@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Webserver/webserver_raw&apos; to &apos;httpserver_raw&apos;" description="Rename resource &apos;webserver_raw&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="webserver_raw" name="httpserver_raw" stamp="1463596075152" updateReferences="true"/>
+</session>

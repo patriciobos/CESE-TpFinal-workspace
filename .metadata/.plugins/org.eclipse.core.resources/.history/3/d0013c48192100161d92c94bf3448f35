@@ -1,0 +1,16 @@
+/*
+ * actuators.h
+ *
+ *  Created on: 23 de may. de 2016
+ *      Author: pato
+ */
+
+#ifndef INC_ACTUATORS_H_
+#define INC_ACTUATORS_H_
+
+typedef enum {OFF = 0, ON = !OFF} actuatorState;
+
+const char estadoActuadorApagado[] = "APAGADO";
+const char estadoActuadorEncendido[] = "ENCENDIDO";
+
+#endif /* INC_ACTUATORS_H_ */

@@ -1,0 +1,26 @@
+
+/* Definición de variables globales para insertar en el HTML*/
+
+#include "actuators.h"
+
+
+actuatorState_t actuatorState[4] = {OFF,OFF,OFF,OFF};
+
+const char estadoActuadorApagado[] = "APAGADO";
+const char estadoActuadorEncendido[] = "ENCENDIDO";
+
+char* getActuatorState(int port){
+//
+	char *ptrActuatorState;
+
+	if(actuatorState[port] == OFF)
+		return ptrActuatorState = estadoActuadorApagado;
+	else
+		return ptrActuatorState = estadoActuadorEncendido;
+//
+//	if (actuatorState(port) == OFF)
+//		return ptrActuatorState = estadoActuadorApagado;
+//	else
+//		return ptrActuatorState = estadoActuadorEncendido;
+//
+}

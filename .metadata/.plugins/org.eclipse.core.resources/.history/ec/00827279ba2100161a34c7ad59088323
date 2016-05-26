@@ -1,0 +1,21 @@
+/*
+ * http_cgi.c
+ *
+ *  Created on: 24 de may. de 2016
+ *      Author: pato
+ */
+
+
+#include "http_cgi.h"
+#include "httpd.h"
+
+tCGI cgi_handler;
+
+
+//Initialise cgi environment
+int CGIinit( void) {
+	cgi_handler.pcCGIName = "/actuators.cgi";
+	cgi_handler.pfnCGIHandler = actuatorsHandler;
+	http_set_cgi_handlers(&cgi_handler, 1);
+	return 0;
+}

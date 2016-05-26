@@ -1,0 +1,22 @@
+/*
+ * http_ssi.h
+ *
+ *  Created on: 20 de may. de 2016
+ *      Author: pato
+ */
+
+#ifndef INC_HTTP_SSI_H_
+#define INC_HTTP_SSI_H_
+
+/* The SSI strings that are embedded in the served html files.  If this array
+is changed, then the index position defined by the #defines such as
+ssiTASK_STATS_INDEX above must also be updated. */
+static const char *pccSSITags[] =
+{
+	"rtos_stats",
+	"run_stats",
+	"g4rx"
+};
+
+
+#endif /* INC_HTTP_SSI_H_ */

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="CGI" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="cgi"/>
+			<item value="TaskEXIT_CRITICAL"/>
+			<item value="TaskEXIT_CRITICAL();"/>
+			<item value="tSSIHandler"/>
+			<item value="LWIP_HTTPD_SSI"/>
+			<item value="malloc"/>
+			<item value="file__index_html"/>
+			<item value="INT"/>
+		</list>
+		<list key="replacehistory">
+			<item value="int"/>
+			<item value="uint32_t"/>
+			<item value="uint16_t"/>
+			<item value="uint8_t"/>
+			<item value="char"/>
+			<item value="uint8_t*"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="291" key="DIALOG_WIDTH"/>
+		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="470" key="DIALOG_HEIGHT"/>
+		<item value="1075" key="DIALOG_X_ORIGIN"/>
+		<item value="147" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
