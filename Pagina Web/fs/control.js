@@ -4,7 +4,7 @@ var data_received = 0;
 
 /*
 function loop1(){
-setTimeout(alertFunc(), 3000);
+setTimeout(alertFunc(), 2000);
 }
 
 function alertFunc (){

@@ -40,12 +40,12 @@ void toggleAlarmState(uint8_t alarmNum){
 
 }
 
-void setAlarm(uint8_t alarmNum){
+void setAlarmState(uint8_t alarmNum){
 
 	alarmState[alarmNum] = ON;
 }
 
-void clearAlarm(uint8_t alarmNum){
+void clearAlarmState(uint8_t alarmNum){
 
 	alarmState[alarmNum] = OFF;
 }
@@ -57,7 +57,7 @@ void vAlarmHandler(void *pvParameters){
 	while(1){
 
 		if (debugInt1 >= ALARM1_THRESHOLD){
-			setAlarm(alarmNum_1);
+			setAlarmState(alarmNum_1);
 		};
 	}
 	return;

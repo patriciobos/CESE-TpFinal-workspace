@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Webserver/Control/src/sensores.c&apos; to &apos;sensors.c&apos;" description="Rename resource &apos;sensores.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Control/src/sensores.c" name="sensors.c" stamp="1465414260232" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Webserver/Control/inc/sensores.h&apos; to &apos;sensors.h&apos;" description="Rename resource &apos;sensores.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Control/inc/sensores.h" name="sensors.h" stamp="1465414269282" updateReferences="true"/>
-</session>

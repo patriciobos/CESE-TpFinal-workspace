@@ -15,9 +15,9 @@ enum {alarmNum_1 = 0,
 };
 
 #define ALARM1_THRESHOLD 3
-#define ALARM2_THRESHOLD 10
-#define ALARM3_THRESHOLD 10
-#define ALARM4_THRESHOLD 10
+#define ALARM2_THRESHOLD 5
+#define ALARM3_THRESHOLD 7
+#define ALARM4_THRESHOLD 9
 
 //typedef enum alarmControl {DISABLE = 0, ENABLE = !DISABLE} alarmControl_t;
 
@@ -25,9 +25,9 @@ char* getAlarmState(uint8_t alarmNum);
 
 void toggleAlarmState(uint8_t alarmNum);
 
-void setAlarm(uint8_t alarmNum);
+void setAlarmState(uint8_t alarmNum);
 
-void clearAlarm(uint8_t alarmNum);
+void clearAlarmState(uint8_t alarmNum);
 
 void vAlarmHandler(void *pvParameters);
 

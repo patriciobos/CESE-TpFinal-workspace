@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;Webserver/Control/inc/alarms.h&apos;" deleteContents="false" description="Delete resource &apos;Webserver/Control/inc/alarms.h&apos;" element1="/Webserver/Control/inc/alarms.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1465234930870"/>
-</session>
