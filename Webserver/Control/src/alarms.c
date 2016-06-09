@@ -56,9 +56,17 @@ void vAlarmHandler(void *pvParameters){
 
 	while(1){
 
-		if (debugInt1 >= ALARM1_THRESHOLD){
+		if ( debugInt1 >= ALARM1_THRESHOLD ){
 			setAlarmState(alarmNum_1);
-		};
+		}
+		else
+			clearAlarmState(alarmNum_1);
+
+		if ( debugInt1 <= ALARM2_THRESHOLD ){
+			setAlarmState(alarmNum_2);
+		}
+		else
+			clearAlarmState(alarmNum_2);
 	}
 	return;
 }

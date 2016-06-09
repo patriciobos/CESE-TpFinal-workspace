@@ -1,22 +1,13 @@
 window.onload = loop;
 
 var data_received = 0;
-
-/*
-function loop1(){
-setTimeout(alertFunc(), 2000);
-}
-
-function alertFunc (){
-alert("hola");
-}
-*/
-
+var timeOutEnable = 1;
 
 function loop() {
 	if( !data_received )
 		makeRequest("ajax.shtml");
-	setTimeout("loop()",5000);
+  if(timeOutEnable == 1)
+    setTimeout("loop()",2000);
 }
 
 function makeRequest(url){
@@ -50,6 +41,9 @@ function alertContents(http_request){
     else{
       alert("There was a problem with the AJAX request.\n\r \
            Request status = " + http_request.status );
+
+      var timeOutEnable = 0;   //inhibe el requerimiento periódico de datos
+
     }
   }
 }
@@ -156,7 +150,7 @@ function strCompare(str1,str2) {
 
 
 /*
-
+//onclick="changeBottonText(this) se llama a la función así
 function changeBottonText(elem)
 {
     if (elem.value == "INICIAR")
@@ -180,6 +174,7 @@ function testAJAX()
 
 }
 */
+
 function changebuttonClasses(elem) {
 
   if ( elem.className.match(/(?:^|\s)active(?!\S)/) )

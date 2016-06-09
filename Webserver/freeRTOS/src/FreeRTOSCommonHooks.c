@@ -69,7 +69,7 @@ __WEAK__ void vApplicationMallocFailedHook(void)
 {
 	DEBUGSTR("DIE:ERROR:FreeRTOS: Malloc Failure!\r\n");
 	taskDISABLE_INTERRUPTS();
-	for (;; ) {}
+	//for (;; ) {}
 }
 
 /* FreeRTOS application idle hook */

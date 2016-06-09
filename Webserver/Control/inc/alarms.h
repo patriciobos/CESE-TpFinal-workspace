@@ -14,8 +14,8 @@ enum {alarmNum_1 = 0,
 	  alarmNum_4
 };
 
-#define ALARM1_THRESHOLD 3
-#define ALARM2_THRESHOLD 5
+#define ALARM1_THRESHOLD 7
+#define ALARM2_THRESHOLD 3
 #define ALARM3_THRESHOLD 7
 #define ALARM4_THRESHOLD 9
 
