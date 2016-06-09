@@ -1,7 +1,8 @@
 Httpserver/src/http_ssi.o Httpserver/src/http_ssi.d: \
  ../Httpserver/src/http_ssi.c \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Httpserver/inc/http_ssi.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/sensors.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/HAL/Chip/inc/lpc_types.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Httpserver/inc/http_ssi.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/actuators.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Httpserver/inc/httpd.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/opt.h \
@@ -81,11 +82,14 @@ Httpserver/src/http_ssi.o Httpserver/src/http_ssi.d: \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/arch.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/arch/cc.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/err.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/alarms.h
 
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Httpserver/inc/http_ssi.h:
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/sensors.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/HAL/Chip/inc/lpc_types.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Httpserver/inc/http_ssi.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/actuators.h:
 
@@ -246,3 +250,5 @@ Httpserver/src/http_ssi.o Httpserver/src/http_ssi.d: \
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/err.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/Control/inc/alarms.h:

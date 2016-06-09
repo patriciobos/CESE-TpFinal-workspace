@@ -75,15 +75,7 @@ lwIP/src/api/netbuf.o lwIP/src/api/netbuf.d: ../lwIP/src/api/netbuf.c \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/freeRTOS/inc/mpu_wrappers.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/debug.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/arch.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/arch/cc.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/err.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_addr.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/def.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/memp.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/memp_std.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/mem.h
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/arch/cc.h
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/opt.h:
 
@@ -238,19 +230,3 @@ lwIP/src/api/netbuf.o lwIP/src/api/netbuf.d: ../lwIP/src/api/netbuf.c \
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/arch.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/arch/cc.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/err.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_addr.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/def.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/memp.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/memp_std.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/mem.h:

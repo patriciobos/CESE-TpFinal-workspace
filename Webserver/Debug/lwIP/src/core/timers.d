@@ -99,14 +99,13 @@ lwIP/src/core/timers.o lwIP/src/core/timers.d: ../lwIP/src/core/timers.c \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/mem.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/tcpip.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api_msg.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_frag.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/netif/etharp.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/dhcp.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/autoip.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/dns.h
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/opt.h:
@@ -309,13 +308,9 @@ lwIP/src/core/timers.o lwIP/src/core/timers.d: ../lwIP/src/core/timers.c \
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api_msg.h:
 
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h:
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_frag.h:
 
@@ -324,5 +319,7 @@ lwIP/src/core/timers.o lwIP/src/core/timers.d: ../lwIP/src/core/timers.c \
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/dhcp.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/autoip.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/dns.h:

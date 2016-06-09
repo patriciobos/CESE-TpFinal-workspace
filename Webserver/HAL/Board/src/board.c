@@ -29,6 +29,7 @@
 
 #include "retarget.h"
 
+
 /** @ingroup BOARD_NGX_XPLORER_18304330
  * @{
  */
@@ -46,6 +47,9 @@ typedef struct {
 	uint8_t pin;
 } io_port_t;
 
+
+
+
 static const io_port_t gpioLEDBits[] = {{5,0},{5,1},{5,2},{0,14},{1,11},{1,12}};
 
 void Board_UART_Init(LPC_USART_T *pUART)
@@ -59,9 +63,12 @@ void Board_UART_Init(LPC_USART_T *pUART)
 		Chip_SCU_PinMuxSet(0x1, 14, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC2));	/* P1.14 : UART1_RX */
 	}
 	else if (pUART == LPC_USART2) {
-			Chip_SCU_PinMux(7, 1, MD_PDN, FUNC6);              	/* P7_1: UART2_TXD */
-			Chip_SCU_PinMux(7, 2, MD_PLN|MD_EZI|MD_ZI, FUNC6); 	/* P7_2: UART2_RXD */
+		Chip_SCU_PinMuxSet(7, 1, (SCU_MODE_INACT | SCU_MODE_FUNC6));              	/* P7_1: UART2_TXD */ /* ring buffer */
+		Chip_SCU_PinMuxSet(7, 2, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS | SCU_MODE_FUNC6)); 	/* P7_2: UART2_RXD */
 		}
+//		Chip_SCU_PinMux(7, 1, MD_PDN, FUNC6);              	/* P7_1: UART2_TXD */
+//		Chip_SCU_PinMux(7, 2, MD_PLN|MD_EZI|MD_ZI, FUNC6); 	/* P7_2: UART2_RXD */
+//	}
 }
 
 /* Initialize debug output via UART for board */
@@ -72,16 +79,64 @@ void Board_Debug_Init(void)
 
 	Chip_UART_Init(DEBUG_UART);
 	Chip_UART_SetBaud(DEBUG_UART, 115200);
-	Chip_UART_ConfigData(DEBUG_UART, UART_LCR_WLEN8 | UART_LCR_SBS_1BIT | UART_LCR_PARITY_DIS);
+//	Chip_UART_ConfigData(DEBUG_UART, UART_LCR_WLEN8 | UART_LCR_SBS_1BIT | UART_LCR_PARITY_DIS);
+	Chip_UART_ConfigData(DEBUG_UART, (UART_LCR_WLEN8 | UART_LCR_SBS_1BIT)); 	/*ring buffer*/
+	Chip_UART_SetupFIFOS (DEBUG_UART, (UART_FCR_FIFO_EN | UART_FCR_TRG_LEV2));
 
 	/* Enable UART Transmit */
 	Chip_UART_TXEnable(DEBUG_UART);
 
+	/* Before using the ring buffers, initialize them using the ring
+	   buffer init function */
+	RingBuffer_Init (&rxring, rxbuff, 1, UART_RRB_SIZE);
+	RingBuffer_Init (&txring, txbuff, 1, UART_SRB_SIZE);
+
+	/* Reset and enable FIFOs, FIFO trigger level 3 (14 chars) */
+	Chip_UART_SetupFIFOS (DEBUG_UART, (UART_FCR_FIFO_EN | UART_FCR_RX_RS |
+							UART_FCR_TX_RS | UART_FCR_TRG_LEV3));
+
+	/* Enable receive data and line status interrupt */
+	Chip_UART_IntEnable (DEBUG_UART, (UART_IER_RBRINT | UART_IER_RLSINT));
+
+	/* preemption = 1, sub-priority = 1 */
+	NVIC_SetPriority (UARTx_IRQn, 1);
+	NVIC_EnableIRQ (UARTx_IRQn);
+
+
+
 	/*UART init ok message*/
-	DEBUGOUT("\r\nUART initialized.........[OK]\r\n");
+	DEBUGSTR("\r\nUART initialized.........[OK]\r\n");
+
 
 #endif
 }
+
+/**
+ * @brief	UART interrupt handler using ring buffers
+ * @return	Nothing
+ */
+void UARTx_IRQHandler(void)
+{
+	/* Want to handle any errors? Do it here. */
+
+	/* Use default ring buffer handler. Override this with your own
+	   code if you need more capability. */
+	Chip_UART_IRQRBHandler (DEBUG_UART, &rxring, &txring);
+}
+
+/* Outputs a string on the debug UART with RingBuffer*/
+void Board_UARTPutSTRrb(const char *str )
+{
+#if defined(DEBUG_UART)
+
+	char tmp_buff[64];
+	strcpy( tmp_buff, str );
+	Chip_UART_SendRB( DEBUG_UART, &txring, tmp_buff, strlen( tmp_buff ) );
+
+#endif
+}
+
+
 
 /* Sends a character on the UART */
 void Board_UARTPutChar(char ch)
@@ -167,7 +222,8 @@ void Board_Ciaa_Gpios()
 	   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 2,(1<<4)|(1<<5)|(1<<6));
 	   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 5,(1<<1));
 
-	   DEBUGOUT("Board GPIOs initialized..[OK]\r\n");
+//	   Chip_UART_SendRB(DEBUG_UART, &txring, inst1, sizeof(inst1) - 1);
+//	   DEBUGOUT("Board GPIOs initialized..[OK]\r\n");
 //	   Board_UARTPutSTR("Board GPIOs initialized..[OK]\r\n");
 //
 //	   // Ugly delay for clearing timing issues

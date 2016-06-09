@@ -35,6 +35,7 @@
 #include "board.h"
 #include "lpc_types.h"
 #include <stdio.h>
+#include "string.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -115,6 +116,13 @@ int Board_UARTGetChar(void);
 void Board_UARTPutSTR(const char *str);
 
 /**
+ * @brief	Prints a string to the UART using ring buffer
+ * @param	str	: Terminated string to output
+ * @return	None
+ */
+void Board_UARTPutSTRrb(const char *str);
+
+/**
  * @brief	Sets the state of a board LED to on or off
  * @param	LEDNumber	: LED number to set state for
  * @param	State		: true for on, false for off
@@ -187,10 +195,10 @@ Board_UARTPutSTR(msg_ppp); \
 #define DEBUGOUT(...) { \
 char msg_aux[64]; \
 sprintf(msg_aux,__VA_ARGS__); \
-Board_UARTPutSTR(msg_aux); \
+Board_UARTPutSTRrb(msg_aux); \
 }
 
-#define DEBUGSTR(str) Board_UARTPutSTR(str)
+#define DEBUGSTR(str) Board_UARTPutSTRrb(str);
 
 /**
  * @}

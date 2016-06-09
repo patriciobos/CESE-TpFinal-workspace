@@ -2,22 +2,24 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="CGI" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="UARTx_RX_MODE" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="cgi"/>
-			<item value="TaskEXIT_CRITICAL"/>
-			<item value="TaskEXIT_CRITICAL();"/>
-			<item value="tSSIHandler"/>
-			<item value="LWIP_HTTPD_SSI"/>
-			<item value="malloc"/>
-			<item value="file__index_html"/>
-			<item value="INT"/>
+			<item value="UARTx_RX_MODE"/>
+			<item value="getActuatorState(portNum_"/>
+			<item value="actuator"/>
+			<item value="reclaim"/>
+			<item value="pbuf_free"/>
+			<item value="free"/>
+			<item value="reference"/>
+			<item value="lpc_num_buff"/>
 		</list>
 		<list key="replacehistory">
+			<item value="getAlarmState(alarmNum_"/>
+			<item value="alarm"/>
 			<item value="int"/>
 			<item value="uint32_t"/>
 			<item value="uint16_t"/>
@@ -30,7 +32,7 @@
 		<item value="291" key="DIALOG_WIDTH"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="470" key="DIALOG_HEIGHT"/>
-		<item value="1075" key="DIALOG_X_ORIGIN"/>
-		<item value="147" key="DIALOG_Y_ORIGIN"/>
+		<item value="1231" key="DIALOG_X_ORIGIN"/>
+		<item value="249" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

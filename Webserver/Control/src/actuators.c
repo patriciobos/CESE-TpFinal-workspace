@@ -2,13 +2,11 @@
 /* Definición de variables globales para insertar en el HTML*/
 /*----------------------------------------------------------*/
 
+#include "include.h"
 #include "actuators.h"
 #include "string.h"
 
-actuatorState_t actuatorState[4] = {OFF,OFF,ON,OFF};
-
-//const char estadoActuadorApagado[] = "APAGADO";
-//const char estadoActuadorEncendido[] = "ENCENDIDO";
+state_t actuatorState[4] = {OFF,OFF,OFF,OFF};
 
 char* getActuatorState(int portNum){
 

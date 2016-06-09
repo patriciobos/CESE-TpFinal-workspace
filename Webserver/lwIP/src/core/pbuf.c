@@ -656,6 +656,7 @@ pbuf_free(struct pbuf *p)
       /* remember next pbuf in chain for next iteration */
       q = p->next;
       LWIP_DEBUGF( PBUF_DEBUG | LWIP_DBG_TRACE, ("pbuf_free: deallocating %p\n", (void *)p));
+      //DEBUGOUT("pbuf_free: deallocating %p\n", (void *)p);
       type = p->type;
 #if LWIP_SUPPORT_CUSTOM_PBUF
       /* is this a custom pbuf? */

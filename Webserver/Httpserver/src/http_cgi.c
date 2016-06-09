@@ -28,7 +28,7 @@ int CGIinit( void) {
 
 	http_set_cgi_handlers(cgi_handlers, 2);
 
-	DEBUGOUT("httpCGIHandler initialized............[OK]\r\n");
+	DEBUGSTR("httpCGIHandler initialized............[OK]\r\n");
 
 	return 0;
 }

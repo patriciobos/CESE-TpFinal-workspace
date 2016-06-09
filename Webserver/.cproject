@@ -31,6 +31,7 @@
 								<option id="com.crt.advproject.gcc.thumb.914661333" name="Thumb mode" superClass="com.crt.advproject.gcc.thumb" value="true" valueType="boolean"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1544778561" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__MULTICORE_NONE"/>
+									<listOptionValue builtIn="false" value="LWIP_DEBUG"/>
 									<listOptionValue builtIn="false" value="__USE_LPCOPEN"/>
 									<listOptionValue builtIn="false" value="DEBUG"/>
 									<listOptionValue builtIn="false" value="__CODE_RED"/>
@@ -51,7 +52,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Webserver/HAL/Board/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Webserver/HAL/Chip/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Webserver/HAL/Chip/inc/usbd}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include&quot;"/>
 								</option>
 								<inputType id="com.crt.advproject.compiler.input.244260177" superClass="com.crt.advproject.compiler.input"/>
 							</tool>
@@ -101,9 +101,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="src/makefsdata|src/fs|src/fsdata.c|src/Webserver.c|src/newlib_stubs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Control"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
+						<entry excluding="Board/src/uarts.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
 						<entry excluding="src/makefsdata|src/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Httpserver"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
+						<entry excluding="src/heap_4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwIP"/>
 					</sourceEntries>
 				</configuration>
@@ -183,9 +183,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="src/makefsdata|src/fs|src/fsdata.c|src/Webserver.c|src/newlib_stubs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Control"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
+						<entry excluding="Board/src/uarts.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
 						<entry excluding="src/makefsdata|src/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Httpserver"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
+						<entry excluding="src/heap_4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwIP"/>
 					</sourceEntries>
 				</configuration>

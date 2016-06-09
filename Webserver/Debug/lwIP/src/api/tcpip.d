@@ -91,14 +91,12 @@ lwIP/src/api/tcpip.o lwIP/src/api/tcpip.d: ../lwIP/src/api/tcpip.c \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/pbuf.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/tcpip.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api_msg.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/timers.h \
+ /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netif.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_addr.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/def.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netif.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h \
- /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/timers.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/init.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/netif/etharp.h \
  /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip.h \
@@ -288,21 +286,17 @@ lwIP/src/api/tcpip.o lwIP/src/api/tcpip.d: ../lwIP/src/api/tcpip.c \
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api_msg.h:
 
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_addr.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/def.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/igmp.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netif.h:
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/api.h:
 
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netbuf.h:
-
-/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netifapi.h:
-
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/timers.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/netif.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/ipv4/lwip/ip_addr.h:
+
+/home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/def.h:
 
 /home/pato/Embebidos/TpFinal/Workspaces/TpFinal/Webserver/lwIP/inc/lwip/init.h:
 

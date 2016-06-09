@@ -29,6 +29,8 @@
  * this code.
  */
 
+#include <stdio.h>
+#include <stdarg.h>
 #include "lwip/opt.h"
 
 /** @defgroup NET_LWIP_DEBUG LWIP debug re-direction
@@ -54,6 +56,30 @@
 /*****************************************************************************
  * Public functions
  ****************************************************************************/
+void
+my_sys_assert( const char *msg )
+{
+    char tmpbuf[64];
+    sprintf(tmpbuf,msg);
+//    SCI2_PullString(tmpbuf);
+    Board_UARTPutSTR(tmpbuf);
+}
+
+void
+sys_debug( const char *const fmt, ... )
+{
+    va_list args;
+    char tmpbuf[64];
+
+    va_start( args, fmt );
+    vsprintf(tmpbuf, fmt, args);
+    va_end( args );
+
+//    SCI2_PullString(tmpbuf);
+    Board_UARTPutSTR(tmpbuf);
+}
+
+
 
 /* Displays an error message on assertion */
 void assert_printf(char *msg, int line, char *file)

@@ -29,9 +29,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -63,9 +63,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -97,9 +97,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -131,9 +131,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -196,9 +196,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -230,9 +230,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -264,9 +264,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -335,9 +335,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -369,9 +369,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -403,9 +403,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -437,9 +437,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -471,9 +471,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -505,9 +505,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -570,9 +570,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -604,9 +604,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -638,9 +638,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -672,9 +672,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -706,9 +706,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -740,9 +740,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -774,9 +774,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -808,9 +808,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -842,9 +842,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -876,9 +876,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -910,9 +910,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -944,9 +944,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -978,9 +978,43 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC43XX__" value=""/>
+						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+					</resource>
+					<resource project-relative-path="HAL/Board/src/uarts.c">
+						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Control/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc/ipv4">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/freeRTOS/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Board/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="CORE_M4" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1012,9 +1046,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1046,9 +1080,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1080,9 +1114,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1148,9 +1182,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1182,9 +1216,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1216,9 +1250,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1250,9 +1284,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1284,9 +1318,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1318,9 +1352,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1416,9 +1450,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1450,9 +1484,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1484,9 +1518,43 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC43XX__" value=""/>
+						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+					</resource>
+					<resource project-relative-path="Control/src/sensors.c">
+						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Control/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc/ipv4">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/freeRTOS/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Board/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="CORE_M4" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1549,9 +1617,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1583,9 +1651,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1617,9 +1685,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1651,9 +1719,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1685,9 +1753,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1719,9 +1787,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1753,9 +1821,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1787,9 +1855,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1821,9 +1889,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1886,9 +1954,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1920,9 +1988,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -1988,9 +2056,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2022,9 +2090,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2056,9 +2124,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2090,9 +2158,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2124,9 +2192,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2158,9 +2226,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2192,9 +2260,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2226,9 +2294,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2260,9 +2328,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2294,9 +2362,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2328,9 +2396,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2362,9 +2430,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2396,9 +2464,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2430,9 +2498,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2464,9 +2532,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2498,9 +2566,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2532,9 +2600,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2566,9 +2634,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2637,9 +2705,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2671,9 +2739,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2705,9 +2773,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2776,9 +2844,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2847,9 +2915,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2881,9 +2949,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2915,9 +2983,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2949,9 +3017,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -2983,9 +3051,43 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC43XX__" value=""/>
+						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+					</resource>
+					<resource project-relative-path="freeRTOS/src/heap_3.c">
+						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Control/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc/ipv4">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/freeRTOS/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Board/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="CORE_M4" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3029,6 +3131,40 @@
 						<entry kind="macro" name="__NEWLIB__" value=""/>
 						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
 					</resource>
+					<resource project-relative-path="Control/src/alarms.c">
+						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Control/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc/ipv4">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/freeRTOS/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Board/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="CORE_M4" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC43XX__" value=""/>
+						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/Chip/src/gpio_18xx_43xx.c">
 						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -3054,9 +3190,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3088,9 +3224,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3153,9 +3289,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3187,9 +3323,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3221,9 +3357,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3255,9 +3391,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3289,9 +3425,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3323,9 +3459,43 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC43XX__" value=""/>
+						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+					</resource>
+					<resource project-relative-path="Control/src/sensores.c">
+						<entry kind="includePath" name="/${ProjName}/Httpserver/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Control/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/lwIP/inc/ipv4">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/freeRTOS/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Board/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="CORE_M4" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3388,9 +3558,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3422,9 +3592,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3456,9 +3626,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3490,9 +3660,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3524,9 +3694,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3558,9 +3728,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3592,9 +3762,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3626,9 +3796,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3697,9 +3867,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3731,9 +3901,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3765,9 +3935,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3799,9 +3969,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3833,9 +4003,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3867,9 +4037,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>
@@ -3901,9 +4071,9 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/Chip/inc/usbd">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/arm-none-eabi/include"/>
 						<entry kind="macro" name="CORE_M4" value=""/>
 						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="LWIP_DEBUG" value=""/>
 						<entry kind="macro" name="__CODE_RED" value=""/>
 						<entry kind="macro" name="__LPC43XX__" value=""/>
 						<entry kind="macro" name="__MULTICORE_NONE" value=""/>

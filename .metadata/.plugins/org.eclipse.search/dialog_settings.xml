@@ -19,7 +19,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="unknown tag" key="textPattern"/>
+			<item value="Heap_Size" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -31,7 +31,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="***unknown" key="textPattern"/>
+			<item value="Heap_Size       EQU     0x00008000" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -43,7 +43,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="taskENTER_critical(void)" key="textPattern"/>
+			<item value="reference" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -52,10 +52,10 @@
 			</list>
 		</section>
 		<section name="HISTORY10">
-			<item value="false" key="ignoreCase"/>
+			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="malloc(" key="textPattern"/>
+			<item value="sys_arch_protect" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -67,7 +67,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="case TAG_FOUND:" key="textPattern"/>
+			<item value="lpc_num_buff" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -80,10 +80,10 @@
 			<item value="lpc_phy.h" key="1"/>
 		</section>
 		<section name="HISTORY11">
-			<item value="false" key="ignoreCase"/>
+			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
-			<item value="true" key="isWholeWord"/>
-			<item value="malloc" key="textPattern"/>
+			<item value="false" key="isWholeWord"/>
+			<item value="mem_malloc" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -92,10 +92,10 @@
 			</list>
 		</section>
 		<section name="HISTORY8">
-			<item value="false" key="ignoreCase"/>
+			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="unknown" key="textPattern"/>
+			<item value=" Heap" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -104,10 +104,10 @@
 			</list>
 		</section>
 		<section name="HISTORY9">
-			<item value="false" key="ignoreCase"/>
+			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="u16_t" key="textPattern"/>
+			<item value=" Heap_Size" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -119,7 +119,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="estadoActuadorApagado" key="textPattern"/>
+			<item value="#include &quot;actuators.h&quot;" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -131,7 +131,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="TaskEXIT_CRITICAL();" key="textPattern"/>
+			<item value="reference count" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -143,7 +143,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="extract_uri_parameters" key="textPattern"/>
+			<item value="ART_INTEN_TXRDY) " key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -155,7 +155,7 @@
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="LWIP_HTTPD_CGI" key="textPattern"/>
+			<item value="if ((Chip_UART_GetIntsEnabled(pUART) &amp; UART_INTEN_TXRDY) != 0)" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*"/>
@@ -186,9 +186,9 @@
 		<item value="org.eclipse.search.internal.ui.text.TextSearchPage" key="PREVIOUS_PAGE"/>
 	</section>
 	<section name="DialogBounds_SearchDialog">
-		<item value="662" key="DIALOG_WIDTH"/>
+		<item value="664" key="DIALOG_WIDTH"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="577" key="DIALOG_HEIGHT"/>
+		<item value="578" key="DIALOG_HEIGHT"/>
 		<item value="22" key="DIALOG_X_ORIGIN"/>
 		<item value="61" key="DIALOG_Y_ORIGIN"/>
 	</section>

@@ -8,7 +8,6 @@
 #ifndef INC_ACTUATORS_H_
 #define INC_ACTUATORS_H_
 
-typedef enum {OFF = 0, ON = !OFF} actuatorState_t;
 
 enum {portNum_1 = 0,
 	  portNum_2,
