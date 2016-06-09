@@ -15,7 +15,8 @@
 *.lo
 
 # Shared objects (inc. Windows DLLs)
-*.dll
+#*.dll
+!**/msvcr100d.dll
 *.so
 *.so.*
 *.dylib
