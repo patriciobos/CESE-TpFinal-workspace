@@ -82,6 +82,7 @@ extern const u16_t memp_sizes[MEMP_MAX];
 #if MEMP_MEM_MALLOC
 
 #include "mem.h"
+#include "board.h"
 
 #define memp_init()
 #define memp_malloc(type)     mem_malloc(memp_sizes[type])

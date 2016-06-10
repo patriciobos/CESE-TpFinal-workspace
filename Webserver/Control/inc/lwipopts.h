@@ -108,7 +108,7 @@
    building the code to use debug. */
 #define TCP_DEBUG                       LWIP_DBG_OFF
 #define ETHARP_DEBUG                    LWIP_DBG_OFF
-#define PBUF_DEBUG                      LWIP_DBG_OFF
+#define PBUF_DEBUG                      LWIP_DBG_ON
 #define IP_DEBUG                        LWIP_DBG_OFF
 #define TCPIP_DEBUG                     LWIP_DBG_OFF
 #define DHCP_DEBUG                      LWIP_DBG_OFF
@@ -119,7 +119,7 @@
 #define EMAC_DEBUG                    LWIP_DBG_OFF
 
 #define DEFAULT_THREAD_PRIO             (tskIDLE_PRIORITY + 1)
-#define DEFAULT_THREAD_STACKSIZE        (128)
+#define DEFAULT_THREAD_STACKSIZE        (512)
 #define DEFAULT_ACCEPTMBOX_SIZE         6
 #define DEFAULT_ACCEPTMBOX_SIZE         6
 #define DEFAULT_TCP_RECVMBOX_SIZE       6
@@ -128,7 +128,7 @@
 /* TCPIP thread must run at higher priority than MAC threads! */
 #define TCPIP_THREAD_PRIO               (DEFAULT_THREAD_PRIO + configMAX_PRIORITIES - 1)
 
-#define TCPIP_THREAD_STACKSIZE          (256)
+#define TCPIP_THREAD_STACKSIZE          (512)
 
 #define TCPIP_MBOX_SIZE                 6
 

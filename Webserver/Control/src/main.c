@@ -247,6 +247,7 @@ void msDelay(uint32_t ms)
  */
 int main(void)
 {
+
 	prvSetupHardware();
 
 	/* Add another thread for initializing physical interface. This

@@ -62,7 +62,7 @@ my_sys_assert( const char *msg )
     char tmpbuf[64];
     sprintf(tmpbuf,msg);
 //    SCI2_PullString(tmpbuf);
-    Board_UARTPutSTR(tmpbuf);
+    Board_UARTPutSTRrb(tmpbuf);
 }
 
 void
@@ -76,7 +76,7 @@ sys_debug( const char *const fmt, ... )
     va_end( args );
 
 //    SCI2_PullString(tmpbuf);
-    Board_UARTPutSTR(tmpbuf);
+    Board_UARTPutSTRrb(tmpbuf);
 }
 
 
