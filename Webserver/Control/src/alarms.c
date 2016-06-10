@@ -5,11 +5,15 @@
  *      Author: pato
  */
 
-#include <sensors.h>
 #include "include.h"
 #include "lpc_types.h"
-#include "alarms.h"
+
+#include "FreeRTOS.h"
+
 #include "actuators.h"
+#include "sensors.h"
+#include "alarms.h"
+
 
 state_t alarmState[4] = {OFF,OFF,OFF,OFF};
 FunctionalState alarmControl[4] = {DISABLE, DISABLE, DISABLE, DISABLE};
@@ -54,7 +58,14 @@ void clearAlarmState(uint8_t alarmNum){
 
 void vAlarmHandler(void *pvParameters){
 
+	volatile portTickType periodo = 1000/portTICK_RATE_MS;
+
+	UBaseType_t uxHighWaterMark;
+
+
 	while(1){
+
+		portTickType ticks = xTaskGetTickCount();
 
 		if ( debugInt1 >= ALARM1_THRESHOLD ){
 			setAlarmState(alarmNum_1);
@@ -67,6 +78,14 @@ void vAlarmHandler(void *pvParameters){
 		}
 		else
 			clearAlarmState(alarmNum_2);
+
+
+		vTaskDelayUntil(&ticks,periodo);
+
+		/* Inspect our own high water mark on entering the task. */
+		uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );
+
+
 	}
 	return;
 }

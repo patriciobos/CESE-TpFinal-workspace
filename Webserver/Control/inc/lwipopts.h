@@ -108,7 +108,7 @@
    building the code to use debug. */
 #define TCP_DEBUG                       LWIP_DBG_OFF
 #define ETHARP_DEBUG                    LWIP_DBG_OFF
-#define PBUF_DEBUG                      LWIP_DBG_ON
+#define PBUF_DEBUG                      LWIP_DBG_OFF
 #define IP_DEBUG                        LWIP_DBG_OFF
 #define TCPIP_DEBUG                     LWIP_DBG_OFF
 #define DHCP_DEBUG                      LWIP_DBG_OFF
@@ -120,6 +120,7 @@
 
 #define DEFAULT_THREAD_PRIO             (tskIDLE_PRIORITY + 1)
 #define DEFAULT_THREAD_STACKSIZE        (512)
+#define DEFAULT_THREAD_STACKSIZE_MIN	(128)
 #define DEFAULT_ACCEPTMBOX_SIZE         6
 #define DEFAULT_ACCEPTMBOX_SIZE         6
 #define DEFAULT_TCP_RECVMBOX_SIZE       6

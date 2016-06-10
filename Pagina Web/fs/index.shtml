@@ -23,9 +23,9 @@
 
 <div id="nav">
   <ul>
-    <li><a id="menu1" class="active" href="index.shtml" onclick=changebuttonClasses(this) >Overview</a></li>
-    <li><a id="menu2" href="#index.shtml" onclick=changebuttonClasses(this) >Control</a></li>
-    <li><a id="menu3" href="#index.shtml" onclick=changebuttonClasses(this) >Config</a></li>
+    <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) class="active">Overview</a></li>
+    <li><a id="menu2" href="index.shtml" onclick=changebuttonClasses(this) >Control</a></li>
+    <li><a id="menu3" href="index.shtml" onclick=changebuttonClasses(this) >Config</a></li>
   </ul>
 </div>
 
@@ -33,48 +33,6 @@
 <!-- ------------------------------------------------------------------------------------ -->
 
 <div id="section" style="width:100%" class="outer">
-
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- ACTUADORES -->
-<!-- ------------------------------------------------------------------------------------ -->
-
-<div id="div_actuadores" class="inner_actuadores">
-
-<h2>ACTUADORES</h2>
-
-<form name="actuadores" action="actuadores.cgi" method="get">
-
- <table id="tabla_actuadores" class="actuadores">
-  <tr>
-    <th>Nombre</th>
-    <th>Estado</th>
-    <th>Control</th>
-  </tr>
-  <tr>
-    <td>Bomba de Agua <br />ENTRADA</td>
-    <td id="state1" class="rojo" ><!--act1--></td>
-    <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="DETENER"/></td>
-  </tr>
-  <tr>
-    <td>Bomba de Agua <br />SALIDA</td>
-    <td id="state2" class="rojo"><!--act2--></td>
-    <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
-  </tr>
-  <tr>
-    <td>Bomba de CO2</td>
-    <td id="state3" class="rojo"><!--act3--></td>
-    <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
-  </tr>
-  <tr>
-    <td>CALEFACTOR</td>
-    <td id="state4" class="rojo"><!--act4--></td>
-    <td><input type="submit" name="cmd4" id="actuador4" class="button5" value="INICIAR"/></td>
-  </tr>
-</table>
-
-</form>
-
-</div>
 
 <!-- ------------------------------------------------------------------------------------ -->
 <!-- SENSORES -->
@@ -105,6 +63,50 @@
 </table>
 
 </div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- ACTUADORES -->
+<!-- ------------------------------------------------------------------------------------ -->
+
+<div id="div_actuadores" class="inner_actuadores">
+
+<h2>ACTUADORES</h2>
+
+<form name="actuadores" action="actuadores.cgi" method="get">
+
+ <table id="tabla_actuadores" class="actuadores">
+  <tr>
+    <th>Nombre</th>
+    <th>Estado</th>
+    <th>Control</th>
+  </tr>
+  <tr>
+    <td>Bomba de Agua <br />ENTRADA</td>
+    <td id="state1"  ><!--act1--></td>
+    <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="DETENER"/></td>
+  </tr>
+  <tr>
+    <td>Bomba de Agua <br />SALIDA</td>
+    <td id="state2" ><!--act2--></td>
+    <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
+  </tr>
+  <tr>
+    <td>CALEFACTOR</td>
+    <td id="state3" ><!--act3--></td>
+    <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
+  </tr>
+  <tr>
+    <td>Bomba de CO2</td>
+    <td id="state4" ><!--act4--></td>
+    <td><input type="submit" name="cmd4" id="actuador4" class="button5" value="INICIAR"/></td>
+  </tr>
+</table>
+
+</form>
+
+</div>
+
+
 
 <!-- ------------------------------------------------------------------------------------ -->
 <!-- ALARMAS -->

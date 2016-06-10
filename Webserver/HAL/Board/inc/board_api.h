@@ -192,11 +192,11 @@ Board_UARTPutSTR(msg_ppp); \
 #endif /* defined(DEBUG_ENABLE) */
 
 
-#define DEBUGOUT(...)// { \
-//char msg_aux[64]; \
-//sprintf(msg_aux,__VA_ARGS__); \
-//Board_UARTPutSTRrb(msg_aux); \
-//}
+#define DEBUGOUT(...) { \
+char msg_aux[64]; \
+sprintf(msg_aux,__VA_ARGS__); \
+Board_UARTPutSTRrb(msg_aux); \
+}
 
 #define DEBUGSTR(str) Board_UARTPutSTRrb(str);
 

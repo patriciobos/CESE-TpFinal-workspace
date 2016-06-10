@@ -103,7 +103,7 @@
 						<entry excluding="src/makefsdata|src/fs|src/fsdata.c|src/Webserver.c|src/newlib_stubs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Control"/>
 						<entry excluding="Board/src/uarts.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
 						<entry excluding="src/makefsdata|src/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Httpserver"/>
-						<entry excluding="src/heap_4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
+						<entry excluding="src/heap_3.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwIP"/>
 					</sourceEntries>
 				</configuration>
@@ -185,7 +185,7 @@
 						<entry excluding="src/makefsdata|src/fs|src/fsdata.c|src/Webserver.c|src/newlib_stubs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Control"/>
 						<entry excluding="Board/src/uarts.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="HAL"/>
 						<entry excluding="src/makefsdata|src/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Httpserver"/>
-						<entry excluding="src/heap_4.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
+						<entry excluding="src/heap_3.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="freeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwIP"/>
 					</sourceEntries>
 				</configuration>

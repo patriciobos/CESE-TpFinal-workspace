@@ -257,7 +257,7 @@ int main(void)
 				(xTaskHandle *) NULL);
 
 	xTaskCreate(vAlarmHandler, (signed char *) "AlarmHandler",
-					configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+					configAlarmHandler_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 					(xTaskHandle *) NULL);
 
 	/* Start the scheduler */

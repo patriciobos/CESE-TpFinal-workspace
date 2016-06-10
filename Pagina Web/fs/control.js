@@ -7,7 +7,7 @@ function loop() {
 	if( !data_received )
 		makeRequest("ajax.shtml");
   if(timeOutEnable == 1)
-    setTimeout("loop()",2000);
+    setTimeout("loop()",1000);
 }
 
 function makeRequest(url){
@@ -42,7 +42,7 @@ function alertContents(http_request){
       alert("There was a problem with the AJAX request.\n\r \
            Request status = " + http_request.status );
 
-      var timeOutEnable = 0;   //inhibe el requerimiento periódico de datos
+     // var timeOutEnable = 0;   //inhibe el requerimiento periódico de datos
 
     }
   }
@@ -150,7 +150,7 @@ function strCompare(str1,str2) {
 
 
 /*
-//onclick="changeBottonText(this) se llama a la función así
+// La función se invoca así: onclick="changeBottonText(this)
 function changeBottonText(elem)
 {
     if (elem.value == "INICIAR")
@@ -158,19 +158,6 @@ function changeBottonText(elem)
 
     else if (elem.value == "DETENER")
 	elem.value = "INICIAR";
-
-}
-
-function testAJAX()
-{
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            document.getElementById("sensor1").innerHTML = xhttp.responseText;
-        }
-    };
-    xhttp.open("GET", "ajax.txt", true);
-    xhttp.send();
 
 }
 */

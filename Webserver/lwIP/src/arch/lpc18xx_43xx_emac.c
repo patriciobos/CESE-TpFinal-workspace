@@ -535,8 +535,15 @@ static err_t lpc_etharp_output(struct netif *netif, struct pbuf *q,
 /* Packet reception task
    This task is called when a packet is received. It will
    pass the packet to the LWIP core */
+
+
+
+//#include "FreeRTOS.h"	//task stack debug
+
 static void vPacketReceiveTask(void *pvParameters) {
 	struct lpc_enetdata *lpc_netifdata = pvParameters;
+
+//	UBaseType_t uxHighWaterMark;	//task stack debug
 
 	while (1) {
 		/* Wait for receive task to wakeup */
@@ -546,7 +553,9 @@ static void vPacketReceiveTask(void *pvParameters) {
 		while (!(lpc_netifdata->prdesc[lpc_netifdata->rx_get_idx].STATUS
 				 & RDES_OWN)) {
 			lpc_enetif_input(lpc_netifdata->netif);
+//			uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );	//task stack debug
 		}
+		//
 	}
 }
 
@@ -556,13 +565,15 @@ static void vPacketReceiveTask(void *pvParameters) {
    the packet has been transferred */
 static void vTransmitCleanupTask(void *pvParameters) {
 	struct lpc_enetdata *lpc_netifdata = pvParameters;
-
+	//UBaseType_t uxHighWaterMark; //task stack debug
 	while (1) {
 		/* Wait for transmit cleanup task to wakeup */
 		sys_arch_sem_wait(&lpc_netifdata->TxCleanSem, 0);
 
 		/* Free TX pbufs and descriptors that are done */
 		lpc_tx_reclaim(lpc_netifdata->netif);
+
+		//uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );	//task stack debug
 	}
 }
 #endif
@@ -919,13 +930,13 @@ err_t lpc_enetif_init(struct netif *netif)
 	err = sys_sem_new(&lpc_enetdata.RxSem, 0);
 	LWIP_ASSERT("RxSem creation error", (err == ERR_OK));
 	sys_thread_new("receive_thread", vPacketReceiveTask, netif->state,
-				   DEFAULT_THREAD_STACKSIZE, tskRECPKT_PRIORITY);
+			DEFAULT_THREAD_STACKSIZE_MIN, tskRECPKT_PRIORITY);
 
 	/* Transmit cleanup task */
 	err = sys_sem_new(&lpc_enetdata.TxCleanSem, 0);
 	LWIP_ASSERT("TxCleanSem creation error", (err == ERR_OK));
 	sys_thread_new("txclean_thread", vTransmitCleanupTask, netif->state,
-				   DEFAULT_THREAD_STACKSIZE, tskTXCLEAN_PRIORITY);
+			DEFAULT_THREAD_STACKSIZE_MIN, tskTXCLEAN_PRIORITY);
 #endif
 
 	return ERR_OK;
