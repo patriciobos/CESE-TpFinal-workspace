@@ -9,12 +9,13 @@
 #include "http_cgi.h"
 #include "httpd.h"
 #include "actuators.h"
+#include "alarms.h"
 
 #include "board_api.h"
 
 tCGI cgi_handlers[]={
 		{"/actuadores.cgi",actuatorsHandler},
-		{"/testAJAX.cgi",AJAXHandler},
+		{"/alarmas.cgi",alarmsHandler}
 };
 tCGI * ptrCGIHandlers;
 

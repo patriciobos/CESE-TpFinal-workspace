@@ -66,11 +66,3 @@ const char *actuatorsHandler(int iIndex, int iNumParams, char *pcParam[], char *
 	return "/index.shtml";
 }
 
-
-const char *AJAXHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {
-
-
-	char *ptrState = getActuatorState(portNum_1);
-
-	return ptrState;
-}

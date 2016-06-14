@@ -8,6 +8,6 @@
 
 #include <sensors.h>
 
-volatile uint8_t debugInt1 = 0;
-volatile uint8_t debugInt2 = 100;
-volatile uint8_t debugInt3 = 100;
+volatile uint8_t sensorNivelAgua = 0;
+volatile uint8_t sensorTemperatura = 15;
+volatile uint8_t sensorPh = 1;

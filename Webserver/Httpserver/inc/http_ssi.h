@@ -26,6 +26,12 @@ array.  If pccSSITags is updated, then these definitions must also be updated. *
 #define ssiALARMA2_INDEX		8
 #define ssiALARMA3_INDEX		9
 #define ssiALARMA4_INDEX		10
+#define ssiCONTROL_ALARMA1_INDEX		11
+#define ssiCONTROL_ALARMA2_INDEX		12
+#define ssiCONTROL_ALARMA3_INDEX		13
+#define ssiCONTROL_ALARMA4_INDEX		14
+
+
 
 /* The SSI strings that are embedded in the served html files.  If this array
 is changed, then the index position defined by the #defines such as
@@ -42,7 +48,11 @@ static const char *pccSSITags[] =
 	"alarma1",
 	"alarma2",
 	"alarma3",
-	"alarma4"
+	"alarma4",
+	"controlAlarma1",
+	"controlAlarma2",
+	"controlAlarma3",
+	"controlAlarma4"
 };
 
 

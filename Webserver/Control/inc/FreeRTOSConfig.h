@@ -76,14 +76,14 @@
 #define configCPU_CLOCK_HZ				( ( unsigned long ) SystemCoreClock )
 #define configTICK_RATE_HZ				( ( portTickType ) 1000 )
 #define configMINIMAL_STACK_SIZE		( ( unsigned short ) 256 ) 		/* <--- 256 */
-#define configAlarmHandler_STACK_SIZE	( ( unsigned short ) 64 )	//task stack debug
+#define configAlarmControl_STACK_SIZE	( ( unsigned short ) 64 )		//task stack debug
 
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 32*1024 ) )
 
 #define configMAX_TASK_NAME_LEN			( 20 )
 #define configUSE_TRACE_FACILITY		1
 #define configUSE_16_BIT_TICKS			0
-#define configUSE_MALLOC_FAILED_HOOK	1									/* <--- 1 */
+#define configUSE_MALLOC_FAILED_HOOK	1								/* <--- 1 */
 #define configIDLE_SHOULD_YIELD			1
 #define configUSE_CO_ROUTINES 			0
 #define configUSE_MUTEXES				1

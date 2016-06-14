@@ -26,6 +26,7 @@
 
 #include "board.h"
 #include "string.h"
+#include "board_api.h"
 
 #include "retarget.h"
 
@@ -48,9 +49,8 @@ typedef struct {
 } io_port_t;
 
 
-
-
 static const io_port_t gpioLEDBits[] = {{5,0},{5,1},{5,2},{0,14},{1,11},{1,12}};
+
 
 void Board_UART_Init(LPC_USART_T *pUART)
 {
@@ -202,6 +202,7 @@ void Board_Ciaa_Gpios()
 	   Chip_GPIO_SetDir(LPC_GPIO_PORT, 2, 0xF, 0);
 	   Chip_GPIO_SetDir(LPC_GPIO_PORT, 3, 0xF<<11, 0);
 
+
 	   /* MOSFETs */
 	   Chip_SCU_PinMux(4,8,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[12] */
 	   Chip_SCU_PinMux(4,9,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[13] */
@@ -222,13 +223,8 @@ void Board_Ciaa_Gpios()
 	   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 2,(1<<4)|(1<<5)|(1<<6));
 	   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 5,(1<<1));
 
-//	   Chip_UART_SendRB(DEBUG_UART, &txring, inst1, sizeof(inst1) - 1);
-//	   DEBUGOUT("Board GPIOs initialized..[OK]\r\n");
-//	   Board_UARTPutSTR("Board GPIOs initialized..[OK]\r\n");
-//
-//	   // Ugly delay for clearing timing issues
-//	   	uint32_t i;
-//	   	for(i=0;i<0xFFF;i++);
+	   DEBUGSTR("Board GPIOs initialized..[OK]\r\n");
+//	   Board_UARTPutSTRrb("Board GPIOs initialized..[OK]\r\n");
 
 }
 
@@ -266,13 +262,6 @@ uint32_t Buttons_GetStatus(void)
 	return ret;
 }
 
-void Board_Joystick_Init(void)
-{}
-
-uint8_t Joystick_GetStatus(void)
-{
-	return NO_BUTTON_PRESSED;
-}
 
 /* Returns the MAC address assigned to this board */
 void Board_ENET_GetMacADDR(uint8_t *mcaddr)
@@ -291,9 +280,12 @@ void Board_Init(void)
 	Board_Debug_Init();
 
 	/* Initializes GPIO */
-//	Chip_GPIO_Init(LPC_GPIO_PORT);
-
+	Chip_GPIO_Init(LPC_GPIO_PORT);
 	Board_Ciaa_Gpios();
+
+	/*Initialize ADCs*/
+//	Board_ADCs_Init();
+//	initAdcs();
 
 	/* Initialize LEDs */
 //	Board_LED_Init();

@@ -32,8 +32,10 @@
 #ifndef __LPC_PHY_H_
 #define __LPC_PHY_H_
 
-#include "board.h"
 #include "chip.h"
+#include "board.h"
+#include "board_api.h"
+#include "lpc_phy.h"
 
 #ifdef __cplusplus
 extern "C" {

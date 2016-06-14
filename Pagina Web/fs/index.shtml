@@ -115,33 +115,37 @@
 <div id="div_alarmas" class="inner_alarmas">
 <h2>ALARMAS</h2>
 
-<table id="tabla_alarmas" class="actuadores">
-  <tr>
-    <th>Alarma</th>
-    <th>Estado</th>
-    <th>Control</th>
-  </tr>
-  <tr>
-    <td>Nivel de Agua <br /> ALTO</td>
-    <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
-    <td><input type="checkbox" name="alarma1" value="0"></td>
-  </tr>
-  <tr>
-    <td>Nivel de Agua <br /> BAJO</td>
-    <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
-    <td><input type="checkbox" name="alarma2" value="0"></td>
-  </tr>
-  <tr>
-    <td>Temperatura</td>
-    <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
-    <td><input type="checkbox" name="alarma3" value="0"></td>
-  </tr>
-  <tr>
-    <td>pH</td>
-    <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
-    <td><input type="checkbox" name="alarma4" value="0"></td>
-  </tr>
-</table>
+  <form name="alarmas" action="alarmas.cgi" method="get">
+
+    <table id="tabla_alarmas" class="actuadores">
+      <tr>
+        <th>Alarma</th>
+        <th>Estado</th>
+        <th>Control</th>
+      </tr>
+      <tr>
+        <td>Nivel de Agua <br /> ALTO</td>
+        <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
+        <td><input type="checkbox" id="alarmControl1" name="alarma1" value="0" onChange="this.form.submit()"></td>
+      </tr>
+      <tr>
+        <td>Nivel de Agua <br /> BAJO</td>
+        <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
+        <td><input type="checkbox" id="alarmControl2" name="alarma2" value="0" onChange="this.form.submit()"></td>
+      </tr>
+      <tr>
+        <td>Temperatura</td>
+        <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
+        <td><input type="checkbox" id="alarmControl3" name="alarma3" value="0" onChange="this.form.submit()"></td>
+      </tr>
+      <tr>
+        <td>pH</td>
+        <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
+        <td><input type="checkbox" id="alarmControl4" name="alarma4" value="0" onChange="this.form.submit()"></td>
+      </tr>
+    </table>
+
+  </form>
 
 </div>
 </div>

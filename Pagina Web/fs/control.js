@@ -139,6 +139,14 @@ function parse_vars( data ){
    document.getElementById("alarm4").className = "alarmaRojo";
   }
 
+  if ( parsed[11] == "<!--#controlAlarma1-->DISABLE" ) {
+    document.getElementById("alarmControl1").checked = false;
+    document.getElementById("alarm4").className = "alarmaRojo";
+  }
+  else {
+    document.getElementById("alarmControl1").checked = true;
+    document.getElementById("menu1").className = document.getElementById("menu1").className.replace ( /(?:^|\s)alarmaAmarillo(?!\S)/g , '' );
+  }
 }
 
 function strCompare(str1,str2) {

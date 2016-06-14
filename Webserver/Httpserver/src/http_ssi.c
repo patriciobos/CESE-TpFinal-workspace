@@ -5,19 +5,21 @@
  *      Author: pato
  */
 
-
-#include <sensors.h>
-#include "http_ssi.h"
-#include "httpd.h"
-//#include "actuators.h"
-#include "alarms.h"
-#include "lpc_types.h"
 #include "string.h"
+#include "lpc_types.h"
+
+#include "http_ssi.h"
+
+#include "httpd.h"
+
+#include "sensors.h"
+#include "alarms.h"
+//#include "actuators.h"
 
 
-extern volatile uint8_t debugInt1;
-extern volatile uint8_t debugInt2;
-extern volatile uint8_t debugInt3;
+extern volatile uint8_t sensorNivelAgua;
+extern volatile uint8_t sensorTemperatura;
+extern volatile uint8_t sensorPh;
 
 uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 {
@@ -29,10 +31,6 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 	the SSI tag encountered. */
 
 	char *ptrState;
-
-//	static uint8_t debugInt1 = 0;
-//	static uint8_t debugInt2 = 100;
-//	static uint8_t debugInt3 = 100;
 
 	switch( iIndex )
 	{
@@ -58,20 +56,20 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		break;
 
 	case ssiSENSOR1_INDEX:
-		debugInt1++;
-		sprintf(pcBuffer,"%d",debugInt1);
+		sensorNivelAgua++;
+		sprintf(pcBuffer,"%d",sensorNivelAgua);
 		//strcpy( pcBuffer, "value1" );
 		break;
 
 	case ssiSENSOR2_INDEX:
-		debugInt2++;
-		sprintf(pcBuffer,"%d",debugInt2);
+		sensorTemperatura++;
+		sprintf(pcBuffer,"%d",sensorTemperatura);
 //		strcpy( pcBuffer, "value2" );
 		break;
 
 	case ssiSENSOR3_INDEX:
-		debugInt3++;
-		sprintf(pcBuffer,"%d",debugInt3);
+		sensorPh++;
+		sprintf(pcBuffer,"%d",sensorPh);
 //		strcpy( pcBuffer, "value3" );
 		break;
 
@@ -92,6 +90,26 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 
 	case ssiALARMA4_INDEX:
 		ptrState = getAlarmState(alarmNum_4);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA1_INDEX:
+		ptrState = getAlarmControl(alarmNum_1);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA2_INDEX:
+		ptrState = getAlarmControl(alarmNum_2);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA3_INDEX:
+		ptrState = getAlarmControl(alarmNum_3);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA4_INDEX:
+		ptrState = getAlarmControl(alarmNum_4);
 		strcpy( pcBuffer, ptrState );
 		break;
 

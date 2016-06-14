@@ -32,25 +32,15 @@
 #ifndef __BOARD_H_
 #define __BOARD_H_
 
+
 #include "chip.h"
+#include "adcs.h"
 /* board_api.h is included at the bottom of this file after DEBUG setup */
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/** @defgroup BOARD_NGX_XPLORER_4330 LPC4330 NGX Xplorer board support software API functions
- * @ingroup LPCOPEN_43XX_BOARD_NGX4330
- * The board support software API functions provide some simple abstracted
- * functions used across multiple LPCOpen board examples. See @ref BOARD_COMMON_API
- * for the functions defined by this board support layer.<br>
- * @{
- */
-
-/** @defgroup BOARD_NGX_XPLORER_4330_OPTIONS BOARD: LPC4330 NGX Xplorer board options
- * This board has options that configure its operation at build-time.<br>
- * @{
- */
 
 /** Define DEBUG_ENABLE to enable IO via the DEBUGSTR, DEBUGOUT, and
     DEBUGIN macros. If not defined, DEBUG* functions will be optimized
@@ -71,12 +61,16 @@ extern "C" {
 #define UARTx_IRQn USART2_IRQn
 #define UARTx_IRQHandler UART2_IRQHandler
 
+
+
+
+
 /**
  * @}
  */
 
 /* Board name */
-#define BOARD_NGX_XPLORER_4330
+//#define BOARD_NGX_XPLORER_4330
 
 /* Build for RMII interface */
 #define USE_RMII
@@ -180,11 +174,13 @@ void Board_ENET_GetMacADDR(uint8_t *mcaddr);
  */
 void Board_UART_Init(LPC_USART_T *pUART);
 
-/**
- * @brief	Initialize pin muxing for SDMMC interface
- * @return	Nothing
- */
-void Board_SDMMC_Init(void);
+//
+///**
+// * @brief	Initialize ADC
+// * @return	Nothing
+// */
+//STATIC INLINE void Board_ADC_Init(void){}
+
 
 /**
  * @brief	Initialize button(s) interface on board
@@ -192,17 +188,6 @@ void Board_SDMMC_Init(void);
  */
 void Board_Buttons_Init(void);
 
-/**
- * @brief	Initialize joystick interface on board
- * @return	Nothing
- */
-void Board_Joystick_Init(void);
-
-/**
- * @brief	Returns joystick states on board
- * @return	Returns a JOY_* value, ir JOY_PRESS or JOY_UP
- */
-uint8_t Joystick_GetStatus(void);
 
 /**
  * @brief	Returns button(s) state on board
@@ -217,15 +202,9 @@ uint32_t Buttons_GetStatus (void);
 
 void Board_Ciaa_Gpios(void);
 
-/**
- * @}
- */
+
+
 
 #include "board_api.h"
-#include "lpc_phy.h"
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* __BOARD_H_ */

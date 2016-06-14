@@ -8,6 +8,8 @@
 #include "include.h"
 #include "lpc_types.h"
 
+#include "board.h"
+
 #include "FreeRTOS.h"
 
 #include "actuators.h"
@@ -18,9 +20,9 @@
 state_t alarmState[4] = {OFF,OFF,OFF,OFF};
 FunctionalState alarmControl[4] = {DISABLE, DISABLE, DISABLE, DISABLE};
 
-extern volatile uint8_t debugInt1;
-extern volatile uint8_t debugInt2;
-extern volatile uint8_t debugInt3;
+extern volatile uint8_t sensorNivelAgua;
+extern volatile uint8_t sensorTemperatura;
+extern volatile uint8_t sensorPh;
 
 
 char* getAlarmState(uint8_t alarmNum){
@@ -55,10 +57,23 @@ void clearAlarmState(uint8_t alarmNum){
 }
 
 
+char* getAlarmControl(uint8_t alarmNum){
 
-void vAlarmHandler(void *pvParameters){
+	char * AlarmControlState;
+
+	//todo: por defecto habilita el control.  REVISAR LA SEGURIDAD
+	if(DISABLE == alarmControl[alarmNum])
+		return AlarmControlState = "DISABLE";
+	else
+		return AlarmControlState = "ENABLE";
+}
+
+
+void vAlarmControl(void *pvParameters){
 
 	volatile portTickType periodo = 1000/portTICK_RATE_MS;
+
+//	volatile uint16_t data0, data1, data2, data3;
 
 	UBaseType_t uxHighWaterMark;
 
@@ -67,25 +82,87 @@ void vAlarmHandler(void *pvParameters){
 
 		portTickType ticks = xTaskGetTickCount();
 
-		if ( debugInt1 >= ALARM1_THRESHOLD ){
+		/*---------------------------------------------*/
+		/*-------------------ALARMA1-------------------*/
+		/*---------------------------------------------*/
+		if ( sensorNivelAgua >= ALARM1_THRESHOLD_MAX ){
 			setAlarmState(alarmNum_1);
 		}
-		else
+		else {
 			clearAlarmState(alarmNum_1);
+		}
 
-		if ( debugInt1 <= ALARM2_THRESHOLD ){
+		/*---------------------------------------------*/
+		/*-------------------ALARMA2-------------------*/
+		/*---------------------------------------------*/
+		if ( sensorNivelAgua <= ALARM2_THRESHOLD_MIN ){
 			setAlarmState(alarmNum_2);
 		}
-		else
+		else {
 			clearAlarmState(alarmNum_2);
+		}
 
+		/*---------------------------------------------*/
+		/*-------------------ALARMA3-------------------*/
+		/*---------------------------------------------*/
+		if ( sensorTemperatura >= ALARM3_THRESHOLD_MAX ){
+			setAlarmState(alarmNum_3);
+		}
+		else if ( sensorTemperatura <= ALARM3_THRESHOLD_MIN ) {
+			setAlarmState(alarmNum_3);
+		}
+		else {
+			clearAlarmState(alarmNum_3);
+		}
 
-		vTaskDelayUntil(&ticks,periodo);
+		/*---------------------------------------------*/
+		/*-------------------ALARMA4-------------------*/
+		/*---------------------------------------------*/
+		if ( sensorPh >= ALARM4_THRESHOLD_MAX ){
+			setAlarmState(alarmNum_4);
+		}
+		else if ( sensorPh <= ALARM4_THRESHOLD_MIN ) {
+			setAlarmState(alarmNum_4);
+		}
+		else {
+			clearAlarmState(alarmNum_4);
+		}
+
+//		data0 = readAdc(adc[0]);
+//		data1 = readAdc(adc[1]);
+//		data2 = readAdc(adc[2]);
+//		data3 = readAdc(ADC_CH3);
+
+//		DEBUGOUT("data0    : %d\r\n", data0);
+//		DEBUGOUT("data1    : %d\r\n", data1);
+//		DEBUGOUT("data2    : %d\r\n", data2);
+//		DEBUGOUT("data3    : %d\r\n", data3);
 
 		/* Inspect our own high water mark on entering the task. */
 		uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );
 
+		vTaskDelayUntil(&ticks,periodo);
+
+
+
 
 	}
 	return;
+}
+
+
+
+
+const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {
+
+	if( strcmp(pcParam[0], "alarma1") == 0)
+	{
+		if ( pcValue[0] == 0 )
+			alarmControl[0] = DISABLE;
+		else
+			alarmControl[0] = ENABLE;
+
+	};
+
+	return "/index.shtml";
 }

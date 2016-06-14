@@ -132,6 +132,15 @@ table td.alarmaRojo {
     color:black;
 }
 
+table td.alarmaAmarillo {
+    padding: 15px;
+    text-align: center;
+    height: 2.5em;
+    width:6em;
+    background-color:yellow;
+    color:black;
+}
+
 
 /*------------------------------*/
 /*  Table class sensores	*/
