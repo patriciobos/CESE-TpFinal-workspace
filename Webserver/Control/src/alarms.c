@@ -155,14 +155,24 @@ void vAlarmControl(void *pvParameters){
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {
 
-	if( strcmp(pcParam[0], "alarma1") == 0)
-	{
-		if ( pcValue[0] == 0 )
-			alarmControl[0] = DISABLE;
-		else
-			alarmControl[0] = ENABLE;
+	uint8_t index;
+	char tmpBuff[8];
 
-	};
+	for(index = 0; index < ALARMS_NUMBER; index ++){
+
+		sprintf(tmpBuff, "alarma%u", index+1);
+
+		if( strncmp(pcParam[index], tmpBuff, 7) == 0)
+		{
+			if( strcmp(pcValue[index], "disable") == 0)
+				alarmControl[index] = DISABLE;
+			else if( strcmp(pcValue[index], "enable") == 0)
+				alarmControl[index] = ENABLE;
+
+		};
+
+	}
+
 
 	return "/index.shtml";
 }

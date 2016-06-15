@@ -115,7 +115,7 @@
 <div id="div_alarmas" class="inner_alarmas">
 <h2>ALARMAS</h2>
 
-  <form name="alarmas" action="alarmas.cgi" method="get">
+  <form name="alarmas" id="formAlarmas" action="alarmas.cgi" method="get" onsubmit="controlCheckbox()">
 
     <table id="tabla_alarmas" class="actuadores">
       <tr>
@@ -126,29 +126,43 @@
       <tr>
         <td>Nivel de Agua <br /> ALTO</td>
         <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
-        <td><input type="checkbox" id="alarmControl1" name="alarma1" value="0" onChange="this.form.submit()"></td>
+        <td><input type="checkbox" id="alarmControl1" name="alarma1" value="enable" >
+            <input type="hidden"   id="alarmControl1Hidden" name="alarma1" value="disable" ></td>
       </tr>
       <tr>
         <td>Nivel de Agua <br /> BAJO</td>
         <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
-        <td><input type="checkbox" id="alarmControl2" name="alarma2" value="0" onChange="this.form.submit()"></td>
+        <td><input type="checkbox" id="alarmControl2" name="alarma2" value="enable" >
+            <input type="hidden"   id="alarmControl2Hidden" name="alarma2" value="disable" ></td>
       </tr>
       <tr>
         <td>Temperatura</td>
         <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
-        <td><input type="checkbox" id="alarmControl3" name="alarma3" value="0" onChange="this.form.submit()"></td>
+        <td><input type="checkbox" id="alarmControl3" name="alarma3" value="enable" >
+            <input type="hidden"   id="alarmControl3Hidden" name="alarma3" value="disable" ></td>
       </tr>
       <tr>
         <td>pH</td>
         <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
-        <td><input type="checkbox" id="alarmControl4" name="alarma4" value="0" onChange="this.form.submit()"></td>
+        <td><input type="checkbox" id="alarmControl4" name="alarma4" value="enable" >
+            <input type="hidden"   id="alarmControl4Hidden" name="alarma4" value="disable" ></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td><input type="submit" name="controlAlarmas" id="controlAlarmas" class="button5" value="APLICAR" /></td>
       </tr>
     </table>
+
+
 
   </form>
 
 </div>
 </div>
+
+<!-- onChange="this.form.submit()"-->
+<!-- onclick="controlCheckbox()"-->
 
 <!-- ------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------ -->

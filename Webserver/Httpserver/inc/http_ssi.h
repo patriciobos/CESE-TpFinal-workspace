@@ -49,10 +49,10 @@ static const char *pccSSITags[] =
 	"alarma2",
 	"alarma3",
 	"alarma4",
-	"controlAlarma1",
-	"controlAlarma2",
-	"controlAlarma3",
-	"controlAlarma4"
+	"ctrlAlrm1",
+	"ctrlAlrm2",
+	"ctrlAlrm3",
+	"ctrlAlrm4"
 };
 
 

@@ -14,6 +14,8 @@ enum {alarmNum_1 = 0,
 	  alarmNum_4
 };
 
+#define ALARMS_NUMBER  4
+
 #define ALARM1_THRESHOLD_MAX 15
 #define ALARM2_THRESHOLD_MIN 10
 #define ALARM3_THRESHOLD_MAX 22

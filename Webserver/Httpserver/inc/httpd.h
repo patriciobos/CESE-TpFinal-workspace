@@ -164,12 +164,12 @@ void http_set_ssi_handler(tSSIHandler pfnSSIHandler,
 
 /* The maximum length of the string comprising the tag name */
 #ifndef LWIP_HTTPD_MAX_TAG_NAME_LEN
-#define LWIP_HTTPD_MAX_TAG_NAME_LEN 8
+#define LWIP_HTTPD_MAX_TAG_NAME_LEN 10 													/* <- 8 */
 #endif
 
 /* The maximum length of string that can be returned to replace any given tag */
 #ifndef LWIP_HTTPD_MAX_TAG_INSERT_LEN
-#define LWIP_HTTPD_MAX_TAG_INSERT_LEN 192
+#define LWIP_HTTPD_MAX_TAG_INSERT_LEN 64												/* <- 192 */
 #endif
 
 #endif /* LWIP_HTTPD_SSI */
