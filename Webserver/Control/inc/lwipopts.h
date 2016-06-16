@@ -77,7 +77,7 @@
 #define MEM_SIZE                        (24 * 1024)
 #endif
 
-#define MEM_SIZE                        (24 * 1024)
+#define MEM_SIZE                        (6 * 1024)
 
 /* Raw interface not needed */
 #define LWIP_RAW                        1

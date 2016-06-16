@@ -78,7 +78,7 @@
 #define configMINIMAL_STACK_SIZE		( ( unsigned short ) 256 ) 		/* <--- 256 */
 #define configAlarmControl_STACK_SIZE	( ( unsigned short ) 64 )		//task stack debug
 
-#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 32*1024 ) )
+#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 40*1024 ) )
 
 #define configMAX_TASK_NAME_LEN			( 20 )
 #define configUSE_TRACE_FACILITY		1

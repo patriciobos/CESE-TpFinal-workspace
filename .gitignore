@@ -41,3 +41,5 @@
 .metadata/**
 
 *.*~
+*.save
+**/Debug/*
