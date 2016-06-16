@@ -9,12 +9,14 @@
 #define INC_ACTUATORS_H_
 
 
-enum {portNum_1 = 0,
-	  portNum_2,
-	  portNum_3,
-	  portNum_4
+enum {
+	portNum_0 = 0,
+	portNum_1,
+	portNum_2,
+	portNum_3
 };
 
+#define ACTUATORs_NUMBER 4
 
 char* getActuatorState(int portNum);
 

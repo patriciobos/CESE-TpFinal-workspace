@@ -24,8 +24,8 @@ extern volatile uint8_t sensorNivelAgua;
 extern volatile uint8_t sensorTemperatura;
 extern volatile uint8_t sensorPh;
 
-extern volatile uint32_t sensorValue[];
-extern volatile uint32_t sensorLimit[];
+extern uint8_t sensorValue[];
+extern uint8_t sensorLimit[];
 
 char* getAlarmState(uint8_t alarmNum){
 

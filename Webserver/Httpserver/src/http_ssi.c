@@ -8,9 +8,8 @@
 #include "string.h"
 #include "lpc_types.h"
 
-#include "http_ssi.h"
-
 #include "httpd.h"
+#include "http_ssi.h"
 
 #include "sensors.h"
 #include "alarms.h"
@@ -20,6 +19,8 @@
 extern volatile uint8_t sensorNivelAgua;
 extern volatile uint8_t sensorTemperatura;
 extern volatile uint8_t sensorPh;
+
+extern uint8_t sensorValue[];
 
 uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 {
@@ -34,6 +35,11 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 
 	switch( iIndex )
 	{
+
+	case ssiACT0_INDEX:
+		ptrState = getActuatorState(portNum_0);
+		strcpy( pcBuffer, ptrState );
+		break;
 
 	case ssiACT1_INDEX:
 		ptrState = getActuatorState(portNum_1);
@@ -50,27 +56,19 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		strcpy( pcBuffer, ptrState );
 		break;
 
-	case ssiACT4_INDEX:
-		ptrState = getActuatorState(portNum_4);
-		strcpy( pcBuffer, ptrState );
+	case ssiSENSOR0_INDEX:
+		sensorPh++;
+		sprintf(pcBuffer,"%u",sensorValue[0]);
 		break;
 
 	case ssiSENSOR1_INDEX:
 		sensorNivelAgua++;
-		sprintf(pcBuffer,"%d",sensorNivelAgua);
-		//strcpy( pcBuffer, "value1" );
+		sprintf(pcBuffer,"%u",sensorValue[1]);
 		break;
 
 	case ssiSENSOR2_INDEX:
 		sensorTemperatura++;
-		sprintf(pcBuffer,"%d",sensorTemperatura);
-//		strcpy( pcBuffer, "value2" );
-		break;
-
-	case ssiSENSOR3_INDEX:
-		sensorPh++;
-		sprintf(pcBuffer,"%d",sensorPh);
-//		strcpy( pcBuffer, "value3" );
+		sprintf(pcBuffer,"%u",sensorValue[2]);
 		break;
 
 	case ssiALARMA0_INDEX:

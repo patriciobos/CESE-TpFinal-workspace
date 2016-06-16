@@ -82,23 +82,23 @@
   </tr>
   <tr>
     <td>Bomba de Agua <br />ENTRADA</td>
-    <td id="state1"  ><!--act1--></td>
-    <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="DETENER"/></td>
+    <td id="state0"  ><!--act0--></td>
+    <td><input type="submit" name="cmd0" id="actuador0" class="button5" value="DETENER"/></td>
   </tr>
   <tr>
     <td>Bomba de Agua <br />SALIDA</td>
+    <td id="state1" ><!--act1--></td>
+    <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="INICIAR"/></td>
+  </tr>
+  <tr>
+    <td>CALEFACTOR</td>
     <td id="state2" ><!--act2--></td>
     <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
   </tr>
   <tr>
-    <td>CALEFACTOR</td>
+    <td>Bomba de CO2</td>
     <td id="state3" ><!--act3--></td>
     <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
-  </tr>
-  <tr>
-    <td>Bomba de CO2</td>
-    <td id="state4" ><!--act4--></td>
-    <td><input type="submit" name="cmd4" id="actuador4" class="button5" value="INICIAR"/></td>
   </tr>
 </table>
 

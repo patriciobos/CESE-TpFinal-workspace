@@ -18,15 +18,6 @@ enum {alarmNum_0 = 0,
 
 #define ALARMs_NUMBER  6
 
-#define ALARM0_THRESHOLD 15
-#define ALARM1_THRESHOLD 15
-#define ALARM2_THRESHOLD 10
-#define ALARM3_THRESHOLD 22
-#define ALARM4_THRESHOLD 18
-#define ALARM5_THRESHOLD 8
-
-
-//typedef enum alarmControl {DISABLE = 0, ENABLE = !DISABLE} alarmControl_t;
 
 char* getAlarmState(uint8_t alarmNum);
 

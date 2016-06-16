@@ -102,15 +102,15 @@ function refreshActuadores( actuadores ) {
 
   for (i=0; i < actuadores.length; i++){
 
-    document.getElementById("state" + (i+1) ).innerHTML = actuadores[i];
+    document.getElementById("state" + i ).innerHTML = actuadores[i];
 
-    if ( actuadores[i] == "<!--#act" + (i+1) + "-->ENCENDIDO" ) {
-      document.getElementById("actuador" + (i+1) ).value = "DETENER";
-      document.getElementById("state" + (i+1) ).className = "actuadorVerde";
+    if ( actuadores[i] == "<!--#act" + i + "-->ENCENDIDO" ) {
+      document.getElementById("actuador" + i ).value = "DETENER";
+      document.getElementById("state" + i ).className = "actuadorVerde";
     }
     else {
-      document.getElementById("actuador" + (i+1) ).value = "INICIAR";
-      document.getElementById("state" + (i+1) ).className = "actuadorRojo";
+      document.getElementById("actuador" + i ).value = "INICIAR";
+      document.getElementById("state" + i ).className = "actuadorRojo";
     }
   }
 

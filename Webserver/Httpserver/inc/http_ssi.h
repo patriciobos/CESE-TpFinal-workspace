@@ -16,13 +16,13 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength );
 /* Definitions of the various SSI callback functions within the pccSSITags
 array.  If pccSSITags is updated, then these definitions must also be updated. */
 enum {
-	ssiACT1_INDEX = 0,
+	ssiACT0_INDEX = 0,
+	ssiACT1_INDEX,
 	ssiACT2_INDEX,
 	ssiACT3_INDEX,
-	ssiACT4_INDEX,
+	ssiSENSOR0_INDEX,
 	ssiSENSOR1_INDEX,
 	ssiSENSOR2_INDEX,
-	ssiSENSOR3_INDEX,
 	ssiALARMA0_INDEX,
 	ssiALARMA1_INDEX,
 	ssiALARMA2_INDEX,
@@ -43,13 +43,13 @@ is changed, then the index position defined by the #defines such as
 ssiACT1_INDEX above must also be updated. */
 static const char *pccSSITags[] =
 {
+	"act0",
 	"act1",
 	"act2",
 	"act3",
-	"act4",
+	"sensor0",
 	"sensor1",
 	"sensor2",
-	"sensor3",
 	"alarma0",
 	"alarma1",
 	"alarma2",
