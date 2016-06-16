@@ -73,6 +73,11 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 //		strcpy( pcBuffer, "value3" );
 		break;
 
+	case ssiALARMA0_INDEX:
+		ptrState = getAlarmState(alarmNum_0);
+		strcpy( pcBuffer, ptrState );
+		break;
+
 	case ssiALARMA1_INDEX:
 		ptrState = getAlarmState(alarmNum_1);
 		strcpy( pcBuffer, ptrState );
@@ -93,6 +98,16 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		strcpy( pcBuffer, ptrState );
 		break;
 
+	case ssiALARMA5_INDEX:
+		ptrState = getAlarmState(alarmNum_5);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA0_INDEX:
+		ptrState = getAlarmControl(alarmNum_0);
+		strcpy( pcBuffer, ptrState );
+		break;
+
 	case ssiCONTROL_ALARMA1_INDEX:
 		ptrState = getAlarmControl(alarmNum_1);
 		strcpy( pcBuffer, ptrState );
@@ -110,6 +125,11 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 
 	case ssiCONTROL_ALARMA4_INDEX:
 		ptrState = getAlarmControl(alarmNum_4);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiCONTROL_ALARMA5_INDEX:
+		ptrState = getAlarmControl(alarmNum_5);
 		strcpy( pcBuffer, ptrState );
 		break;
 

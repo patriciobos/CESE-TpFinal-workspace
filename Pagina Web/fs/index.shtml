@@ -49,15 +49,15 @@
   </tr>
   <tr>
     <td>Nivel de Agua</td>
-    <td id= "sensor1" ><!--sensor1--></td>
+    <td id= "sensor0" ><!--sensor1--></td>
   </tr>
   <tr>
     <td>Temperatura</td>
-    <td id= "sensor2" ><!--sensor2--></td>
+    <td id= "sensor1" ><!--sensor2--></td>
   </tr>
   <tr>
     <td>pH</td>
-    <td id= "sensor3" ><!--sensor3--></td>
+    <td id= "sensor2" ><!--sensor3--></td>
   </tr>
 
 </table>
@@ -125,27 +125,39 @@
       </tr>
       <tr>
         <td>Nivel de Agua <br /> ALTO</td>
+        <td id="alarm0" clase="alarmaVerde"><!--alarma0--></td>
+        <td><input type="checkbox" id="alarmControl0" name="alarma0" value="enable" >
+            <input type="hidden"   id="alarmControl0Hidden" name="alarma0" value="disable" ></td>
+      </tr>
+      <tr>
+        <td>Nivel de Agua <br /> BAJO</td>
         <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
         <td><input type="checkbox" id="alarmControl1" name="alarma1" value="enable" >
             <input type="hidden"   id="alarmControl1Hidden" name="alarma1" value="disable" ></td>
       </tr>
       <tr>
-        <td>Nivel de Agua <br /> BAJO</td>
+        <td>Temperatura <br /> ALTA</td>
         <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
         <td><input type="checkbox" id="alarmControl2" name="alarma2" value="enable" >
             <input type="hidden"   id="alarmControl2Hidden" name="alarma2" value="disable" ></td>
       </tr>
       <tr>
-        <td>Temperatura</td>
+        <td>Temperatura <br /> BAJA</td>
         <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
         <td><input type="checkbox" id="alarmControl3" name="alarma3" value="enable" >
             <input type="hidden"   id="alarmControl3Hidden" name="alarma3" value="disable" ></td>
       </tr>
       <tr>
-        <td>pH</td>
+        <td>pH <br /> ALTO</td>
         <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
         <td><input type="checkbox" id="alarmControl4" name="alarma4" value="enable" >
             <input type="hidden"   id="alarmControl4Hidden" name="alarma4" value="disable" ></td>
+      </tr>
+      <tr>
+        <td>pH <br /> BAJA</td>
+        <td id="alarm5" clase="alarmaVerde"><!--alarma5--></td>
+        <td><input type="checkbox" id="alarmControl5" name="alarma5" value="enable" >
+            <input type="hidden"   id="alarmControl5Hidden" name="alarma5" value="disable" ></td>
       </tr>
       <tr>
         <td> </td>

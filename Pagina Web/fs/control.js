@@ -4,12 +4,16 @@ window.onload = function() {
 };
 
 var data_received = 0;
-var timeOutEnable = 1;
+
+var actuadores = new Array(4);
+var sensores = new Array(3);
+var estadoAlarmas = new Array(6);
+var controlAlarmas = new Array(6);
+
 
 function loop() {
 	if( !data_received )
 		makeRequest("ajax.shtml");
-  if(timeOutEnable == 1)
     setTimeout("loop()",2000);
 }
 
@@ -52,165 +56,118 @@ function parse_vars( data ) {
 
   var parsed = data.split('\n');
 
-  parseActuadores(parsed);
+  var i, index;
 
-  parseSensores(parsed);
+  for (i=0; i < actuadores.length; i++ ) {
 
-  parseAlarmas(parsed);
+    actuadores[i] = parsed[i];
+
+  }
+
+  index = actuadores.length;
+
+  for (i=0; i < sensores.length; i++ ) {
+
+    sensores[i] = parsed[i+index];
+
+  }
+
+  index += sensores.length;
+
+  for (i=0; i < estadoAlarmas.length; i++ ) {
+
+    estadoAlarmas[i] = parsed[i+index];
+
+  }
+
+  index += estadoAlarmas.length;
+
+  for (i=0; i < controlAlarmas.length; i++ ) {
+
+    controlAlarmas[i] = parsed[i+index];
+
+  }
+
+  refreshActuadores(actuadores);
+
+  refreshSensores(sensores);
+
+  refreshAlarmas(estadoAlarmas,controlAlarmas);
 
 }
 
-function parseActuadores( parsed ) {
+function refreshActuadores( actuadores ) {
 
-  document.getElementById("state1").innerHTML = parsed[0];
+  var i;
 
-  if ( parsed[0] == "<!--#act1-->ENCENDIDO" ) {
-    document.getElementById("actuador1").value = "DETENER";
-    document.getElementById("state1").className = "actuadorVerde";
-  }
-  else {
-    document.getElementById("actuador1").value = "INICIAR";
-    document.getElementById("state1").className = "actuadorRojo";
-  }
+  for (i=0; i < actuadores.length; i++){
 
-  document.getElementById("state2").innerHTML = parsed[1];
+    document.getElementById("state" + (i+1) ).innerHTML = actuadores[i];
 
-  if ( parsed[1] == "<!--#act2-->ENCENDIDO" ) {
-    document.getElementById("actuador2").value = "DETENER";
-    document.getElementById("state2").className = "actuadorVerde";
-  }
-  else {
-    document.getElementById("actuador2").value = "INICIAR";
-    document.getElementById("state2").className = "actuadorRojo";
-  }
-
-  document.getElementById("state3").innerHTML = parsed[2];
-
-  if ( parsed[2] == "<!--#act3-->ENCENDIDO" ) {
-    document.getElementById("actuador3").value = "DETENER";
-    document.getElementById("state3").className = "actuadorVerde";
-  }
-  else {
-    document.getElementById("actuador3").value = "INICIAR";
-    document.getElementById("state3").className = "actuadorRojo";
-  }
-
-  document.getElementById("state4").innerHTML = parsed[3];
-
-  if ( parsed[3] == "<!--#act4-->ENCENDIDO" ) {
-    document.getElementById("actuador4").value = "DETENER";
-    document.getElementById("state4").className = "actuadorVerde";
-  }
-  else {
-    document.getElementById("actuador4").value = "INICIAR";
-    document.getElementById("state4").className = "actuadorRojo";
+    if ( actuadores[i] == "<!--#act" + (i+1) + "-->ENCENDIDO" ) {
+      document.getElementById("actuador" + (i+1) ).value = "DETENER";
+      document.getElementById("state" + (i+1) ).className = "actuadorVerde";
+    }
+    else {
+      document.getElementById("actuador" + (i+1) ).value = "INICIAR";
+      document.getElementById("state" + (i+1) ).className = "actuadorRojo";
+    }
   }
 
 }
 
-function parseSensores( parsed ) {
+function refreshSensores( sensores ) {
 
-  document.getElementById("sensor1").innerHTML = parsed[4];
-  document.getElementById("sensor2").innerHTML = parsed[5];
-  document.getElementById("sensor3").innerHTML = parsed[6];
+  var i;
+
+  for (i=0; i < sensores.length; i++) {
+
+    document.getElementById("sensor" + i ).innerHTML = sensores[i];
+  }
+
 }
 
-function  parseAlarmas( parsed ) {
+function  refreshAlarmas( estadoAlarmas, controlAlarmas ) {
 
-  if ( parsed[11] == "<!--#ctrlAlrm1-->DISABLE" ) {
-    document.getElementById("alarm1").innerHTML  = "-";
-    document.getElementById("alarm1").className = "alarmaAmarillo";
-  }
-  else if (parsed[11] == "<!--#ctrlAlrm1-->ENABLE") {
-    document.getElementById("alarm1").innerHTML  = parsed[7];
+  var i;
 
-    if ( parsed[7] == "<!--#alarma1-->NORMAL" ) {
-      document.getElementById("alarm1").className = "alarmaVerde";
+  for (i=0; i < estadoAlarmas.length; i++) {
+
+    if ( controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->DISABLE" ) {
+    document.getElementById("alarm" + i).innerHTML  = "-";
+    document.getElementById("alarm" + i).className = "alarmaAmarillo";
+    }
+    else if (controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->ENABLE") {
+      document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
+
+      if ( estadoAlarmas[i] == "<!--#alarma" + i + "-->NORMAL" ) {
+        document.getElementById("alarm" + i).className = "alarmaVerde";
+      }
+      else {
+       document.getElementById("alarm" + i).className = "alarmaRojo";
+      }
     }
     else {
-     document.getElementById("alarm1").className = "alarmaRojo";
+      document.getElementById("alarm" + i).innerHTML  = ""
+      document.getElementById("alarm" + i).className = "alarmaRojo";
     }
+
   }
-  else
-    //document.getElementById("alarm1").innerHTML  = "-";
-    document.getElementById("alarm1").className = "alarmaRojo";
-
-  /*------------------------------------------------------------*/
-
-  if ( parsed[12] == "<!--#ctrlAlrm2-->DISABLE" ) {
-    document.getElementById("alarm2").innerHTML  = "-";
-    document.getElementById("alarm2").className = "alarmaAmarillo";
-  }
-  else if (parsed[12] == "<!--#ctrlAlrm2-->ENABLE") {
-    document.getElementById("alarm2").innerHTML  = parsed[8];
-
-    if ( parsed[8] == "<!--#alarma2-->NORMAL" ) {
-      document.getElementById("alarm2").className = "alarmaVerde";
-    }
-    else {
-     document.getElementById("alarm2").className = "alarmaRojo";
-    }
-  }
-  else
-    document.getElementById("alarm2").className = "alarmaRojo";
-
-  /*------------------------------------------------------------*/
-
-  if ( parsed[13] == "<!--#ctrlAlrm3-->DISABLE" ) {
-    document.getElementById("alarm3").innerHTML  = "-";
-    document.getElementById("alarm3").className = "alarmaAmarillo";
-  }
-  else if (parsed[13] == "<!--#ctrlAlrm3-->ENABLE") {
-    document.getElementById("alarm3").innerHTML  = parsed[9];
-
-    if ( parsed[9] == "<!--#alarma3-->NORMAL" ) {
-      document.getElementById("alarm3").className = "alarmaVerde";
-    }
-    else {
-     document.getElementById("alarm3").className = "alarmaRojo";
-    }
-  }
-  else
-    document.getElementById("alarm3").className = "alarmaRojo";
-
-  /*------------------------------------------------------------*/
-
-  if ( parsed[14] == "<!--#ctrlAlrm4-->DISABLE" ) {
-    document.getElementById("alarm4").innerHTML  = "-";
-    document.getElementById("alarm4").className = "alarmaAmarillo";
-  }
-  else if (parsed[14] == "<!--#ctrlAlrm4-->ENABLE") {
-    document.getElementById("alarm4").innerHTML  = parsed[10];
-
-    if ( parsed[10] == "<!--#alarma4-->NORMAL" ) {
-      document.getElementById("alarm4").className = "alarmaVerde";
-    }
-    else {
-     document.getElementById("alarm4").className = "alarmaRojo";
-    }
-  }
-  else
-    document.getElementById("alarm4").className = "alarmaRojo";
-
-  /*------------------------------------------------------------*/
 
 }
 
 function controlCheckbox( ) {
 
+  var i;
+
   saveCheckboxes();
 
-  if(document.getElementById("alarmControl1").checked)
-    document.getElementById("alarmControl1Hidden").disabled = true;
+  for (i=0; i < controlAlarmas.length; i++) {
 
-  if(document.getElementById("alarmControl2").checked)
-    document.getElementById("alarmControl2Hidden").disabled = true;
+    if(document.getElementById("alarmControl" + i).checked)
+      document.getElementById("alarmControl" + i + "Hidden").disabled = true;
+  }
 
-  if(document.getElementById("alarmControl3").checked)
-    document.getElementById("alarmControl3Hidden").disabled = true;
-
-  if(document.getElementById("alarmControl4").checked)
-    document.getElementById("alarmControl4Hidden").disabled = true;
 }
 
 
@@ -232,38 +189,27 @@ function changebuttonClasses(elem) {
 
 function saveCheckboxes(){
 
-  var checkbox = document.getElementById("alarmControl1");
-  sessionStorage.setItem("alarmControl1", checkbox.checked);
+  var i;
+  var checkbox;
 
-  checkbox = document.getElementById("alarmControl2");
-  sessionStorage.setItem("alarmControl2", checkbox.checked);
+  for (i=0; i < controlAlarmas.length; i++) {
 
-  checkbox = document.getElementById("alarmControl3");
-  sessionStorage.setItem("alarmControl3", checkbox.checked);
-
-  checkbox = document.getElementById("alarmControl4");
-  sessionStorage.setItem("alarmControl4", checkbox.checked);
+    checkbox = document.getElementById("alarmControl" + i);
+    sessionStorage.setItem("alarmControl" + i, checkbox.checked);
+  }
 }
 
 function loadCheckboxes(){
 
-  var checked1 = JSON.parse(sessionStorage.getItem("alarmControl1"));
-  document.getElementById("alarmControl1").checked = checked1;
+  var i;
+  var checkbox;
 
-  var checked2 = JSON.parse(sessionStorage.getItem("alarmControl2"));
-  document.getElementById("alarmControl2").checked = checked2;
+  for (i=0; i < controlAlarmas.length; i++) {
 
-  var checked3 = JSON.parse(sessionStorage.getItem("alarmControl3"));
-  document.getElementById("alarmControl3").checked = checked3;
+    checkbox = JSON.parse(sessionStorage.getItem("alarmControl" + i));
+    document.getElementById("alarmControl" + i).checked = checkbox;
 
-  var checked4 = JSON.parse(sessionStorage.getItem("alarmControl4"));
-  document.getElementById("alarmControl4").checked = checked4;
-
-  /*
-  if ( !firstLoad ) {
-    document.getElementById("formAlarmas").submit();
-    firstLoad = 1;
   }
-  */
+
 }
 

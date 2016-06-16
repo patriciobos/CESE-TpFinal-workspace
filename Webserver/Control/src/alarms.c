@@ -17,13 +17,15 @@
 #include "alarms.h"
 
 
-state_t alarmState[4] = {OFF,OFF,OFF,OFF};
-FunctionalState alarmControl[4] = {DISABLE, DISABLE, DISABLE, DISABLE};
+state_t alarmState[ALARMs_NUMBER];
+FunctionalState alarmControl[ALARMs_NUMBER];
 
 extern volatile uint8_t sensorNivelAgua;
 extern volatile uint8_t sensorTemperatura;
 extern volatile uint8_t sensorPh;
 
+extern volatile uint32_t sensorValue[];
+extern volatile uint32_t sensorLimit[];
 
 char* getAlarmState(uint8_t alarmNum){
 
@@ -74,6 +76,14 @@ void vAlarmControl(void *pvParameters){
 	volatile portTickType periodo = 1000/portTICK_RATE_MS;
 
 //	volatile uint16_t data0, data1, data2, data3;
+	uint8_t i;
+
+	/*inicialización del estado y del control de las alarmas*/
+	for (i=0; i < ALARMs_NUMBER; i++) {
+
+		alarmState[i]= OFF;
+		alarmControl[i] = DISABLE;
+	}
 
 	UBaseType_t uxHighWaterMark;
 
@@ -82,51 +92,24 @@ void vAlarmControl(void *pvParameters){
 
 		portTickType ticks = xTaskGetTickCount();
 
-		/*---------------------------------------------*/
-		/*-------------------ALARMA1-------------------*/
-		/*---------------------------------------------*/
-		if ( sensorNivelAgua >= ALARM1_THRESHOLD_MAX ){
-			setAlarmState(alarmNum_1);
-		}
-		else {
-			clearAlarmState(alarmNum_1);
+		for (i=0; i < SENSORs_NUMBER; i++) {
+
+			if ( sensorValue[i] > sensorLimit[2*i] ){
+				setAlarmState(2*i);
+			}
+			else {
+				clearAlarmState(2*i);
+			}
+
+			if ( sensorValue[i] < sensorLimit[(2*i)+1] ){
+				setAlarmState((2*i)+1);
+			}
+			else {
+				clearAlarmState((2*i)+1);
+			}
+
 		}
 
-		/*---------------------------------------------*/
-		/*-------------------ALARMA2-------------------*/
-		/*---------------------------------------------*/
-		if ( sensorNivelAgua <= ALARM2_THRESHOLD_MIN ){
-			setAlarmState(alarmNum_2);
-		}
-		else {
-			clearAlarmState(alarmNum_2);
-		}
-
-		/*---------------------------------------------*/
-		/*-------------------ALARMA3-------------------*/
-		/*---------------------------------------------*/
-		if ( sensorTemperatura >= ALARM3_THRESHOLD_MAX ){
-			setAlarmState(alarmNum_3);
-		}
-		else if ( sensorTemperatura <= ALARM3_THRESHOLD_MIN ) {
-			setAlarmState(alarmNum_3);
-		}
-		else {
-			clearAlarmState(alarmNum_3);
-		}
-
-		/*---------------------------------------------*/
-		/*-------------------ALARMA4-------------------*/
-		/*---------------------------------------------*/
-		if ( sensorPh >= ALARM4_THRESHOLD_MAX ){
-			setAlarmState(alarmNum_4);
-		}
-		else if ( sensorPh <= ALARM4_THRESHOLD_MIN ) {
-			setAlarmState(alarmNum_4);
-		}
-		else {
-			clearAlarmState(alarmNum_4);
-		}
 
 //		data0 = readAdc(adc[0]);
 //		data1 = readAdc(adc[1]);
@@ -158,9 +141,9 @@ const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcV
 	uint8_t index;
 	char tmpBuff[8];
 
-	for(index = 0; index < ALARMS_NUMBER; index ++){
+	for(index = 0; index < ALARMs_NUMBER; index ++){
 
-		sprintf(tmpBuff, "alarma%u", index+1);
+		sprintf(tmpBuff, "alarma%u", index);
 
 		if( strncmp(pcParam[index], tmpBuff, 7) == 0)
 		{

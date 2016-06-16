@@ -15,22 +15,27 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength );
 
 /* Definitions of the various SSI callback functions within the pccSSITags
 array.  If pccSSITags is updated, then these definitions must also be updated. */
-#define ssiACT1_INDEX			0
-#define ssiACT2_INDEX			1
-#define ssiACT3_INDEX			2
-#define ssiACT4_INDEX			3
-#define ssiSENSOR1_INDEX		4
-#define ssiSENSOR2_INDEX		5
-#define ssiSENSOR3_INDEX		6
-#define ssiALARMA1_INDEX		7
-#define ssiALARMA2_INDEX		8
-#define ssiALARMA3_INDEX		9
-#define ssiALARMA4_INDEX		10
-#define ssiCONTROL_ALARMA1_INDEX		11
-#define ssiCONTROL_ALARMA2_INDEX		12
-#define ssiCONTROL_ALARMA3_INDEX		13
-#define ssiCONTROL_ALARMA4_INDEX		14
-
+enum {
+	ssiACT1_INDEX = 0,
+	ssiACT2_INDEX,
+	ssiACT3_INDEX,
+	ssiACT4_INDEX,
+	ssiSENSOR1_INDEX,
+	ssiSENSOR2_INDEX,
+	ssiSENSOR3_INDEX,
+	ssiALARMA0_INDEX,
+	ssiALARMA1_INDEX,
+	ssiALARMA2_INDEX,
+	ssiALARMA3_INDEX,
+	ssiALARMA4_INDEX,
+	ssiALARMA5_INDEX,
+	ssiCONTROL_ALARMA0_INDEX,
+	ssiCONTROL_ALARMA1_INDEX,
+	ssiCONTROL_ALARMA2_INDEX,
+	ssiCONTROL_ALARMA3_INDEX,
+	ssiCONTROL_ALARMA4_INDEX,
+	ssiCONTROL_ALARMA5_INDEX
+};
 
 
 /* The SSI strings that are embedded in the served html files.  If this array
@@ -45,14 +50,18 @@ static const char *pccSSITags[] =
 	"sensor1",
 	"sensor2",
 	"sensor3",
+	"alarma0",
 	"alarma1",
 	"alarma2",
 	"alarma3",
 	"alarma4",
+	"alarma5",
+	"ctrlAlrm0",
 	"ctrlAlrm1",
 	"ctrlAlrm2",
 	"ctrlAlrm3",
-	"ctrlAlrm4"
+	"ctrlAlrm4",
+	"ctrlAlrm5"
 };
 
 
