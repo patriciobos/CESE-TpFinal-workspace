@@ -101,7 +101,7 @@ function refreshActuadores( actuadores ) {
 
   for (i=0; i < actuadores.length; i++){
 
-    document.getElementById("state" + i ).innerHTML = actuadores[i];
+    //document.getElementById("state" + i ).innerHTML = actuadores[i];
 
     if ( actuadores[i] == "<!--#act" + i + "-->ENCENDIDO" ) {
       //document.getElementById("actuador" + i ).value = "DETENER";
@@ -134,10 +134,10 @@ function  refreshAlarmas( estadoAlarmas, controlAlarmas ) {
 
     if ( controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->DISABLE" ) {
     document.getElementById("alarm" + i).innerHTML  = "-";
-    document.getElementById("alarm" + i).className = "alarmaAmarillo";
+    //document.getElementById("alarm" + i).className = "alarmaAmarillo";
     }
     else if (controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->ENABLE") {
-      document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
+      //document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
 
       if ( estadoAlarmas[i] == "<!--#alarma" + i + "-->NORMAL" ) {
         document.getElementById("alarm" + i).className = "alarmaVerde";

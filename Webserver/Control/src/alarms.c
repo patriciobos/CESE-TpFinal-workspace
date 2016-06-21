@@ -157,5 +157,5 @@ const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcV
 	}
 
 
-	return "/index.shtml";
+	return "/control.shtml";
 }

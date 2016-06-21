@@ -49,38 +49,6 @@ const char *actuatorsHandler(int iIndex, int iNumParams, char *pcParam[], char *
 		}
 	}
 
-//	if( strcmp(pcParam[0], "cmd1") == 0)
-//	{
-//		if( strcmp(pcValue[0], "INICIAR") == 0)
-//			actuatorState[0] = ON;
-//		else if ( strcmp(pcValue[0], "DETENER") == 0)
-//			actuatorState[0] = OFF;
-//	}
-//
-//	if( strcmp(pcParam[0], "cmd2") == 0)
-//	{
-//		if( strcmp(pcValue[0], "INICIAR") == 0)
-//			actuatorState[1] = ON;
-//		else if ( strcmp(pcValue[0], "DETENER") == 0)
-//			actuatorState[1] = OFF;
-//	}
-//
-//	if( strcmp(pcParam[0], "cmd3") == 0)
-//	{
-//		if( strcmp(pcValue[0], "INICIAR") == 0)
-//			actuatorState[2] = ON;
-//		else if ( strcmp(pcValue[0], "DETENER") == 0)
-//			actuatorState[2] = OFF;
-//	}
-//
-//	if( strcmp(pcParam[0], "cmd4") == 0)
-//	{
-//		if( strcmp(pcValue[0], "INICIAR") == 0)
-//			actuatorState[3] = ON;
-//		else if ( strcmp(pcValue[0], "DETENER") == 0)
-//			actuatorState[3] = OFF;
-//	}
-
-	return "/index.shtml";
+	return "/control.shtml";
 }
 

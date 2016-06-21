@@ -1,192 +1,200 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 
-<head>
+  <head>
 
-<title>Panel de Control</title>
+    <title>Panel de Control</title>
 
-<meta name="description" content="Panel de Control">
-<meta name="author" content="Patricio Bos">
-<meta charset="UTF-8">
+    <meta name="description" content="Panel de Control">
+    <meta name="author" content="Patricio Bos">
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="framework.css">
-<link rel="stylesheet" href="control.css">
+    <link rel="stylesheet" href="framework.css">
+    <link rel="stylesheet" href="control.css">
 
-<script src="framework.js"></script>
-<script src="control.js"></script>
+    <script src="framework.js"></script>
+    <script src="control.js"></script>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-<div id="header">
-<h1>ACUARIO</h1>
-</div>
+    <div id="header">
+      <h1>ACUARIO</h1>
+    </div>
 
-<div id="nav">
-  <ul>
-    <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) class="active">Home</a></li>
-    <li><a id="menu2" href="control.shtml" onclick=changebuttonClasses(this) >Control</a></li>
-    <li><a id="menu3" href="config.shtml" onclick=changebuttonClasses(this) >Configuración</a></li>
-  </ul>
-</div>
-
-
-
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- ------------------------------------------------------------------------------------ -->
-
-<div id="section">
-
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- SENSORES -->
-<!-- ------------------------------------------------------------------------------------ -->
-
-<div id="div_sensores" class="inner_sensores">
-
-<h2>SENSORES</h2>
-
-<table id="tabla_sensores" class="sensores">
-  <tr>
-    <th>Nombre</th>
-    <th>Valor</th>
-  </tr>
-  <tr>
-    <td>Nivel de Agua</td>
-    <td id= "sensor0" ><!--sensor1--></td>
-  </tr>
-  <tr>
-    <td>Temperatura</td>
-    <td id= "sensor1" ><!--sensor2--></td>
-  </tr>
-  <tr>
-    <td>pH</td>
-    <td id= "sensor2" ><!--sensor3--></td>
-  </tr>
-
-</table>
-
-</div>
-
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- ACTUADORES -->
-<!-- ------------------------------------------------------------------------------------ -->
-
-<div id="div_actuadores" class="inner_actuadores">
-
-<h2>ACTUADORES</h2>
-
-<form name="actuadores" action="actuadores.cgi" method="get">
-
- <table id="tabla_actuadores" class="actuadores">
-  <tr>
-    <th>Nombre</th>
-    <th>Estado</th>
-    <th>Control</th>
-  </tr>
-  <tr>
-    <td>Bomba de Agua <br />ENTRADA</td>
-    <td id="state0"  ><!--act0--></td>
-    <td><input type="submit" name="cmd0" id="actuador0" class="button5" value="DETENER"/></td>
-  </tr>
-  <tr>
-    <td>Bomba de Agua <br />SALIDA</td>
-    <td id="state1" ><!--act1--></td>
-    <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="INICIAR"/></td>
-  </tr>
-  <tr>
-    <td>CALEFACTOR</td>
-    <td id="state2" ><!--act2--></td>
-    <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
-  </tr>
-  <tr>
-    <td>Bomba de CO2</td>
-    <td id="state3" ><!--act3--></td>
-    <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
-  </tr>
-</table>
-
-</form>
-
-</div>
+    <div id="nav">
+      <ul>
+        <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) class="active">Home</a></li>
+        <li><a id="menu2" href="control.shtml" onclick=changebuttonClasses(this) >Control</a></li>
+        <li><a id="menu3" href="config.shtml" onclick=changebuttonClasses(this) >Configuración</a></li>
+      </ul>
+    </div>
 
 
 
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- ALARMAS -->
-<!-- ------------------------------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------------------------------ -->
 
-<div id="div_alarmas" class="inner_alarmas">
-<h2>ALARMAS</h2>
+    <div id="section">
 
-  <form name="alarmas" id="formAlarmas" action="alarmas.cgi" method="get" onsubmit="controlCheckbox()">
+      <!-- ------------------------------------------------------------------------------------ -->
+      <!-- SENSORES -->
+      <!-- ------------------------------------------------------------------------------------ -->
 
-    <table id="tabla_alarmas" class="actuadores">
-      <tr>
-        <th>Alarma</th>
-        <th>Estado</th>
-        <th>Control</th>
-      </tr>
-      <tr>
-        <td>Nivel de Agua <br /> ALTO</td>
-        <td id="alarm0" clase="alarmaVerde"><!--alarma0--></td>
-        <td><input type="checkbox" id="alarmControl0" name="alarma0" value="enable" >
-            <input type="hidden"   id="alarmControl0Hidden" name="alarma0" value="disable" ></td>
-      </tr>
-      <tr>
-        <td>Nivel de Agua <br /> BAJO</td>
-        <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
-        <td><input type="checkbox" id="alarmControl1" name="alarma1" value="enable" >
-            <input type="hidden"   id="alarmControl1Hidden" name="alarma1" value="disable" ></td>
-      </tr>
-      <tr>
-        <td>Temperatura <br /> ALTA</td>
-        <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
-        <td><input type="checkbox" id="alarmControl2" name="alarma2" value="enable" >
-            <input type="hidden"   id="alarmControl2Hidden" name="alarma2" value="disable" ></td>
-      </tr>
-      <tr>
-        <td>Temperatura <br /> BAJA</td>
-        <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
-        <td><input type="checkbox" id="alarmControl3" name="alarma3" value="enable" >
-            <input type="hidden"   id="alarmControl3Hidden" name="alarma3" value="disable" ></td>
-      </tr>
-      <tr>
-        <td>pH <br /> ALTO</td>
-        <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
-        <td><input type="checkbox" id="alarmControl4" name="alarma4" value="enable" >
-            <input type="hidden"   id="alarmControl4Hidden" name="alarma4" value="disable" ></td>
-      </tr>
-      <tr>
-        <td>pH <br /> BAJA</td>
-        <td id="alarm5" clase="alarmaVerde"><!--alarma5--></td>
-        <td><input type="checkbox" id="alarmControl5" name="alarma5" value="enable" >
-            <input type="hidden"   id="alarmControl5Hidden" name="alarma5" value="disable" ></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td><input type="submit" name="controlAlarmas" id="controlAlarmas" class="button5" value="APLICAR" /></td>
-      </tr>
-    </table>
+      <div id="div_sensores" class="inner_sensores">
+
+        <h2>SENSORES</h2>
+
+        <table id="tabla_sensores" class="fixed">
+          <col width="120px" />
+          <col width="100 px" />
+          <tr>
+            <th>Nombre</th>
+            <th>Valor</th>
+          </tr>
+          <tr>
+            <td>Nivel de Agua</td>
+            <td id= "sensor0" ><!--sensor1--></td>
+          </tr>
+          <tr>
+            <td>Temperatura</td>
+            <td id= "sensor1" ><!--sensor2--></td>
+          </tr>
+          <tr>
+            <td>pH</td>
+            <td id= "sensor2" ><!--sensor3--></td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <!-- ------------------------------------------------------------------------------------ -->
+      <!-- ACTUADORES -->
+      <!-- ------------------------------------------------------------------------------------ -->
+
+      <div id="div_actuadores" class="inner_actuadores">
+
+        <h2>ACTUADORES</h2>
+
+        <form name="actuadores" action="actuadores.cgi" method="get">
+
+          <table id="tabla_actuadores" class="fixed">
+            <col width="165px" />
+            <col width="165 px" />
+            <col width="120px" />
+            <tr>
+              <th>Nombre</th>
+              <th>Estado</th>
+              <th>Control</th>
+            </tr>
+            <tr>
+              <td class="nombresAct">Bomba de Agua <br />ENTRADA</td>
+              <td class="estadoAct"id="state0"  ><!--act0--></td>
+              <td class="controlAct"><input type="submit" name="cmd0" id="actuador0" class="button5" value="DETENER"/></td>
+            </tr>
+            <tr>
+              <td>Bomba de Agua <br />SALIDA</td>
+              <td id="state1" ><!--act1--></td>
+              <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="INICIAR"/></td>
+            </tr>
+            <tr>
+              <td>CALEFACTOR</td>
+              <td id="state2" ><!--act2--></td>
+              <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
+            </tr>
+            <tr>
+              <td>Bomba de CO2</td>
+              <td id="state3" ><!--act3--></td>
+              <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
+            </tr>
+          </table>
+
+        </form>
+
+      </div>
 
 
 
-  </form>
+      <!-- ------------------------------------------------------------------------------------ -->
+      <!-- ALARMAS -->
+      <!-- ------------------------------------------------------------------------------------ -->
 
-</div>
-</div>
+      <div id="div_alarmas" class="inner_alarmas">
+        <h2>ALARMAS</h2>
 
-<!-- onChange="this.form.submit()"-->
-<!-- onclick="controlCheckbox()"-->
+        <form name="alarmas" id="formAlarmas" action="alarmas.cgi" method="get" onsubmit="controlCheckbox()">
 
-<!-- ------------------------------------------------------------------------------------ -->
-<!-- ------------------------------------------------------------------------------------ -->
+          <table id="tabla_alarmas" class="fixed">
+            <col width="155px" />
+            <col width="155 px" />
+            <col width="110px" />
+            <tr>
+              <th>Alarma</th>
+              <th>Estado</th>
+              <th>Control</th>
+            </tr>
+            <tr>
+              <td>Nivel de Agua <br /> ALTO</td>
+              <td id="alarm0" clase="alarmaVerde"><!--alarma0--></td>
+              <td><input type="checkbox" id="alarmControl0" name="alarma0" value="enable" >
+                <input type="hidden"   id="alarmControl0Hidden" name="alarma0" value="disable" ></td>
+            </tr>
+            <tr>
+              <td>Nivel de Agua <br /> BAJO</td>
+              <td id="alarm1" clase="alarmaVerde"><!--alarma1--></td>
+              <td><input type="checkbox" id="alarmControl1" name="alarma1" value="enable" >
+                <input type="hidden"   id="alarmControl1Hidden" name="alarma1" value="disable" ></td>
+            </tr>
+            <tr>
+              <td>Temperatura <br /> ALTA</td>
+              <td id="alarm2" clase="alarmaVerde"><!--alarma2--></td>
+              <td><input type="checkbox" id="alarmControl2" name="alarma2" value="enable" >
+                <input type="hidden"   id="alarmControl2Hidden" name="alarma2" value="disable" ></td>
+            </tr>
+            <tr>
+              <td>Temperatura <br /> BAJA</td>
+              <td id="alarm3" clase="alarmaVerde"><!--alarma3--></td>
+              <td><input type="checkbox" id="alarmControl3" name="alarma3" value="enable" >
+                <input type="hidden"   id="alarmControl3Hidden" name="alarma3" value="disable" ></td>
+            </tr>
+            <tr>
+              <td>pH <br /> ALTO</td>
+              <td id="alarm4" clase="alarmaVerde"><!--alarma4--></td>
+              <td><input type="checkbox" id="alarmControl4" name="alarma4" value="enable" >
+                <input type="hidden"   id="alarmControl4Hidden" name="alarma4" value="disable" ></td>
+            </tr>
+            <tr>
+              <td>pH <br /> BAJA</td>
+              <td id="alarm5" clase="alarmaVerde"><!--alarma5--></td>
+              <td><input type="checkbox" id="alarmControl5" name="alarma5" value="enable" >
+                <input type="hidden"   id="alarmControl5Hidden" name="alarma5" value="disable" ></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td><input type="submit" name="controlAlarmas" id="controlAlarmas" class="button5" value="APLICAR" /></td>
+            </tr>
+          </table>
 
-<div id="footer">
-Copyright &copy Patricio Bos
-</div>
 
-</body>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- onChange="this.form.submit()"-->
+    <!-- onclick="controlCheckbox()"-->
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------------------------------ -->
+
+    <div id="footer">
+      Copyright &copy Patricio Bos
+    </div>
+
+  </body>
 
 </html>
