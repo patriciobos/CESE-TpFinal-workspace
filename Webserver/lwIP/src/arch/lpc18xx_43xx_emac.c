@@ -535,9 +535,6 @@ static err_t lpc_etharp_output(struct netif *netif, struct pbuf *q,
 /* Packet reception task
    This task is called when a packet is received. It will
    pass the packet to the LWIP core */
-
-
-
 //#include "FreeRTOS.h"	//task stack debug
 
 static void vPacketReceiveTask(void *pvParameters) {
@@ -555,7 +552,6 @@ static void vPacketReceiveTask(void *pvParameters) {
 			lpc_enetif_input(lpc_netifdata->netif);
 //			uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );	//task stack debug
 		}
-		//
 	}
 }
 
@@ -572,7 +568,6 @@ static void vTransmitCleanupTask(void *pvParameters) {
 
 		/* Free TX pbufs and descriptors that are done */
 		lpc_tx_reclaim(lpc_netifdata->netif);
-
 		//uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );	//task stack debug
 	}
 }

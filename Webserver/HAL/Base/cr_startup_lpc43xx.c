@@ -190,7 +190,7 @@ void (* const g_pfnVectors[])(void) = {
     MemManage_Handler,              // The MPU fault handler
     BusFault_Handler,               // The bus fault handler
     UsageFault_Handler,             // The usage fault handler
-    __valid_user_code_checksum,             // LPC MCU Checksum
+    __valid_user_code_checksum,		// LPC MCU Checksum
     0,                              // Reserved
     0,                              // Reserved
     0,                              // Reserved
