@@ -21,7 +21,7 @@ tCGI * ptrCGIHandlers;
 
 
 //Initialise cgi environment
-int CGIinit( void) {
+int CGI_init( void) {
 
 //	cgi_handler.pcCGIName = "/actuadores.cgi";
 //

@@ -284,8 +284,8 @@ void Board_Init(void)
 	Board_Ciaa_Gpios();
 
 	/*Initialize ADCs*/
-//	Board_ADCs_Init();
-//	initAdcs();
+	init_ADCs();
+
 
 	/* Initialize LEDs */
 //	Board_LED_Init();

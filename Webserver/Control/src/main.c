@@ -158,14 +158,10 @@ static void vSetupIFTask (void *pvParameters)
 	/* Install the server side include handler. */
 	http_set_ssi_handler(SSIHandler, pccSSITags, sizeof( pccSSITags ) / sizeof( char * ) );
 
-	CGIinit();
+	CGI_init();
 
 	/* Initialize and start application */
 	httpd_init();
-
-	const char inst1[] = "LPC18xx/43xx UART example using ring buffers\r\n";
-	/* Send initial messages */
-	Chip_UART_SendRB(DEBUG_UART, &txring, inst1, sizeof(inst1) - 1);
 
 	/* This loop monitors the PHY link and will handle cable events
 	   via the PHY driver. */

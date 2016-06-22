@@ -9,6 +9,7 @@
 #include "lpc_types.h"
 
 #include "board.h"
+#include "adcs.h"
 
 #include "FreeRTOS.h"
 
@@ -75,7 +76,8 @@ void vAlarmControl(void *pvParameters){
 
 	volatile portTickType periodo = 1000/portTICK_RATE_MS;
 
-//	volatile uint16_t data0, data1, data2, data3;
+	volatile uint16_t data0, data1, data2;
+
 	uint8_t i;
 
 	/*inicialización del estado y del control de las alarmas*/
@@ -87,10 +89,23 @@ void vAlarmControl(void *pvParameters){
 
 	UBaseType_t uxHighWaterMark;
 
+	init_ADCs();
+
 
 	while(1){
 
 		portTickType ticks = xTaskGetTickCount();
+
+		data0 = ADC_Polling_Read(ADC_CH3);
+		data1 = ADC_Polling_Read(ADC_CH3);
+		data2 = ADC_Polling_Read(ADC_CH2);
+
+		data0 = (data0*30>>10);
+		data2 = (data2*14>>10);
+
+		sensorValue[0] = data0;
+		sensorValue[1] = ((data1*28>>10))+16;
+		sensorValue[2] = data2;
 
 		for (i=0; i < SENSORs_NUMBER; i++) {
 
@@ -109,12 +124,6 @@ void vAlarmControl(void *pvParameters){
 			}
 
 		}
-
-
-//		data0 = readAdc(adc[0]);
-//		data1 = readAdc(adc[1]);
-//		data2 = readAdc(adc[2]);
-//		data3 = readAdc(ADC_CH3);
 
 //		DEBUGOUT("data0    : %d\r\n", data0);
 //		DEBUGOUT("data1    : %d\r\n", data1);

@@ -7,73 +7,58 @@
 
 #include "chip.h"
 #include "adcs.h"
+#include "board_api.h"
 
 
-#define ADC0	0
-#define ADC1	1
-
-#define ADC_ID 		ADC0
-#define LPC_ADC_ID LPC_ADC0
-//#define _LPC_ADC_ID LPC_ADC1
+#define _ADC_CHANNLE ADC_CH3
+#define _LPC_ADC_ID LPC_ADC0
+#define _LPC_ADC_IRQ ADC0_IRQn
 
 static ADC_CLOCK_SETUP_T ADCSetup;
 
 
-void initAdcs (void)
-{
- 	int idx;
+void init_ADCs(void){
 
-	for (idx = 0; idx < (sizeof (adc) / sizeof (adc_t)); ++idx)
-		initAdc (adc[idx]);
+	/*ADC Init */
+	Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+//	Chip_ADC_EnableChannel(_LPC_ADC_ID, ADC_CH2, ENABLE);
+
+//	Chip_ADC_EnableChannel(_LPC_ADC_ID, ADC_CH3, ENABLE);
 }
 
-
-void initAdc (const adc_t adcNumber)
+/* Polling routine for ADC example */
+uint16_t ADC_Polling_Read(ADC_CHANNEL_T adcChannel)
 {
-	ADCSetup.adcRate = ADC_MAX_SAMPLE_RATE;
-	ADCSetup.bitsAccuracy = ADC_10BITS;
-	ADCSetup.burstMode = false;
+	uint16_t dataADC;
 
-	if ((adcNumber >= 0) && (adcNumber < (sizeof (adc) / sizeof (adc_t)))) {
+	ADC_CHANNEL_T channel = adcChannel;
 
-		/*ADC Init */
-		Chip_ADC_Init(LPC_ADC_ID, &ADCSetup);
-		Chip_ADC_EnableChannel(LPC_ADC_ID, adc[adcNumber], ENABLE);
+	Chip_ADC_EnableChannel(_LPC_ADC_ID, channel, ENABLE);
 
-		Chip_SCU_ADC_Channel_Config(ADC_ID, adc[adcNumber]);				//	Channel on ADC0
+	/* Select using burst mode or not */
+	Chip_ADC_SetBurstCmd(_LPC_ADC_ID, DISABLE);
 
+	/* Get  adc value  */
+	/* Start A/D conversion if not using burst mode */
+	Chip_ADC_SetStartMode(_LPC_ADC_ID, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
 
-	}
+	/* Waiting for A/D conversion complete */
+	while (Chip_ADC_ReadStatus(_LPC_ADC_ID, channel, ADC_DR_DONE_STAT) != SET) {}
+	/* Read ADC value */
+	Chip_ADC_ReadValue(_LPC_ADC_ID, channel, &dataADC);
+
+	Chip_ADC_EnableChannel(_LPC_ADC_ID, channel, DISABLE);
+
+	return dataADC;
+
 }
 
-
-uint16_t readAdc (const adc_t adcNumber)
+/* Print ADC value and delay */
+void App_print_ADC_value(uint16_t data)
 {
-	uint16_t dataADC = 0;
-
-	if ((adcNumber >= 0) && (adcNumber < (sizeof (adc) / sizeof (adc_t)))) {
-		/* Select using burst mode or not */
-		if (ADCSetup.burstMode)
-			Chip_ADC_SetBurstCmd (LPC_ADC_ID, ENABLE);
-		else
-			Chip_ADC_SetBurstCmd (LPC_ADC_ID, DISABLE);
-
-		/* Start A/D conversion if not using burst mode */
-		if (!ADCSetup.burstMode)
-			Chip_ADC_SetStartMode (LPC_ADC_ID, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
-
-		/* Waiting for A/D conversion complete */
-		while (Chip_ADC_ReadStatus (LPC_ADC_ID, adc[adcNumber], ADC_DR_DONE_STAT) != SET);
-
-		/* Read ADC value */
-		Chip_ADC_ReadValue (LPC_ADC_ID, adc[adcNumber], &dataADC);
-
-		/* Disable burst mode, if any */
-		if (ADCSetup.burstMode)
-			Chip_ADC_SetBurstCmd (LPC_ADC_ID, DISABLE);
-	}
-
-	return (dataADC);
+	volatile uint32_t j;
+	j = 5000000;
+	DEBUGOUT("ADC value is : 0x%04x\r\n", data);
+	/* Delay */
+	while (j--) {}
 }
-
-
