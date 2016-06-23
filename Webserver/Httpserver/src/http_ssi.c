@@ -37,22 +37,22 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 	{
 
 	case ssiACT0_INDEX:
-		ptrState = getActuatorState(portNum_0);
+		ptrState = getActuatorCharState(portNum_0);
 		strcpy( pcBuffer, ptrState );
 		break;
 
 	case ssiACT1_INDEX:
-		ptrState = getActuatorState(portNum_1);
+		ptrState = getActuatorCharState(portNum_1);
 		strcpy( pcBuffer, ptrState );
 		break;
 
 	case ssiACT2_INDEX:
-		ptrState = getActuatorState(portNum_2);
+		ptrState = getActuatorCharState(portNum_2);
 		strcpy( pcBuffer, ptrState );
 		break;
 
 	case ssiACT3_INDEX:
-		ptrState = getActuatorState(portNum_3);
+		ptrState = getActuatorCharState(portNum_3);
 		strcpy( pcBuffer, ptrState );
 		break;
 

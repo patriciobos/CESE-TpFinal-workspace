@@ -8,6 +8,7 @@
 #ifndef INC_ACTUATORS_H_
 #define INC_ACTUATORS_H_
 
+#include "include.h"
 
 enum {
 	portNum_0 = 0,
@@ -16,9 +17,18 @@ enum {
 	portNum_3
 };
 
+enum {
+	pumpIn = 0,
+	pumpOut,
+	heat,
+	CO2
+};
+
 #define ACTUATORs_NUMBER 4
 
-char* getActuatorState(int portNum);
+state_t getActuatorState(int portNum);
+
+char* getActuatorCharState(int portNum);
 
 void toggleActuatorState(int portNum);
 

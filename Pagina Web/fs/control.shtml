@@ -58,12 +58,22 @@
             <td id= "sensor0" ><!--sensor1--></td>
           </tr>
           <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
             <td>Temperatura</td>
             <td id= "sensor1" ><!--sensor2--></td>
           </tr>
           <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
             <td>pH</td>
             <td id= "sensor2" ><!--sensor3--></td>
+          </tr>
+          <tr>
           </tr>
 
         </table>
@@ -82,7 +92,7 @@
 
           <table id="tabla_actuadores" class="fixed">
             <col width="165px" />
-            <col width="165 px" />
+            <col width="165px" />
             <col width="120px" />
             <tr>
               <th>Nombre</th>
@@ -105,10 +115,19 @@
               <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
             </tr>
             <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
               <td>Bomba de CO2</td>
               <td id="state3" ><!--act3--></td>
               <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
             </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+
           </table>
 
         </form>

@@ -56,8 +56,16 @@
             <td id= "sensor0" ><!--sensor1--></td>
           </tr>
           <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
             <td>Temperatura</td>
             <td id= "sensor1" ><!--sensor2--></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>pH</td>
@@ -82,28 +90,32 @@
           <tr>
             <th>Nombre</th>
             <th>Estado</th>
-
           </tr>
           <tr>
             <td>Bomba de Agua <br />ENTRADA</td>
             <td id="state0"  ><!--act0--></td>
-
           </tr>
           <tr>
             <td>Bomba de Agua <br />SALIDA</td>
             <td id="state1" ><!--act1--></td>
-
           </tr>
           <tr>
             <td>CALEFACTOR</td>
             <td id="state2" ><!--act2--></td>
-
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Bomba de CO2</td>
             <td id="state3" ><!--act3--></td>
-
           </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+
         </table>
 
       </div>

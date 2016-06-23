@@ -10,7 +10,12 @@
 
 state_t actuatorState[4] = {OFF,OFF,OFF,OFF};
 
-char* getActuatorState(int portNum){
+state_t getActuatorState(int portNum){
+
+	return actuatorState[portNum];
+}
+
+char* getActuatorCharState(int portNum){
 
 	char *ptrActuatorState;
 

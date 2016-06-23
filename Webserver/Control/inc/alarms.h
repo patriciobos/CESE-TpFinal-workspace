@@ -16,6 +16,23 @@ enum {alarmNum_0 = 0,
 	  alarmNum_5
 };
 
+enum {
+	alarmWater_High = 0,
+	alarmWater_Low,
+	alarmTemp_High,
+	alarmTemp_Low,
+	alarmPH_High,
+	alarmPH_Low
+};
+
+typedef enum{
+	IDLE,
+	TEMPERATURE,
+	pH,
+	WATERLEVEL,
+	APPLY
+} controlFSM;
+
 #define ALARMs_NUMBER  6
 
 

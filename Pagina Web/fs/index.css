@@ -7,6 +7,7 @@ div.inner_sensores {
   display:inline-block;
   text-align:left;
   padding:5px;
+  float:left;
 }
 
 div.inner_actuadores {
@@ -16,7 +17,8 @@ div.inner_actuadores {
   margin: 0 auto;
   display:inline-block;
   text-align:left;
-  padding:10px;
+  padding:5px;
+  float:right;
 }
 
 div.inner_alarmas {
@@ -26,7 +28,8 @@ div.inner_alarmas {
   margin: 0 auto;
   display:inline-block;
   text-align:left;
-  padding:10px;
+  padding:5px;
+  float:right;
 }
 
 
