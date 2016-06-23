@@ -7,6 +7,7 @@
 
 #include "include.h"
 #include "lpc_types.h"
+#include "math.h"
 
 #include "board.h"
 #include "adcs.h"
@@ -76,7 +77,9 @@ void vAlarmControl(void *pvParameters){
 
 	volatile portTickType periodo = 1000/portTICK_RATE_MS;
 
-	volatile uint16_t data0, data1, data2;
+	volatile uint32_t data0, data1, data2;
+
+	//float aux=1;
 
 	uint8_t i;
 
@@ -101,10 +104,12 @@ void vAlarmControl(void *pvParameters){
 		data2 = ADC_Polling_Read(ADC_CH2);
 
 		data0 = (data0*30>>10);
+		data1 = (data1*30>>10);
+		//aux = floor(data1*((30-16)*2-1)/1024)/2+16;
 		data2 = (data2*14>>10);
 
 		sensorValue[0] = data0;
-		sensorValue[1] = ((data1*28>>10))+16;
+		sensorValue[1] = data1;
 		sensorValue[2] = data2;
 
 		for (i=0; i < SENSORs_NUMBER; i++) {

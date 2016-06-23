@@ -57,7 +57,6 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		break;
 
 	case ssiSENSOR0_INDEX:
-		sensorPh++;
 		sprintf(pcBuffer,"%u",sensorValue[0]);
 		break;
 
