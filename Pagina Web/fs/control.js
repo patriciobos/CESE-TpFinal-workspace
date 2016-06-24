@@ -5,19 +5,6 @@ window.onload = function() {
 
 var data_received = 0;
 
-var actuadores = new Array(4);
-var sensores = new Array(3);
-var estadoAlarmas = new Array(6);
-var controlAlarmas = new Array(6);
-
-var Alarm = Object.freeze({
-  Water_High : 0,
-	Water_Low  : 1,
-	Temp_High  : 2,
-	Temp_Low   : 3,
-	PH_High    : 4,
-	PH_Low     : 5
-});
 
 function loop() {
 	if( !data_received )
@@ -168,10 +155,14 @@ function  refreshAlarmas( estadoAlarmas, controlAlarmas ) {
 
 function  refreshBotones( estadoAlarmas, controlAlarmas ) {
 
-  var btn0 = document.getElementById("actuador0");
-  var btn1 = document.getElementById("actuador1");
-  var btn2 = document.getElementById("actuador2");
-  var btn3 = document.getElementById("actuador3");
+  var btnPumpIn = document.getElementById("actuador0");
+  var actPumpIn = document.getElementById("act0");
+  var btnPumpOut = document.getElementById("actuador1");
+  var actPumpOut = document.getElementById("act1");
+  var btnHeat = document.getElementById("actuador2");
+  var actHeat = document.getElementById("act2");
+  var btnCO2 = document.getElementById("actuador5");
+  var actCO2 = document.getElementById("act5");
 
 
   /* Botón0: ENTRADA DE AGUA*/
@@ -182,8 +173,10 @@ function  refreshBotones( estadoAlarmas, controlAlarmas ) {
     ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->ALARMA" )) ||
     ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->ALARMA" ))
   ) {
-    btn0.disabled = true;
-    btn1.disabled = true;
+    btnPumpIn.disabled = true;
+    actPumpIn.className = "tooltip";
+    btnPumpOut.disabled = true;
+    actPumpOut.className = "tooltip";
   }
   else if (
     ((controlAlarmas[Alarm.Water_High] == "<!--#ctrlAlrm" + Alarm.Water_High + "-->ENABLE") && ( estadoAlarmas[Alarm.Water_High] == "<!--#alarma" + Alarm.Water_High + "-->NORMAL" )) &&
@@ -191,8 +184,10 @@ function  refreshBotones( estadoAlarmas, controlAlarmas ) {
     ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->NORMAL" )) &&
     ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->NORMAL" ))
   ) {
-    btn0.disabled = false;
-    btn1.disabled = false;
+    btnPumpIn.disabled = false;
+     actPumpIn.className = "notooltip";
+    btnPumpOut.disabled = false;
+    actPumpOut.className = "notooltip";
   }
 
   /* Botón2: CALEFACTOR*/
@@ -200,12 +195,14 @@ function  refreshBotones( estadoAlarmas, controlAlarmas ) {
     ( ( controlAlarmas[Alarm.Temp_Low] == "<!--#ctrlAlrm" + Alarm.Temp_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_Low] == "<!--#alarma" + Alarm.Temp_Low + "-->ALARMA"   ) ) ||
     ( ( controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE") && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->ALARMA" ) )
      ) {
-    btn2.disabled = true;
+    btnHeat.disabled = true;
+    actHeat.className = "tooltip";
 
   }
 
   else if ( (controlAlarmas[Alarm.Temp_Low] == "<!--#ctrlAlrm" + Alarm.Temp_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_Low] == "<!--#alarma" + Alarm.Temp_Low + "-->NORMAL" ) ) {
-    btn2.disabled = false;
+    btnHeat.disabled = false;
+    actHeat.className = "notooltip";
   }
 
   /* Botón3: BOMBA DE CO2*/
@@ -213,12 +210,13 @@ function  refreshBotones( estadoAlarmas, controlAlarmas ) {
     ((controlAlarmas[Alarm.PH_High] == "<!--#ctrlAlrm" + Alarm.PH_High + "-->ENABLE") && ( estadoAlarmas[Alarm.PH_High] == "<!--#alarma" + Alarm.PH_High + "-->ALARMA" )) ||
     ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->ALARMA" ))
   ) {
-    btn3.disabled = true;
-
+    btnCO2.disabled = true;
+    actCO2.className = "tooltip";
   }
 
   else if ( (controlAlarmas[Alarm.PH_High] == "<!--#ctrlAlrm" + Alarm.PH_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.PH_High] == "<!--#alarma" + Alarm.PH_High + "-->NORMAL" ) ) {
-    btn3.disabled = false;
+    btnCO2.disabled = false;
+    actCO2.className = "notooltip";
   }
 
 }

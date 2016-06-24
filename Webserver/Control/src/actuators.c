@@ -8,7 +8,7 @@
 #include "lpc_types.h"
 
 
-state_t actuatorState[4] = {OFF,OFF,OFF,OFF};
+state_t actuatorState[ACTUATORs_NUMBER];
 
 state_t getActuatorState(int portNum){
 
@@ -24,6 +24,15 @@ char* getActuatorCharState(int portNum){
 	else
 		return ptrActuatorState = "ENCENDIDO";	//(char *) estadoActuadorEncendido;
 
+}
+
+void initActuators(void){
+
+	uint8_t index;
+
+	for (index = 0; index < ACTUATORs_NUMBER ; index++) {
+		actuatorState[index] = OFF;
+	}
 }
 
 void toggleActuatorState(int portNum){

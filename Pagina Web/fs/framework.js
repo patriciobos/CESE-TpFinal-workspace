@@ -1,3 +1,17 @@
+var actuadores = new Array(6);
+var sensores = new Array(3);
+var estadoAlarmas = new Array(6);
+var controlAlarmas = new Array(6);
+
+var Alarm = Object.freeze({
+  Water_High : 0,
+	Water_Low  : 1,
+	Temp_High  : 2,
+	Temp_Low   : 3,
+	PH_High    : 4,
+	PH_Low     : 5
+});
+
 function changebuttonClasses(elem) {
 
   if ( elem.className.match(/(?:^|\s)active(?!\S)/) )

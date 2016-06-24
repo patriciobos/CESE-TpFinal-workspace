@@ -4,10 +4,7 @@ window.onload = function() {
 
 var data_received = 0;
 
-var actuadores = new Array(4);
-var sensores = new Array(3);
-var estadoAlarmas = new Array(6);
-var controlAlarmas = new Array(6);
+
 
 
 function loop() {

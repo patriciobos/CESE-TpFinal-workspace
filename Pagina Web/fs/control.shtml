@@ -100,32 +100,84 @@
               <th>Control</th>
             </tr>
             <tr>
-              <td class="nombresAct">Bomba de Agua <br />ENTRADA</td>
-              <td class="estadoAct"id="state0"  ><!--act0--></td>
-              <td class="controlAct"><input type="submit" name="cmd0" id="actuador0" class="button5" value="DETENER"/></td>
+              <td>Bomba de Agua <br />ENTRADA</td>
+              <td id="state0"  ><!--act0--></td>
+              <td>
+                <div class="notooltip"  id="act0">
+                  <input type="submit" name="cmd0" id="actuador0" class="button5" value="INICIAR"/>
+                  <span>
+                    <img class="callout" src="callout_black.gif" />
+                    <strong>Botón deshabilitado</strong><br />
+                    Desactive el control de alarma para<br />
+                    operar el actuador manualmente.
+                  </span>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Bomba de Agua <br />SALIDA</td>
               <td id="state1" ><!--act1--></td>
-              <td><input type="submit" name="cmd1" id="actuador1" class="button5" value="INICIAR"/></td>
+              <td>
+                <div class="notooltip"  id="act1">
+                  <input type="submit" name="cmd1" id="actuador1" class="button5" value="INICIAR"/>
+                  <span>
+                    <img class="callout" src="callout_black.gif" />
+                    <strong>Botón deshabilitado</strong><br />
+                    Desactive el control de alarma para<br />
+                    operar el actuador manualmente.
+                  </span>
+                </div>
             </tr>
             <tr>
               <td>CALEFACTOR</td>
               <td id="state2" ><!--act2--></td>
-              <td><input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/></td>
+              <td>
+                <div class="notooltip"  id="act2">
+                  <input type="submit" name="cmd2" id="actuador2" class="button5" value="INICIAR"/>
+                  <span>
+                    <img class="callout" src="callout_black.gif" />
+                    <strong>Botón deshabilitado</strong><br />
+                    Desactive el control de alarma para<br />
+                    operar el actuador manualmente.
+                  </span>
+                </div>
+              <td/>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Bomba de CO2</td>
-              <td id="state3" ><!--act3--></td>
+              <td>ILUMINACIÓN <br/> 1</td>
+              <td id="state3" ><!--act2--></td>
               <td><input type="submit" name="cmd3" id="actuador3" class="button5" value="INICIAR"/></td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
+              <td>ILUMINACIÓN<br/> 2</td>
+              <td id="state4" ><!--act2--></td>
+              <td>
+                <div class="notooltip"  id="act4">
+                  <input type="submit" name="cmd4" id="actuador4" class="button5" value="INICIAR"/>
+                  <span>
+                    <img class="callout" src="callout_black.gif" />
+                    <strong>Botón deshabilitado</strong><br />
+                    Desactive el control de alarma para<br />
+                    operar el actuador manualmente.
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Bomba de CO2</td>
+              <td id="state5" ><!--act3--></td>
+              <td>
+                <div class="notooltip" id="act5">
+                  <input type="submit" name="cmd5" id="actuador5" class="button5" value="INICIAR"/>
+                  <span>
+                    <img class="callout" src="callout_black.gif" />
+                    <strong>Botón deshabilitado</strong><br />
+                    Desactive el control de alarma para<br />
+                    operar el actuador manualmente.
+                  </span>
+                </div>
+              </td>
+
             </tr>
 
           </table>
@@ -133,8 +185,6 @@
         </form>
 
       </div>
-
-
 
       <!-- ------------------------------------------------------------------------------------ -->
       <!-- ALARMAS -->

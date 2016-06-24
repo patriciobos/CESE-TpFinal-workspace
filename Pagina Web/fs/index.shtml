@@ -104,12 +104,15 @@
             <td id="state2" ><!--act2--></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>ILUMINACIÓN <br/> 1</td>
+            <td id="state3" ><!--act2--></td>
+          <tr>
+            <td>ILUMINACIÓN<br/> 2</td>
+            <td id="state4" ><!--act2--></td>
           </tr>
           <tr>
             <td>Bomba de CO2</td>
-            <td id="state3" ><!--act3--></td>
+            <td id="state5" ><!--act3--></td>
           </tr>
           <tr>
             <td></td>

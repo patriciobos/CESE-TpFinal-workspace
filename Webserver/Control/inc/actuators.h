@@ -14,17 +14,24 @@ enum {
 	portNum_0 = 0,
 	portNum_1,
 	portNum_2,
-	portNum_3
+	portNum_3,
+	portNum_4,
+	portNum_5
 };
 
 enum {
 	pumpIn = 0,
 	pumpOut,
 	heat,
+	light1,
+	light2,
 	CO2
 };
 
-#define ACTUATORs_NUMBER 4
+#define ACTUATORs_NUMBER 6
+
+
+void initActuators(void);
 
 state_t getActuatorState(int portNum);
 

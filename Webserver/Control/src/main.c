@@ -58,6 +58,7 @@
 #include "http_ssi.h"
 #include "http_cgi.h"
 
+#include "actuators.h"
 #include "alarms.h"
 
 #if defined(lpc4337_m4)
@@ -96,6 +97,7 @@ static void prvSetupHardware(void)
 	ciaaIOInit();
 #endif
 
+	initActuators();
 
 	/* LED0 is used for the link status, on = PHY cable detected */
 	/* Initial LED state is off to show an unconnected cable state */

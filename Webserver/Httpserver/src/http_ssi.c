@@ -16,10 +16,6 @@
 //#include "actuators.h"
 
 
-extern volatile uint8_t sensorNivelAgua;
-extern volatile uint8_t sensorTemperatura;
-extern volatile uint8_t sensorPh;
-
 extern uint8_t sensorValue[];
 
 uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
@@ -56,17 +52,25 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		strcpy( pcBuffer, ptrState );
 		break;
 
+	case ssiACT4_INDEX:
+		ptrState = getActuatorCharState(portNum_4);
+		strcpy( pcBuffer, ptrState );
+		break;
+
+	case ssiACT5_INDEX:
+		ptrState = getActuatorCharState(portNum_5);
+		strcpy( pcBuffer, ptrState );
+		break;
+
 	case ssiSENSOR0_INDEX:
 		sprintf(pcBuffer,"%u",sensorValue[0]);
 		break;
 
 	case ssiSENSOR1_INDEX:
-		sensorNivelAgua++;
 		sprintf(pcBuffer,"%u",sensorValue[1]);
 		break;
 
 	case ssiSENSOR2_INDEX:
-		sensorTemperatura++;
 		sprintf(pcBuffer,"%u",sensorValue[2]);
 		break;
 
