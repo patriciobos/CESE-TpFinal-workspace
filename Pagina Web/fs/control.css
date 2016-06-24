@@ -41,6 +41,7 @@ div.inner_alarmas {
 table.fixed {
   table-layout:fixed;
   border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
 table.fixed th, td {
@@ -63,28 +64,33 @@ table.fixed th, td {
 table td.actuadorVerde {
   background-color:green;
   color:white;
+  border-radius: 6px;
 
 }
 
 table td.actuadorRojo {
   background-color:red;
   color:black;
+  border-radius: 6px;
 }
 
 table td.alarmaVerde {
   background-color:green;
   color:white;
+  border-radius: 6px;
 
 }
 
 table td.alarmaRojo {
   background-color:red;
   color:black;
+  border-radius: 6px;
 }
 
 table td.alarmaAmarillo {
   background-color:lightgray;
   color:black;
+  border-radius: 6px;
 }
 
 
@@ -107,9 +113,28 @@ table.sensores td {
 }
 
 
-iframe.section{
-  display:inline;
-  position:static;
-  width:400px;height:400px;
-  border:1px solid black;
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

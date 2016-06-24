@@ -185,7 +185,7 @@ void controlAcuario(){
 	if (ENABLE == alarmControl[alarmTemp_High]) {
 
 		if(ON == alarmState[alarmTemp_High]){
-			recycleWater += 1;
+			actuatorFakeState[heat] = OFF;
 			flags[alarmTemp_High] = ON;
 		}
 		else if (ON == flags[alarmTemp_High]) {
@@ -222,11 +222,10 @@ void controlAcuario(){
 	if (ENABLE == alarmControl[alarmPH_Low]) {
 
 		if(ON == alarmState[alarmPH_Low]){
-			recycleWater += 1;
+			actuatorFakeState[CO2] = OFF;
 			flags[alarmPH_Low] = ON;
 		}
 		else if (ON == flags[alarmPH_Low]) {
-			recycleWater -= 1;
 			flags[alarmPH_Low] = OFF;
 		}
 	}

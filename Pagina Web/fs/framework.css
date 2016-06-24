@@ -1,7 +1,7 @@
 body{
-    background-color:#eeeeee;
-    margin:0px;
-    padding:0px;
+  background-color:#eeeeee;
+  margin:0px;
+  padding:0px;
 }
 
 /*---------------------------*/
@@ -9,19 +9,19 @@ body{
 /*---------------------------*/
 
 #header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:5px;
 }
 
 #nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:140px;
-    float:left;
-    padding:5px;
+  line-height:30px;
+  background-color:#eeeeee;
+  height:300px;
+  width:140px;
+  float:left;
+  padding:5px;
 }
 
 #section{
@@ -42,14 +42,14 @@ body{
 
 
 #footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;
-    position: fixed;
-    bottom: 5px;
-    width: 100%;
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  padding:5px;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
 }
 
 
@@ -67,12 +67,13 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 13px;
+  border-radius: 6px;
 
 }
 
 .button5:hover {
-    background-color: #555555;
-    color: white;
+  background-color: #555555;
+  color: white;
 }
 /*------------------------------*/
 /*  listas para menu de nav	    */
@@ -80,28 +81,29 @@ body{
 
 
 ul {
-    list-style-type: none;
-    margin:  0;
-    padding: 0;
-    background-color: #f1f1f1;
-    width: 9em;
-    height: 100%; /* Full height */
-    position: fixed;
+  list-style-type: none;
+  margin:  0;
+  padding: 0;
+  background-color: #f1f1f1;
+  width: 9em;
+  height: 100%; /* Full height */
+  position: fixed;
 }
 
 li a {
-    display: block;
-    color: #000;
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
+  display: block;
+  color: #000;
+  padding: 8px 0 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 li a.active {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 
 li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+  background-color: #555;
+  color: white;
 }

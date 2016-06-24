@@ -72,7 +72,7 @@
 
 /* Non-static memory, used with DMA pool */
 #ifdef __CODE_RED
-#define MEM_SIZE                        (6 * 1024)
+#define MEM_SIZE                        (4 * 1024)
 #else
 #define MEM_SIZE                        (24 * 1024)
 #endif
