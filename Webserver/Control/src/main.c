@@ -140,6 +140,7 @@ static void vSetupIFTask (void *pvParameters)
 	IP4_ADDR(&netmask, 255, 255, 255, 0);
 #endif
 
+	memset(&lpc_netif, 0, sizeof(lpc_netif));
 	/* Add netif interface for lpc17xx_8x */
 	if (!netif_add(&lpc_netif, &ipaddr, &netmask, &gw, NULL, lpc_enetif_init,
 				   tcpip_input)) {

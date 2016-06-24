@@ -25,9 +25,9 @@
 
     <div id="nav">
       <ul>
-        <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) >Home</a></li>
-        <li><a id="menu2" href="control.shtml" onclick=changebuttonClasses(this) class="active" >Control</a></li>
-        <li><a id="menu3" href="config.shtml" onclick=changebuttonClasses(this) >Configuración</a></li>
+        <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this)> Home</a></li>
+        <li><a id="menu2" href="control.shtml" onclick=changebuttonClasses(this) class="active" > Control</a></li>
+        <li><a id="menu3" href="config.shtml" onclick=changebuttonClasses(this) > Configuración</a></li>
       </ul>
     </div>
 

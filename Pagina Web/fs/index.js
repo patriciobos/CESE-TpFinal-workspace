@@ -10,7 +10,7 @@ var data_received = 0;
 function loop() {
 	if( !data_received )
 		makeRequest("ajax.shtml");
-    setTimeout("loop()",2000);
+    setTimeout("loop()",1000);
 }
 
 function makeRequest(url){
