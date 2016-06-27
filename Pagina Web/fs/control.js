@@ -9,7 +9,7 @@ var data_received = 0;
 function loop() {
 	if( !data_received )
 		makeRequest("ajax.shtml");
-    setTimeout("loop()",1000);
+    setTimeout("loop()",msUpdateTime);
 }
 
 function makeRequest(url){

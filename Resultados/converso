@@ -1,0 +1,103 @@
+# !/bin/bash
+
+# Me defino una función para hacer la magia. Converso 1.1
+# E.F. LAVIA - Junio 2015
+# 
+# 1.1 -- Añadida función para sobreescribir la salida si fuera necesario
+
+function check()
+{
+  if [ "$(stat -c %n $1 2> /dev/null)" != "$1" ]
+  then
+      echo ================================================================
+      echo \ \ \ \ "ERROR:"
+      echo \ \ \ \ "No existe la entrada "\"$1\""."
+      echo ================================================================
+      exit 1;
+  fi
+}
+
+function protect()
+{
+  SOBREESCRIBIR=`(stat -c %n $1 2> /dev/null)`
+  if [ "$SOBREESCRIBIR" == $1 ]
+  then
+      echo ================================================================
+      echo \ \ \ \ "ERROR:"
+      echo \ \ \ \ "Ya existe la salida "\"$1\""."
+      echo ================================================================
+      exit 1;
+  fi
+}
+
+function sobreescribir()
+{
+	SOBREESCRIBIR=`(stat -c %n $1 2> /dev/null)`
+	if [ "$SOBREESCRIBIR" == $1 ]
+	then
+		echo "Archivo "\"$1\"" existe."	
+		read -p "Sobreescribir? [Y/N/Tal vez]" valor
+		case "$valor" in 
+		Y ) ;; 
+		* ) echo "Abortando."
+		exit 1;;
+		esac
+	fi
+}
+
+function file_temporal()
+{
+TEMPORAL=$1 # Defino un nombre de archivo temporal
+N=0 # Defino un contador
+# Mientras existe incremento el nombre hasta que no exista
+while [ "$(stat -c %n $TEMPORAL 2>/dev/null)" == $TEMPORAL ]; do 
+      ((N++))
+      TEMPORAL="$N""_""$TEMPORAL"
+done
+echo $TEMPORAL
+}
+
+function check_doble_file_name()
+{
+TEMPORAL=$1 # Defino un nombre de archivo temporal
+N=0 # Defino un contador
+# Mientras existe incremento el nombre hasta que no exista
+while [ "$(stat -c %n $TEMPORAL".ps" 2>/dev/null)" == $TEMPORAL".ps" ] || [ "$(stat -c %n $TEMPORAL".eps" 2>/dev/null)" == $TEMPORAL".eps" ]; do 
+      ((N++))
+      TEMPORAL="$N""_""$TEMPORAL"
+done
+echo $TEMPORAL
+}
+
+
+###############################################################################
+
+# Función principal. Toma la entrada, la procesa y la saca...
+# Chequea si existe la entrada, la salida (sobreescribe si hay confirmación),
+# y los temporales necesarios de buffer para hacer las magias de conversión y 
+# ajuste de la bounding box.
+
+###############################################################################
+
+function converso()
+{
+check $1
+# protect $2
+sobreescribir $2
+echo ============================================
+echo \ \ Este script requiere ps2eps y ps2pdf.
+echo \ \ Si no las tiene fallará de manera miserable.
+echo ============================================
+TEMP_PS=`(check_doble_file_name "temporal")` # Pongo un temporal tentativo
+cp $1 $TEMP_PS".ps" # Copio la entrada al temporal .PS
+ps2eps -s 50x50cm -B -f $TEMP_PS".ps" # Genero el temporal.EPS con la BB correcta
+ps2pdf -dEPSCrop $TEMP_PS".eps" $2 # Transforma a PDF cropeando por la BB
+rm $TEMP_PS".ps" # Removemos el temporal PS
+rm $TEMP_PS".eps" # Removemos el temporal EPS
+}
+
+# Ahora utilizamos la función definida
+
+converso $1 $2 
+
+

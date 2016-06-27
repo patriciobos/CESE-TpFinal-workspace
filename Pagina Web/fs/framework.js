@@ -3,6 +3,8 @@ var sensores = new Array(3);
 var estadoAlarmas = new Array(6);
 var controlAlarmas = new Array(6);
 
+var msUpdateTime = 1500;
+
 var Alarm = Object.freeze({
   Water_High : 0,
 	Water_Low  : 1,

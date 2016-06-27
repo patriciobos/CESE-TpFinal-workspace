@@ -15,6 +15,6 @@ volatile uint8_t sensorPh = 1;
 
 uint8_t sensorValue[] = {0, 15, 1};
 
-uint8_t sensorMaxLimit[] = {25, 20, 7};
-uint8_t sensorMinLimit[] = {20, 18, 7};
+uint8_t sensorMaxLimit[] = {35, 21, 7};
+uint8_t sensorMinLimit[] = {30, 17, 7};
 

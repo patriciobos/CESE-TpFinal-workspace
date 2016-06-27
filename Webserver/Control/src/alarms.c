@@ -22,6 +22,7 @@
 state_t alarmState[ALARMs_NUMBER];
 FunctionalState alarmControl[ALARMs_NUMBER];
 
+/* flags indica si hay una accion de control en ejecución*/
 volatile state_t flags[] = {OFF, OFF, OFF, OFF, OFF, OFF};
 
 extern volatile uint8_t sensorNivelAgua;
@@ -80,7 +81,7 @@ char* getAlarmControl(uint8_t alarmNum){
 
 void vAlarmControl(void *pvParameters){
 
-	volatile portTickType periodo = 1000/portTICK_RATE_MS;
+	volatile portTickType periodo = 1500/portTICK_RATE_MS;
 
 	volatile uint16_t data0, data1, data2;
 
@@ -95,7 +96,7 @@ void vAlarmControl(void *pvParameters){
 
 	UBaseType_t uxHighWaterMark;
 
-	init_ADCs();
+	//init_ADCs();
 
 
 	while(1){
@@ -105,11 +106,6 @@ void vAlarmControl(void *pvParameters){
 		updateStatus();
 
 		controlAcuario();
-
-//		DEBUGOUT("data0    : %d\r\n", data0);
-//		DEBUGOUT("data1    : %d\r\n", data1);
-//		DEBUGOUT("data2    : %d\r\n", data2);
-//		DEBUGOUT("data3    : %d\r\n", data3);
 
 		/* Inspect our own high water mark on entering the task. */
 		uxHighWaterMark = uxTaskGetStackHighWaterMark( NULL );
@@ -134,19 +130,25 @@ void updateStatus() {
 
 	uint8_t i;
 
+	/* Leer los sensores conectados a los ADCs*/
 	data0 = ADC_Polling_Read(ADC_CH3);
-	data1 = ADC_Polling_Read(ADC_CH3);
-	data2 = ADC_Polling_Read(ADC_CH2);
+	data1 = ADC_Polling_Read(ADC_CH2);
+	data2 = ADC_Polling_Read(ADC_CH1);
 
-	data0 = (data0*30>>10);
-	data1 = (data1*50>>10);
+	/* Conversiones de escala para los sensores*/
+	data0 = (data0*40>>10);
+	data1 = (data1*(30)>>10);
 	data2 = (data2*14>>10);
 	//aux = floor(data1*((30-16)*2-1)/1024)/2+16;
 
+	/* Asignar los valores leidos*/
 	sensorValue[0] = data0;
 	sensorValue[1] = data1;
 	sensorValue[2] = data2;
 
+
+
+	/* Actualizar el estado de las alarmas según los nuevos valores leidos*/
 	for (i=0; i < SENSORs_NUMBER; i++) {
 
 		if ( sensorValue[i] > sensorMaxLimit[i] ){
@@ -231,8 +233,7 @@ void controlAcuario(){
 	}
 
 	/* if alarmTemp_high OR alarmPH_low are ENABLE checks recycleWater status
-	 * and start or stop the pumps.
-	 * -2 and -1 should stop. 0,1 or 2 should start  */
+	 * and start or stop the pumps. */
 	if (ENABLE == (alarmControl[alarmTemp_High] || alarmControl[alarmPH_Low]) ) {
 		if( ON == (flags[alarmTemp_High] || flags[alarmPH_Low]) ) {
 			actuatorFakeState[pumpIn] = ON;
@@ -278,6 +279,23 @@ void controlAcuario(){
 
 		actuatorState[i] = actuatorFakeState[i];
 	}
+	//DEBUGOUT("%d, %d, %d\r\n", data0, data1, data2);
+	DEBUGOUT("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\r\n",
+											sensorValue[0],
+											sensorValue[1],
+											sensorValue[2],
+											alarmState[0],
+											alarmState[1],
+											alarmState[2],
+											alarmState[3],
+											alarmState[4],
+											alarmState[5],
+											actuatorState[0],
+											actuatorState[1],
+											actuatorState[2],
+											actuatorState[3],
+											actuatorState[4],
+											actuatorState[5] );
 }
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {
