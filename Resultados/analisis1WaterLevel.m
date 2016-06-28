@@ -33,14 +33,17 @@ hold on
 grid on
 grid minor
 
-% stairs([a,a(end)]);
-stairs(pumpIn,'LineWidth',1.5,'Marker','o','Color','g');
-stairs(pumpOut+2,'LineWidth',1.5,'Marker','o','Color','b')
+stairs(pumpIn-1.5,'LineWidth',1.5,'Marker','o','Color','g');
+stairs(pumpOut,'LineWidth',1.5,'Marker','o','Color','b');
+stairs(heater+1.5,'LineWidth',1.5,'Marker','o','Color','r')
+stairs(CO2+3,'LineWidth',1.5,'Marker','o','Color','m');
 
 plot(xlim,[15 15],'--','Color','r');
 plot(xlim,[5 5],'--','Color','b');
 
-h_legend = legend('Nivel de Agua', 'Bomba de Entrada', 'Bomba de Salida','Umbral alto','Umbral bajo','Location','northeastoutside');
+h_legend = legend('Nivel de Agua', 'Bomba de Entrada', 'Bomba de Salida', 'Calefactor',...
+    'Bomba de CO2', 'Umbral alto','Umbral bajo','Location','northeastoutside');
+
 set(h_legend,'FontSize',14);
 
 

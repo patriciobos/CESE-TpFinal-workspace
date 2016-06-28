@@ -35,15 +35,17 @@ hold on
 grid on
 grid minor
 
-% stairs([a,a(end)]);
-stairs(3*pumpIn,'LineWidth',1.5,'Marker','o','Color','g');
-stairs(3*pumpOut+4,'LineWidth',1.5,'Marker','o','Color','b');
-stairs(3*heater+8,'LineWidth',1.5,'Marker','o','Color','r');
+stairs(2*pumpIn,'LineWidth',1.5,'Marker','o','Color','g');
+stairs(2*pumpOut+3,'LineWidth',1.5,'Marker','o','Color','b');
+stairs(2*heater+6,'LineWidth',1.5,'Marker','o','Color','r')
+stairs(2*CO2+9,'LineWidth',1.5,'Marker','o','Color','m');
 
 plot(xlim,[21 21],'--','Color','r');
 plot(xlim,[17 17],'--','Color','b');
 
-h_legend = legend('Temperatura', 'Bomba de Entrada', 'Bomba de Salida', 'Calefactor','Umbral alto','Umbral bajo','Location','northeastoutside');
+h_legend = legend('Temperatura', 'Bomba de Entrada', 'Bomba de Salida', 'Calefactor',...
+    'Bomba de CO2', 'Umbral alto','Umbral bajo','Location','northeastoutside');
+
 set(h_legend,'FontSize',14);
 
 set(gcf, 'PaperPositionMode', 'manual');

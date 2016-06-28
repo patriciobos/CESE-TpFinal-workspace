@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-filename = 'Result_2_WaterHigh.dat';
+filename = 'Result_1_pH.dat';
 M = csvread(filename);
 
 waterLevel = M(:,1);
@@ -35,15 +35,17 @@ hold on
 grid on
 grid minor
 
-% stairs([a,a(end)]);
-stairs(pumpIn,'LineWidth',1.5,'Marker','o','Color','g');
-stairs(pumpOut+1.5,'LineWidth',1.5,'Marker','o','Color','b');
+stairs(pumpIn-1.5,'LineWidth',1.5,'Marker','o','Color','g');
+stairs(pumpOut,'LineWidth',1.5,'Marker','o','Color','b');
+stairs(heater+1.5,'LineWidth',1.5,'Marker','o','Color','r')
 stairs(CO2+3,'LineWidth',1.5,'Marker','o','Color','m');
 
 plot(xlim,[7.5 7.5],'--','Color','r');
 plot(xlim,[6.5 6.5],'--','Color','b');
 
-h_legend = legend('pH', 'Bomba de Entrada', 'Bomba de Salida', 'Bomba de CO2','Umbral alto','Umbral bajo','Location','northeastoutside');
+h_legend = legend('pH', 'Bomba de Entrada', 'Bomba de Salida', 'Calefactor',...
+    'Bomba de CO2', 'Umbral alto','Umbral bajo','Location','northeastoutside');
+
 set(h_legend,'FontSize',14);
 
 set(gcf, 'PaperPositionMode', 'manual');
