@@ -25,13 +25,13 @@ FunctionalState alarmControl[ALARMs_NUMBER];
 /* flags indica si hay una accion de control en ejecución*/
 volatile state_t flags[] = {OFF, OFF, OFF, OFF, OFF, OFF};
 
-extern volatile uint8_t sensorNivelAgua;
-extern volatile uint8_t sensorTemperatura;
-extern volatile uint8_t sensorPh;
+//extern volatile uint8_t sensorNivelAgua;
+//extern volatile uint8_t sensorTemperatura;
+//extern volatile uint8_t sensorPh;
 
-extern uint8_t sensorValue[];
-extern uint8_t sensorMaxLimit[];
-extern uint8_t sensorMinLimit[];
+extern uint32_t sensorValue[];
+extern uint32_t sensorMaxLimit[];
+extern uint32_t sensorMinLimit[];
 
 extern state_t actuatorState[];
 
@@ -83,7 +83,7 @@ void vAlarmControl(void *pvParameters){
 
 	volatile portTickType periodo = 1500/portTICK_RATE_MS;
 
-	volatile uint16_t data0, data1, data2;
+//	volatile uint16_t data0, data1, data2;
 
 	uint8_t i;
 
@@ -126,7 +126,7 @@ void vAlarmControl(void *pvParameters){
 
 void updateStatus() {
 
-	volatile uint16_t data0, data1, data2;
+	volatile uint32_t data0, data1, data2, aux;
 
 	uint8_t i;
 
@@ -136,10 +136,13 @@ void updateStatus() {
 	data2 = ADC_Polling_Read(ADC_CH1);
 
 	/* Conversiones de escala para los sensores*/
-	data0 = (data0*40>>10);
-	data1 = (data1*(30)>>10);
-	data2 = (data2*14>>10);
-	//aux = floor(data1*((30-16)*2-1)/1024)/2+16;
+
+//	data1 = (data1*(30)>>10);
+
+
+	data0 = 5*(data0*2*20/1024);
+	data1 = 5*(((data1*2*(30-16)))/1024)+160;
+	data2 = (data2*10*14>>10);
 
 	/* Asignar los valores leidos*/
 	sensorValue[0] = data0;
@@ -173,8 +176,6 @@ void controlAcuario(){
 
 	state_t actuatorFakeState[ACTUATORs_NUMBER];
 
-	volatile int8_t recycleWater = 0;
-
 	uint8_t i;
 
 	for(i=0; i < ACTUATORs_NUMBER; i++){
@@ -191,7 +192,6 @@ void controlAcuario(){
 			flags[alarmTemp_High] = ON;
 		}
 		else if (ON == flags[alarmTemp_High]) {
-			recycleWater -= 1;
 			flags[alarmTemp_High] = OFF;
 		}
 	}

@@ -7,6 +7,7 @@
 
 #include "string.h"
 #include "lpc_types.h"
+#include <inttypes.h>
 
 #include "httpd.h"
 #include "http_ssi.h"
@@ -16,7 +17,7 @@
 //#include "actuators.h"
 
 
-extern uint8_t sensorValue[];
+extern uint32_t sensorValue[];
 
 uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 {
@@ -63,15 +64,15 @@ uint16_t SSIHandler( int iIndex, char *pcBuffer, int iBufferLength )
 		break;
 
 	case ssiSENSOR0_INDEX:
-		sprintf(pcBuffer,"%u",sensorValue[0]);
+		sprintf(pcBuffer,"%"PRIu32"",sensorValue[0]);
 		break;
 
 	case ssiSENSOR1_INDEX:
-		sprintf(pcBuffer,"%u",sensorValue[1]);
+		sprintf(pcBuffer,"%"PRIu32"",sensorValue[1]);
 		break;
 
 	case ssiSENSOR2_INDEX:
-		sprintf(pcBuffer,"%u",sensorValue[2]);
+		sprintf(pcBuffer,"%"PRIu32"",sensorValue[2]);
 		break;
 
 	case ssiALARMA0_INDEX:

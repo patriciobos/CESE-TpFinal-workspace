@@ -53,6 +53,8 @@ function parse_vars( data ) {
 
   var i, index;
 
+  var thenum;
+
   for (i=0; i < actuadores.length; i++ ) {
 
     actuadores[i] = parsed[i];
@@ -63,7 +65,9 @@ function parse_vars( data ) {
 
   for (i=0; i < sensores.length; i++ ) {
 
-    sensores[i] = parsed[i+index];
+    sensores[i] = parsed[i+index].replace(/.*\D/g, "");
+    sensores[i]  = parseInt(sensores[i],10)/10;
+    alert(sensores[i]);
 
   }
 

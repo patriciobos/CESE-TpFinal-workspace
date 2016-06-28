@@ -46,6 +46,10 @@ void clearAlarmState(uint8_t alarmNum);
 
 char* getAlarmControl(uint8_t alarmNum);
 
+void updateStatus(void);
+
+void controlAcuario(void);
+
 void vAlarmControl(void *pvParameters);
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]);
