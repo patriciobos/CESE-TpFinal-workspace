@@ -76,53 +76,6 @@
 
       </div>
 
-      <!-- ------------------------------------------------------------------------------------ -->
-      <!-- ACTUADORES -->
-      <!-- ------------------------------------------------------------------------------------ -->
-
-      <div id="div_actuadores" class="inner_actuadores">
-
-        <h2>ACTUADORES</h2>
-
-        <table id="tabla_actuadores" class="fixed">
-          <col width="165px" />
-          <col width="50px" />
-          <tr>
-            <th>Nombre</th>
-            <th>Estado</th>
-          </tr>
-          <tr>
-            <td>Bomba de Agua <br />ENTRADA</td>
-            <td id="state0"  ><!--act0--></td>
-          </tr>
-          <tr>
-            <td>Bomba de Agua <br />SALIDA</td>
-            <td id="state1" ><!--act1--></td>
-          </tr>
-          <tr>
-            <td>CALEFACTOR</td>
-            <td id="state2" ><!--act2--></td>
-          </tr>
-          <tr>
-            <td>ILUMINACIÓN <br/> 1</td>
-            <td id="state3" ><!--act2--></td>
-          <tr>
-            <td>ILUMINACIÓN<br/> 2</td>
-            <td id="state4" ><!--act2--></td>
-          </tr>
-          <tr>
-            <td>Bomba de CO2</td>
-            <td id="state5" ><!--act3--></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-
-        </table>
-
-      </div>
-
 
 
       <!-- ------------------------------------------------------------------------------------ -->
@@ -135,7 +88,7 @@
         <table id="tabla_alarmas" class="fixed">
 
           <col width="155px" />
-          <col width="50 px" />
+          <col width="155 px" />
 
           <tr>
             <th>Alarma</th>
@@ -176,6 +129,53 @@
             <td> </td>
 
           </tr>
+        </table>
+
+      </div>
+
+       <!-- ------------------------------------------------------------------------------------ -->
+      <!-- ACTUADORES -->
+      <!-- ------------------------------------------------------------------------------------ -->
+
+      <div id="div_actuadores" class="inner_actuadores">
+
+        <h2>ACTUADORES</h2>
+
+        <table id="tabla_actuadores" class="fixed">
+          <col width="145px" />
+          <col width="145px" />
+          <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+          </tr>
+          <tr>
+            <td>Bomba de Agua <br />ENTRADA</td>
+            <td id="state0"  ><!--act0--></td>
+          </tr>
+          <tr>
+            <td>Bomba de Agua <br />SALIDA</td>
+            <td id="state1" ><!--act1--></td>
+          </tr>
+          <tr>
+            <td>CALEFACTOR</td>
+            <td id="state2" ><!--act2--></td>
+          </tr>
+          <tr>
+            <td>ILUMINACIÓN </td>
+            <td id="state3" ><!--act2--></td>
+          <tr>
+            <td>Bomba de<br/>OXÍGENO</td>
+            <td id="state4" ><!--act2--></td>
+          </tr>
+          <tr>
+            <td>Bomba de CO2</td>
+            <td id="state5" ><!--act3--></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+
         </table>
 
       </div>

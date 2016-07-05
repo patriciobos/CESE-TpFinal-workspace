@@ -83,8 +83,6 @@ void vAlarmControl(void *pvParameters){
 
 	volatile portTickType periodo = 1500/portTICK_RATE_MS;
 
-//	volatile uint16_t data0, data1, data2;
-
 	uint8_t i;
 
 	/*inicialización del estado y del control de las alarmas*/
@@ -95,9 +93,6 @@ void vAlarmControl(void *pvParameters){
 	}
 
 	UBaseType_t uxHighWaterMark;
-
-	//init_ADCs();
-
 
 	while(1){
 
@@ -136,9 +131,6 @@ void updateStatus() {
 	data2 = ADC_Polling_Read(ADC_CH1);
 
 	/* Conversiones de escala para los sensores*/
-
-//	data1 = (data1*(30)>>10);
-
 
 	data0 = 5*(data0*2*20/1024);
 	data1 = 5*(((data1*2*(30-16)))/1024)+160;
@@ -191,14 +183,11 @@ void controlAcuario(){
 			actuatorFakeState[heat] = OFF;
 			flags[alarmTemp_High] = ON;
 		}
-		else if (ON == flags[alarmTemp_High]) {
-			flags[alarmTemp_High] = OFF;
-		}
 	}
 
 	if (ENABLE == alarmControl[alarmTemp_Low]) {
 
-		if(ON == alarmState[alarmTemp_Low]){
+		if(ON == alarmState[alarmTemp_Low]) {
 			actuatorFakeState[heat] = ON;
 			flags[alarmTemp_Low] = ON;
 		}
@@ -227,23 +216,50 @@ void controlAcuario(){
 			actuatorFakeState[CO2] = OFF;
 			flags[alarmPH_Low] = ON;
 		}
-		else if (ON == flags[alarmPH_Low]) {
+	}
+
+
+	/* if alarmTemp_high OR alarmPH_low are ENABLE checks recycleWater status
+	 * and start or stop the pumps. */
+	if (ENABLE == (alarmControl[alarmTemp_High] && alarmControl[alarmPH_Low]) ) {
+		if( ON == (alarmState[alarmTemp_High] || alarmState[alarmPH_Low]) ) {
+			actuatorFakeState[pumpIn] = ON;
+			actuatorFakeState[pumpOut] = ON;
+		}
+		else if (ON == (flags[alarmTemp_High] || flags[alarmPH_Low]) ) {
+			actuatorFakeState[pumpIn] = OFF;
+			actuatorFakeState[pumpOut] = OFF;
+			flags[alarmTemp_High] = OFF;
 			flags[alarmPH_Low] = OFF;
 		}
 	}
 
-	/* if alarmTemp_high OR alarmPH_low are ENABLE checks recycleWater status
-	 * and start or stop the pumps. */
-	if (ENABLE == (alarmControl[alarmTemp_High] || alarmControl[alarmPH_Low]) ) {
-		if( ON == (flags[alarmTemp_High] || flags[alarmPH_Low]) ) {
+	if ((ENABLE == (alarmControl[alarmTemp_High]) && (DISABLE == alarmControl[alarmPH_Low]) )) {
+		if( ON ==  alarmState[alarmTemp_High]  ) {
 			actuatorFakeState[pumpIn] = ON;
 			actuatorFakeState[pumpOut] = ON;
 		}
-		else if (OFF == (flags[alarmTemp_High] && flags[alarmPH_Low]) ) {
+		else if ( ON == flags[alarmTemp_High] ) {
 			actuatorFakeState[pumpIn] = OFF;
 			actuatorFakeState[pumpOut] = OFF;
+			flags[alarmTemp_High] = OFF;
+			flags[alarmPH_Low] = OFF;
 		}
 	}
+
+	if ((DISABLE == (alarmControl[alarmTemp_High]) && (ENABLE == alarmControl[alarmPH_Low]) )) {
+		if( ON ==  alarmState[alarmPH_Low] ) {
+			actuatorFakeState[pumpIn] = ON;
+			actuatorFakeState[pumpOut] = ON;
+		}
+		else if ( ON == flags[alarmPH_Low])  {
+			actuatorFakeState[pumpIn] = OFF;
+			actuatorFakeState[pumpOut] = OFF;
+			flags[alarmTemp_High] = OFF;
+			flags[alarmPH_Low] = OFF;
+		}
+	}
+
 	/* Control Water Level*/
 	if (ENABLE == alarmControl[alarmWater_High]) {
 
@@ -278,24 +294,25 @@ void controlAcuario(){
 	for(i=0; i < ACTUATORs_NUMBER; i++){
 
 		actuatorState[i] = actuatorFakeState[i];
+		//DEBUGOUT("%d -> %d \r\n", i, flags[i] );
 	}
-	//DEBUGOUT("%d, %d, %d\r\n", data0, data1, data2);
-	DEBUGOUT("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\r\n",
-											sensorValue[0],
-											sensorValue[1],
-											sensorValue[2],
-											alarmState[0],
-											alarmState[1],
-											alarmState[2],
-											alarmState[3],
-											alarmState[4],
-											alarmState[5],
-											actuatorState[0],
-											actuatorState[1],
-											actuatorState[2],
-											actuatorState[3],
-											actuatorState[4],
-											actuatorState[5] );
+
+//	DEBUGOUT("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\r\n",
+//											sensorValue[0],
+//											sensorValue[1],
+//											sensorValue[2],
+//											alarmState[0],
+//											alarmState[1],
+//											alarmState[2],
+//											alarmState[3],
+//											alarmState[4],
+//											alarmState[5],
+//											actuatorState[0],
+//											actuatorState[1],
+//											actuatorState[2],
+//											actuatorState[3],
+//											actuatorState[4],
+//											actuatorState[5] );
 }
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {

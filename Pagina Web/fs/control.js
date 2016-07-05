@@ -67,7 +67,6 @@ function parse_vars( data ) {
 
     sensores[i] = parsed[i+index].replace(/.*\D/g, "");
     sensores[i]  = parseInt(sensores[i],10)/10;
-    alert(sensores[i]);
 
   }
 
@@ -187,6 +186,50 @@ function  refreshBotones( estadoAlarmas, controlAlarmas ) {
     ((controlAlarmas[Alarm.Water_Low] == "<!--#ctrlAlrm" + Alarm.Water_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Water_Low] == "<!--#alarma" + Alarm.Water_Low + "-->NORMAL" )) &&
     ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->NORMAL" )) &&
     ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->NORMAL" ))
+  ) {
+    btnPumpIn.disabled = false;
+     actPumpIn.className = "notooltip";
+    btnPumpOut.disabled = false;
+    actPumpOut.className = "notooltip";
+  }
+  else if (
+    ((controlAlarmas[Alarm.Water_High] == "<!--#ctrlAlrm" + Alarm.Water_High + "-->DISABLE") ) &&
+    ((controlAlarmas[Alarm.Water_Low] == "<!--#ctrlAlrm" + Alarm.Water_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Water_Low] == "<!--#alarma" + Alarm.Water_Low + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->NORMAL" ))
+  ) {
+    btnPumpIn.disabled = false;
+     actPumpIn.className = "notooltip";
+    btnPumpOut.disabled = false;
+    actPumpOut.className = "notooltip";
+  }
+  else if (
+    ((controlAlarmas[Alarm.Water_High] == "<!--#ctrlAlrm" + Alarm.Water_High + "-->ENABLE") && ( estadoAlarmas[Alarm.Water_High] == "<!--#alarma" + Alarm.Water_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Water_Low] == "<!--#ctrlAlrm" + Alarm.Water_Low + "-->DISABLE")) &&
+    ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->NORMAL" ))
+  ) {
+    btnPumpIn.disabled = false;
+     actPumpIn.className = "notooltip";
+    btnPumpOut.disabled = false;
+    actPumpOut.className = "notooltip";
+  }
+  else if (
+    ((controlAlarmas[Alarm.Water_High] == "<!--#ctrlAlrm" + Alarm.Water_High + "-->ENABLE") && ( estadoAlarmas[Alarm.Water_High] == "<!--#alarma" + Alarm.Water_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Water_Low] == "<!--#ctrlAlrm" + Alarm.Water_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Water_Low] == "<!--#alarma" + Alarm.Water_Low + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->DISABLE")) &&
+    ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->ENABLE")         && ( estadoAlarmas[Alarm.PH_Low] == "<!--#alarma" + Alarm.PH_Low + "-->NORMAL" ))
+  ) {
+    btnPumpIn.disabled = false;
+     actPumpIn.className = "notooltip";
+    btnPumpOut.disabled = false;
+    actPumpOut.className = "notooltip";
+  }
+  else if (
+    ((controlAlarmas[Alarm.Water_High] == "<!--#ctrlAlrm" + Alarm.Water_High + "-->ENABLE") && ( estadoAlarmas[Alarm.Water_High] == "<!--#alarma" + Alarm.Water_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Water_Low] == "<!--#ctrlAlrm" + Alarm.Water_Low + "-->ENABLE")   && ( estadoAlarmas[Alarm.Water_Low] == "<!--#alarma" + Alarm.Water_Low + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.Temp_High] == "<!--#ctrlAlrm" + Alarm.Temp_High + "-->ENABLE")   && ( estadoAlarmas[Alarm.Temp_High] == "<!--#alarma" + Alarm.Temp_High + "-->NORMAL" )) &&
+    ((controlAlarmas[Alarm.PH_Low] == "<!--#ctrlAlrm" + Alarm.PH_Low + "-->DISABLE")  )
   ) {
     btnPumpIn.disabled = false;
      actPumpIn.className = "notooltip";

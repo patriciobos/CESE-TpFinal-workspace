@@ -64,7 +64,9 @@ function parse_vars( data ) {
 
   for (i=0; i < sensores.length; i++ ) {
 
-    sensores[i] = parsed[i+index];
+    //sensores[i] = parsed[i+index];
+    sensores[i] = parsed[i+index].replace(/.*\D/g, "");
+    sensores[i]  = parseInt(sensores[i],10)/10;
 
   }
 
@@ -98,7 +100,7 @@ function refreshActuadores( actuadores ) {
 
   for (i=0; i < actuadores.length; i++){
 
-    //document.getElementById("state" + i ).innerHTML = actuadores[i];
+    document.getElementById("state" + i ).innerHTML = actuadores[i];
 
     if ( actuadores[i] == "<!--#act" + i + "-->ENCENDIDO" ) {
       //document.getElementById("actuador" + i ).value = "DETENER";
@@ -134,7 +136,7 @@ function  refreshAlarmas( estadoAlarmas, controlAlarmas ) {
     //document.getElementById("alarm" + i).className = "alarmaAmarillo";
     }
     else if (controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->ENABLE") {
-      //document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
+      document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
 
       if ( estadoAlarmas[i] == "<!--#alarma" + i + "-->NORMAL" ) {
         document.getElementById("alarm" + i).className = "alarmaVerde";

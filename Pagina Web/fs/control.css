@@ -1,36 +1,36 @@
 div.inner_sensores {
   background-color:#eeeeee;
-  width: 230px;
+  width: 260px;
   height: 100%;
   margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
-  float:left;
+  float:center;
 }
 
 div.inner_actuadores {
   background-color:#eeeeee;
-  width: 460px;
+  width: 420px;
   height: 100%;
   margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
-  float:right;
+  float:center;
 }
-
 
 div.inner_alarmas {
   background-color:#eeeeee;
-  width: 430px;
+  width: 420px;
   height: 100%;
   margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
-  float:right;
+  float:center;
 }
+
 
 
 
@@ -40,7 +40,9 @@ div.inner_alarmas {
 
 table.fixed {
   table-layout:fixed;
-  border: 1px solid #ddd;
+  border: 2.5px solid #ddd;
+  padding-right:5px;
+  padding-left:5px;
   border-radius: 6px;
 }
 
