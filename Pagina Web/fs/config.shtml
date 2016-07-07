@@ -54,7 +54,7 @@
       <label for="mask">Máscara de red: <span class="required">*</span></label>
              <input type="text" id="mask" name="mask" value="" placeholder="255.255.255.0" required="required" autofocus="autofocus" /> <br/><br/>
 
-      <label for="gw">Gateway: <span class="required">*</span></label>
+      <label for="gw">Puerta de enlace: <span class="required">*</span></label>
              <input type="text" id="gw" name="gw" value="" placeholder="192.168.200.1" required="required" autofocus="autofocus" /> <br/><br/>
 
       <input type="submit" name="controlAlarmas" id="controlAlarmas" class="button5" value="APLICAR" />

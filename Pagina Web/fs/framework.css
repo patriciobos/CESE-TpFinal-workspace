@@ -27,11 +27,11 @@ body{
 #section{
   background-color:#eeeeee;
   text-align:center;
-  position: fixed;
+  position:center;
   /* center the element */
   right: 0;
   left: 0;
-  margin-right: auto;
+  margin-right: 150;
   margin-left: auto;
   /* give it dimensions */
   min-height: 10em;
