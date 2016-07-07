@@ -28,7 +28,7 @@ enum {
 	CO2
 };
 
-#define ACTUATORs_NUMBER 6
+#define MAX_ACTUATOR_NUMBER 6
 
 
 void initActuators(void);

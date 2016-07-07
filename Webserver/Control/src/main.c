@@ -255,7 +255,7 @@ int main(void)
 				configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 				(xTaskHandle *) NULL);
 
-	xTaskCreate(vAlarmControl, (signed char *) "AlarmControl",
+	xTaskCreate(vControl, (signed char *) "Control",
 					configAlarmControl_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
 					(xTaskHandle *) NULL);
 

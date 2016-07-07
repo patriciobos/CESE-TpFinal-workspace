@@ -10,6 +10,6 @@
 
 #include "lpc_types.h"
 
-#define SENSORs_NUMBER 3
+#define MAX_SENSOR_NUMBER 3
 
 #endif /* SRC_SENSORES_H_ */

@@ -8,7 +8,7 @@
 #include "lpc_types.h"
 
 
-state_t actuatorState[ACTUATORs_NUMBER];
+state_t actuatorState[MAX_ACTUATOR_NUMBER];
 
 state_t getActuatorState(int portNum){
 
@@ -30,7 +30,7 @@ void initActuators(void){
 
 	uint8_t index;
 
-	for (index = 0; index < ACTUATORs_NUMBER ; index++) {
+	for (index = 0; index < MAX_ACTUATOR_NUMBER ; index++) {
 		actuatorState[index] = OFF;
 	}
 }
@@ -50,7 +50,7 @@ const char *actuatorsHandler(int iIndex, int iNumParams, char *pcParam[], char *
 	uint8_t i;
 	char tmpBuff[5];
 
-	for (i=0; i < ACTUATORs_NUMBER; i++) {
+	for (i=0; i < MAX_ACTUATOR_NUMBER; i++) {
 
 		sprintf(tmpBuff,"cmd%u",i);
 

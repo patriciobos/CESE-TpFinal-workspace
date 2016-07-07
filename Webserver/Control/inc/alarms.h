@@ -33,7 +33,7 @@ typedef enum{
 	APPLY
 } controlFSM;
 
-#define ALARMs_NUMBER  6
+#define MAX_ALARM_NUMBER  6
 
 
 char* getAlarmState(uint8_t alarmNum);
@@ -46,11 +46,13 @@ void clearAlarmState(uint8_t alarmNum);
 
 char* getAlarmControl(uint8_t alarmNum);
 
-void updateStatus(void);
+void updateSensors(void);
 
-void controlAcuario(void);
+void updateAlarms(void);
 
-void vAlarmControl(void *pvParameters);
+void controlActuators(void);
+
+void vControl(void *pvParameters);
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]);
 
