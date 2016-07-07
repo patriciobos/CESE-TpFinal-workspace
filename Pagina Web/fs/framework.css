@@ -27,7 +27,7 @@ body{
 #section{
   background-color:#eeeeee;
   text-align:center;
-  position:center;
+  position:relative;
   /* center the element */
   right: 0;
   left: 0;
@@ -47,8 +47,8 @@ body{
   clear:both;
   text-align:center;
   padding:5px;
-  /*position: fixed;
-  bottom: 5px;*/
+  position: fixed;
+  bottom: 5px;
   width: 100%;
 }
 
