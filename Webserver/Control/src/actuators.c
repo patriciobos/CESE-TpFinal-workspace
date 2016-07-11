@@ -54,11 +54,12 @@ const char *actuatorsHandler(int iIndex, int iNumParams, char *pcParam[], char *
 
 		sprintf(tmpBuff,"cmd%u",i);
 
-		if( strcmp(pcParam[0], tmpBuff) == 0)
-		{
-			if( strcmp(pcValue[0], "INICIAR") == 0)
+		if( 0 == strcmp(pcParam[0], tmpBuff) ) {
+
+			if( 0 == strcmp(pcValue[0], "INICIAR"))
 				actuatorState[i] = ON;
-			else if ( strcmp(pcValue[0], "DETENER") == 0)
+
+			else if ( 0 == strcmp(pcValue[0], "DETENER"))
 				actuatorState[i] = OFF;
 		}
 	}

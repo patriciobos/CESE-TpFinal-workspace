@@ -161,7 +161,7 @@ static void vSetupIFTask (void *pvParameters)
 	/* Install the server side include handler. */
 	http_set_ssi_handler(SSIHandler, pccSSITags, sizeof( pccSSITags ) / sizeof( char * ) );
 
-	CGI_init();
+	initCGIs();
 
 	/* Initialize and start application */
 	httpd_init();

@@ -20,16 +20,14 @@ tCGI cgi_handlers[]={
 tCGI * ptrCGIHandlers;
 
 
-//Initialise cgi environment
-int CGI_init( void) {
+/** Initialize the CGI environment
+ *	This function registers the pairs of file's name and CGI function for the HTTPD server
+ * @returns nothing*/
+void initCGIs( void) {
 
-//	cgi_handler.pcCGIName = "/actuadores.cgi";
-//
-//	cgi_handler.pfnCGIHandler = actuatorsHandler;
+	http_set_cgi_handlers(cgi_handlers, (sizeof (cgi_handlers) / sizeof (tCGI) ) );
 
-	http_set_cgi_handlers(cgi_handlers, 2);
+	DEBUGSTR("httpCGIHandlers registered...............[OK]\r\n");
 
-	DEBUGSTR("httpCGIHandler initialized............[OK]\r\n");
-
-	return 0;
+	return;
 }

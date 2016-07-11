@@ -9,6 +9,6 @@
 #define INC_HTTP_CGI_H_
 
 
-int CGI_init( void);
+void initCGIs( void );
 
 #endif /* INC_HTTP_CGI_H_ */

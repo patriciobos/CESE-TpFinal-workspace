@@ -473,17 +473,17 @@ const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcV
 	uint8_t index;
 	char tmpBuff[8];
 
-	for(index = 0; index < MAX_ALARM_NUMBER; index ++){
+	for(index = 0; index < MAX_ALARM_NUMBER; index ++) {
 
 		sprintf(tmpBuff, "alarma%u", index);
 
-		if( strncmp(pcParam[index], tmpBuff, 7) == 0)
-		{
-			if( strcmp(pcValue[index], "disable") == 0)
-				alarmControl[index] = DISABLE;
-			else if( strcmp(pcValue[index], "enable") == 0)
-				alarmControl[index] = ENABLE;
+		if( 0 == strncmp(pcParam[index], tmpBuff, 7) )  {
 
+			if( 0 == strcmp(pcValue[index], "disable") )
+				alarmControl[index] = DISABLE;
+
+			else if( 0 == strcmp(pcValue[index], "enable") )
+				alarmControl[index] = ENABLE;
 		}
 	}
 	return "/control.shtml";

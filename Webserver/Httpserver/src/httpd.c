@@ -2470,9 +2470,7 @@ httpd_init(void)
  * @param tags an array of SSI tag strings to search for in SSI-enabled files
  * @param num_tags number of tags in the 'tags' array
  */
-void
-http_set_ssi_handler(tSSIHandler ssi_handler, const char **tags, int num_tags)
-{
+void http_set_ssi_handler(tSSIHandler ssi_handler, const char **tags, int num_tags) {
   LWIP_DEBUGF(HTTPD_DEBUG, ("http_set_ssi_handler\n"));
 
   LWIP_ASSERT("no ssi_handler given", ssi_handler != NULL);
