@@ -63,7 +63,6 @@ const char *actuatorsHandler(int iIndex, int iNumParams, char *pcParam[], char *
 				actuatorState[i] = OFF;
 		}
 	}
-
 	return "/control.shtml";
 }
 
