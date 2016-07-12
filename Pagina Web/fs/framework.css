@@ -39,20 +39,110 @@ body{
   min-width: 1150px;
 }
 
-
-
 #footer {
   background-color:black;
   color:white;
   clear:both;
   text-align:center;
   padding:5px;
-  position: fixed;
+  position: absolute;
   bottom: 5px;
   width: 100%;
 }
 
+/*---------------------------*/
+/*	  Divs	                 */
+/*---------------------------*/
 
+
+div.inner_sensores {
+  background-color:#eeeeee;
+  width: 260px;
+  position: absolute;
+  left:20px;
+  margin: 0 auto;
+  display:inline-block;
+  text-align:left;
+  padding:5px;
+}
+
+div.inner_alarmas {
+  background-color:#eeeeee;
+  width: 430px;
+  position: absolute;
+  left:300px;
+  margin: 0 auto;
+  display:inline-block;
+  text-align:left;
+  padding:5px;
+}
+
+div.inner_actuadores {
+  background-color:#eeeeee;
+  width: 730px;
+  position: absolute;
+  left:740px;
+  margin: 0 auto;
+  display:inline-block;
+  text-align:left;
+  padding:5px;
+}
+
+/*---------------------------*/
+/*	  Tables	               */
+/*---------------------------*/
+
+table.fixed {
+  table-layout:fixed;
+  border: 2.5px solid #ddd;
+  padding-right:10px;
+  padding-left:10px;
+  border-radius: 6px;
+}
+
+table.fixed th, td {
+  overflow: hidden;
+  background-color:#eeeeee;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right:5px;
+  padding-left:5px;
+  height: 40px;
+}
+
+
+table td.actuadorVerde {
+  background-color:green;
+  color:white;
+  border-radius: 6px;
+
+}
+
+table td.actuadorRojo {
+  background-color:red;
+  color:black;
+  border-radius: 6px;
+}
+
+table td.alarmaVerde {
+  background-color:green;
+  color:white;
+  border-radius: 6px;
+
+}
+
+table td.alarmaRojo {
+  background-color:red;
+  color:black;
+  border-radius: 6px;
+}
+
+table td.alarmaAmarillo {
+  background-color:lightgray;
+  color:black;
+  border-radius: 6px;
+}
 /*---------------------------*/
 /*	  Buttons	               */
 /*---------------------------*/

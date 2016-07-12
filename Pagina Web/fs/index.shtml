@@ -87,8 +87,8 @@
 
         <table id="tabla_alarmas" class="fixed">
 
-          <col width="155px" />
-          <col width="155 px" />
+          <col width="140px" />
+          <col width="140px" />
 
           <tr>
             <th>Alarma</th>
@@ -133,7 +133,7 @@
 
       </div>
 
-       <!-- ------------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------------ -->
       <!-- ACTUADORES -->
       <!-- ------------------------------------------------------------------------------------ -->
 
@@ -142,8 +142,8 @@
         <h2>ACTUADORES</h2>
 
         <table id="tabla_actuadores" class="fixed">
-          <col width="145px" />
-          <col width="145px" />
+          <col width="140px" />
+          <col width="140px" />
           <tr>
             <th>Nombre</th>
             <th>Estado</th>

@@ -90,8 +90,8 @@
         <form name="alarmas" id="formAlarmas" action="alarmas.cgi" method="get" onsubmit="controlCheckbox()">
 
           <table id="tabla_alarmas" class="fixed">
-            <col width="145px" />
-            <col width="145px" />
+            <col width="140px" />
+            <col width="140px" />
             <col width="100px" />
             <tr>
               <th>Alarma</th>
@@ -140,11 +140,7 @@
               <td><input type="submit" name="controlAlarmas" id="controlAlarmas" class="button5" value="APLICAR" /></td>
             </tr>
           </table>
-
-
-
         </form>
-
       </div>
 
       <!-- ------------------------------------------------------------------------------------ -->
@@ -158,8 +154,8 @@
         <form name="actuadores" action="actuadores.cgi" method="get">
 
           <table id="tabla_actuadores" class="fixed">
-            <col width="145px" />
-            <col width="145px" />
+            <col width="140px" />
+            <col width="140px" />
             <col width="100px" />
             <tr>
               <th>Nombre</th>
@@ -244,19 +240,11 @@
                   </span>
                 </div>
               </td>
-
             </tr>
-
           </table>
-
         </form>
-
       </div>
-
-
-</div>
-    <!-- onChange="this.form.submit()"-->
-    <!-- onclick="controlCheckbox()"-->
+    </div>
 
     <!-- ------------------------------------------------------------------------------------ -->
     <!-- ------------------------------------------------------------------------------------ -->
