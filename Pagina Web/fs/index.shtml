@@ -71,7 +71,14 @@
             <td>pH</td>
             <td id= "sensor2" ><!--sensor3--></td>
           </tr>
-
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
         </table>
 
       </div>
