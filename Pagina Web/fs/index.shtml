@@ -8,12 +8,15 @@
     <meta name="description" content="Control de Acuario">
     <meta name="author" content="Patricio Bos">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="framework.css">
     <link rel="stylesheet" href="index.css">
 
     <script src="framework.js"></script>
     <script src="index.js"></script>
+    <script src="graphs.js"></script>
+
 
   </head>
 
@@ -55,25 +58,22 @@
             <td>Nivel de Agua</td>
             <td id= "sensor0" ><!--sensor1--></td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
+          <tr >
+            <td colspan="2"> <div id="graphDiv0"> </div></td>
           </tr>
           <tr>
             <td>Temperatura</td>
             <td id= "sensor1" ><!--sensor2--></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td colspan="2" > <div id="graphDiv1"> </div> </td>
           </tr>
           <tr>
             <td>pH</td>
             <td id= "sensor2" ><!--sensor3--></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td colspan="2" > <div id="graphDiv2"> </div> </td>
           </tr>
           <tr>
             <td></td>
@@ -82,8 +82,6 @@
         </table>
 
       </div>
-
-
 
       <!-- ------------------------------------------------------------------------------------ -->
       <!-- ALARMAS -->
@@ -196,6 +194,8 @@
     <div id="footer">
       Copyright &copy Patricio Bos
     </div>
+
+    <script>(function () { createGraphs(); }()); </script>
 
   </body>
 

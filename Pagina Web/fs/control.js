@@ -120,9 +120,11 @@ function refreshSensores( sensores ) {
 
   var i;
 
+  var baseAux = "graph"
   for (i=0; i < sensores.length; i++) {
 
     document.getElementById("sensor" + i ).innerHTML = sensores[i];
+    window[baseAux+i].update([sensores[i]]);
   }
 
 }
@@ -134,7 +136,7 @@ function  refreshAlarmas( estadoAlarmas, controlAlarmas ) {
   for (i=0; i < estadoAlarmas.length; i++) {
 
     if ( controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->DISABLE" ) {
-    document.getElementById("alarm" + i).innerHTML  = "-";
+    document.getElementById("alarm" + i).innerHTML  = estadoAlarmas[i];
     document.getElementById("alarm" + i).className = "alarmaAmarillo";
     }
     else if (controlAlarmas[i] == "<!--#ctrlAlrm" + i + "-->ENABLE") {

@@ -3,15 +3,19 @@ var sensores = new Array(3);
 var estadoAlarmas = new Array(6);
 var controlAlarmas = new Array(6);
 
-var msUpdateTime = 1500;
+var graph0;
+var graph1;
+var graph2;
+
+var msUpdateTime = 1000;
 
 var Alarm = Object.freeze({
   Water_High : 0,
-	Water_Low  : 1,
-	Temp_High  : 2,
-	Temp_Low   : 3,
-	PH_High    : 4,
-	PH_Low     : 5
+  Water_Low  : 1,
+  Temp_High  : 2,
+  Temp_Low   : 3,
+  PH_High    : 4,
+  PH_Low     : 5
 });
 
 function changebuttonClasses(elem) {
@@ -28,4 +32,46 @@ function changebuttonClasses(elem) {
 
     elem.className = "active";
   }
+}
+
+function createCanvas(divName) {
+
+    var div = document.getElementById(divName);
+    var canvas = document.createElement('canvas');
+    div.appendChild(canvas);
+    if (typeof G_vmlCanvasManager != 'undefined') {
+      canvas = G_vmlCanvasManager.initElement(canvas);
+    }
+    var ctx = canvas.getContext("2d");
+    return ctx;
+  }
+
+function createGraphs() {
+
+  var ctx = createCanvas("graphDiv0");
+
+  graph0 = new BarGraph(ctx);
+  graph0.maxValue = 20;
+  graph0.margin = 2;
+  graph0.colors = ["#49a0d8"];
+  graph0.xAxisLabelArr = ["Nivel de Agua"];
+  graph0.update([10]);
+
+  var ctx = createCanvas("graphDiv1");
+
+  graph1 = new BarGraph(ctx);
+  graph1.maxValue = 30;
+  graph1.margin = 2;
+  graph1.colors = ["#49a0d8"];
+  graph1.xAxisLabelArr = ["Temperatura"];
+  graph1.update([15]);
+
+  var ctx = createCanvas("graphDiv2");
+
+  graph2 = new BarGraph(ctx);
+  graph2.maxValue = 14;
+  graph2.margin = 2;
+  graph2.colors = ["#49a0d8"];
+  graph2.xAxisLabelArr = ["pH"];
+  graph2.update([7]);
 }
