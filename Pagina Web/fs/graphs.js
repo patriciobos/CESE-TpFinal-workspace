@@ -175,12 +175,12 @@ function BarGraph(ctx) {
   // Public properties and methods
 
   this.width = 200;
-  this.height = 36;
+  this.height = 30;
   this.maxValue;
   this.margin = 5;
   this.colors = ["purple", "red", "green", "yellow"];
   this.curArr = [];
-  this.backgroundColor = "#fff";
+  this.backgroundColor = "#eeeeee";
   this.xAxisLabelArr = [];
   this.yAxisLabelArr = [];
   this.animationInterval = 100;

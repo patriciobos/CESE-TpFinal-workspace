@@ -53,25 +53,25 @@ function createGraphs() {
   graph0 = new BarGraph(ctx);
   graph0.maxValue = 20;
   graph0.margin = 2;
-  graph0.colors = ["#49a0d8"];
-  graph0.xAxisLabelArr = ["Nivel de Agua"];
-  graph0.update([10]);
+  graph0.colors = ["#555555"];
+  graph0.xAxisLabelArr = [];
+  graph0.update([0]);
 
   var ctx = createCanvas("graphDiv1");
 
   graph1 = new BarGraph(ctx);
   graph1.maxValue = 30;
   graph1.margin = 2;
-  graph1.colors = ["#49a0d8"];
-  graph1.xAxisLabelArr = ["Temperatura"];
-  graph1.update([15]);
+  graph1.colors = ["#555555"];
+  graph1.xAxisLabelArr = [];
+  graph1.update([0]);
 
   var ctx = createCanvas("graphDiv2");
 
   graph2 = new BarGraph(ctx);
   graph2.maxValue = 14;
   graph2.margin = 2;
-  graph2.colors = ["#49a0d8"];
-  graph2.xAxisLabelArr = ["pH"];
-  graph2.update([7]);
+  graph2.colors = ["#555555"];
+  graph2.xAxisLabelArr = [];
+  graph2.update([0]);
 }
