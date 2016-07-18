@@ -175,7 +175,7 @@ function BarGraph(ctx) {
   // Public properties and methods
 
   this.width = 200;
-  this.height = 30;
+  this.height = 25;
   this.maxValue;
   this.margin = 5;
   this.colors = ["purple", "red", "green", "yellow"];

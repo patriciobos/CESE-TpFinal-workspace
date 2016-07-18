@@ -24,7 +24,7 @@
 
 <div id="nav">
   <ul class="sidenav">
-    <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) >Home</a></li>
+    <li><a id="menu1" href="index.shtml" onclick=changebuttonClasses(this) >Inicio</a></li>
     <li><a id="menu2" href="control.shtml" onclick=changebuttonClasses(this) >Control</a></li>
     <li><a id="menu3" href="config.shtml" onclick=changebuttonClasses(this) class="active" >Configuración</a></li>
   </ul>

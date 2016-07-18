@@ -75,7 +75,7 @@
 #define configUSE_TICK_HOOK				0
 #define configCPU_CLOCK_HZ				( ( unsigned long ) SystemCoreClock )
 #define configTICK_RATE_HZ				( ( portTickType ) 1000 )
-#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 256 ) 		/* <--- 256 */
+#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 128 ) 		/* <--- 256 */
 #define configAlarmControl_STACK_SIZE	( ( unsigned short ) 256)		//task stack debug
 
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 40*1024 ) )

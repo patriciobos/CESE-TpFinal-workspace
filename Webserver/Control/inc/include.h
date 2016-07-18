@@ -11,3 +11,7 @@
 typedef enum state {OFF = 0, ON = !OFF} state_t;
 
 #endif /* INC_INCLUDE_H_ */
+
+//#define DEBUG_ENABLE
+//
+//#define LWIP_DEBUG

@@ -5,49 +5,6 @@ window.onload = function() {
 var data_received = 0;
 
 
-
-
-function loop() {
-	if( !data_received )
-		makeRequest("ajax.shtml");
-    setTimeout("loop()",msUpdateTime);
-}
-
-function makeRequest(url){
-  var http_request = false;
-  data_received = 1;
-
-  if (window.XMLHttpRequest){
-    http_request = new XMLHttpRequest();
-    if (http_request.overrideMimeType){
-      http_request.overrideMimeType('text/xml');
-    }
-  }
-
-  if(!http_request){
-    alert('Giving up :( Cannot create an XMLHTTP instance');
-    return false;
-  }
-  http_request.onreadystatechange = function() { alertContents(http_request); };
-  http_request.open('GET', url, true);
-  http_request.send(null);
-}
-
-function alertContents(http_request){
-
-  if (http_request.readyState == 4){
-    if (http_request.status == 200){
-      parse_vars(http_request.responseText);
-      data_received = 0;
-    }
-    else{
-      alert("There was a problem with the AJAX request.\n\r \
-           Request status = " + http_request.status );
-
-    }
-  }
-}
-
 function parse_vars( data ) {
 
   var parsed = data.split('\n');
@@ -86,11 +43,11 @@ function parse_vars( data ) {
 
   }
 
-  refreshActuadores(actuadores);
+  refreshActuadores( actuadores );
 
-  refreshSensores(sensores);
+  refreshSensores( sensores, estadoAlarmas );
 
-  refreshAlarmas(estadoAlarmas,controlAlarmas);
+  refreshAlarmas( estadoAlarmas,controlAlarmas );
 
 }
 
@@ -110,18 +67,6 @@ function refreshActuadores( actuadores ) {
       //document.getElementById("actuador" + i ).value = "INICIAR";
       document.getElementById("state" + i ).className = "actuadorRojo";
     }
-  }
-
-}
-
-function refreshSensores( sensores ) {
-
-  var i;
-  var baseAux = "graph"
-  for (i=0; i < sensores.length; i++) {
-
-    document.getElementById("sensor" + i ).innerHTML = sensores[i];
-    window[baseAux+i].update([sensores[i]]);
   }
 
 }

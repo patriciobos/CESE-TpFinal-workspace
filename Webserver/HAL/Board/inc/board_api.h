@@ -32,6 +32,7 @@
 #ifndef __BOARD_API_H_
 #define __BOARD_API_H_
 
+#include "include.h"
 #include "board.h"
 #include "lpc_types.h"
 #include <stdio.h>
@@ -172,26 +173,6 @@ typedef void (*p_msDelay_func_t)(uint32_t);
 #define DEBUGIN() (int) EOF
 
 #else
-#define DEBUGINIT() Board_Debug_Init()
-#define DEBUGOUT(...) { \
-char msg_ppp[64]; \
-sprintf(msg_ppp,__VA_ARGS__); \
-Board_UARTPutSTR(msg_ppp); \
-}
-#define DEBUGSTR(str) Board_UARTPutSTR(str)
-#define DEBUGIN() Board_UARTGetChar()
-#endif /* defined(DEBUG_SEMIHOSTING) */
-
-
-//#else
-//#define DEBUGINIT()
-//#define DEBUGOUT(...)
-//#define DEBUGSTR(str)
-//#define DEBUGIN() (int) EOF
-
-#endif /* defined(DEBUG_ENABLE) */
-
-
 #define DEBUGOUT(...) { \
 char msg_aux[64]; \
 sprintf(msg_aux,__VA_ARGS__); \
@@ -199,6 +180,26 @@ Board_UARTPutSTRrb(msg_aux); \
 }
 
 #define DEBUGSTR(str) Board_UARTPutSTRrb(str);
+#define DEBUGIN() Board_UARTGetChar()
+#endif /* defined(DEBUG_SEMIHOSTING) */
+
+
+#else
+#define DEBUGINIT()
+#define DEBUGOUT(...)
+#define DEBUGSTR(str)
+#define DEBUGIN() (int) EOF
+
+#endif /* defined(DEBUG_ENABLE) */
+
+
+//#define DEBUGOUT(...) { \
+//char msg_aux[64]; \
+//sprintf(msg_aux,__VA_ARGS__); \
+//Board_UARTPutSTRrb(msg_aux); \
+//}
+//
+//#define DEBUGSTR(str) Board_UARTPutSTRrb(str);
 
 
 
