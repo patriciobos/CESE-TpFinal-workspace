@@ -10,6 +10,7 @@
 #include "math.h"
 
 #include "board.h"
+#include "board_api.h"
 #include "adcs.h"
 
 #include "FreeRTOS.h"
@@ -32,6 +33,7 @@ volatile state_t alarmFlag[MAX_ALARM_NUMBER];
 extern uint32_t sensorValue[];
 extern uint32_t sensorMaxLimit[];
 extern uint32_t sensorMinLimit[];
+extern const io_port_t gpioDOUTBits[];
 
 extern state_t actuatorState[];
 
@@ -81,7 +83,7 @@ char* getAlarmControl(uint8_t alarmNum){
 
 void vControl(void *pvParameters){
 
-	volatile portTickType periodo = 1500/portTICK_RATE_MS;
+	volatile portTickType periodo = 1000/portTICK_RATE_MS;
 
 	uint8_t i;
 
@@ -131,9 +133,14 @@ void updateSensors() {
 	data2 = ADC_Polling_Read(ADC_CH1);
 
 	/* Conversiones de escala para los sensores*/
-	data0 = 5*(data0*2*20/1024);
-	data1 = 5*(((data1*2*(30-16)))/1024)+160;
-	data2 = (data2*10*14>>10);
+//	data0 = 5*(data0*2*20/1024);
+//	data1 = 5*(((data1*2*(30-16)))/1024)+160;
+//	data2 = (data2*10*14>>10);
+
+	/* Conversiones de escala para los sensores*/
+	data0 = 5*(data0*2*20/512);
+	data1 = 5*(((data1*2*(30)))/512);
+	data2 = (data2*10*14/512);
 
 	/* Asignar los valores leidos*/
 	sensorValue[0] = data0;
@@ -300,172 +307,9 @@ void controlActuators() {
 	for( i=0; i < MAX_ACTUATOR_NUMBER; i++ ) {
 
 		actuatorState[i] = actuatorFakeState[i];
+		Board_DOUT_Set(i, actuatorState[i]);
 	}
 }
-
-//%void waterRecycling( state_t recycle) {
-//%
-//%if (ON == recycle) {
-//%		actuatorFakeState[pumpIn] = ON;
-//%		actuatorFakeState[pumpOut] = ON;
-//%	}
-//%	else if (OFF == recycle) {
-//%		actuatorFakeState[pumpIn] = OFF;
-//%		actuatorFakeState[pumpOut] = OFF;
-//%		alarmFlag[alarmTemp_High] = OFF;
-//%		alarmFlag[alarmPH_Low] = OFF;
-//%	}
-//%}
-
-//void controlActuators(){
-//
-//	state_t actuatorFakeState[MAX_ACTUATOR_NUMBER];
-//
-//	uint8_t i;
-//
-//	for(i=0; i < MAX_ACTUATOR_NUMBER; i++){
-//
-//		actuatorFakeState[i] = getActuatorState(i);
-//	}
-//
-//
-//	/* Control temperature*/
-//	if (ENABLE == alarmControl[alarmTemp_High]) {
-//
-//		if(ON == alarmState[alarmTemp_High]){
-//			actuatorFakeState[heat] = OFF;
-//			alarmFlag[alarmTemp_High] = ON;
-//		}
-//	}
-//
-//	if (ENABLE == alarmControl[alarmTemp_Low]) {
-//
-//		if(ON == alarmState[alarmTemp_Low]) {
-//			actuatorFakeState[heat] = ON;
-//			alarmFlag[alarmTemp_Low] = ON;
-//		}
-//		else if (ON == alarmFlag[alarmTemp_Low]) {
-//			actuatorFakeState[heat] = OFF;
-//			alarmFlag[alarmTemp_Low] = OFF;
-//		}
-//	}
-//
-//	/* Control pH*/
-//	if (ENABLE == alarmControl[alarmPH_High]) {
-//
-//		if(ON == alarmState[alarmPH_High]){
-//			actuatorFakeState[CO2] = ON;
-//			alarmFlag[alarmPH_High] = ON;
-//		}
-//		else if (ON == alarmFlag[alarmPH_High]) {
-//			actuatorFakeState[CO2] = OFF;
-//			alarmFlag[alarmPH_High] = OFF;
-//		}
-//	}
-//
-//	if (ENABLE == alarmControl[alarmPH_Low]) {
-//
-//		if(ON == alarmState[alarmPH_Low]){
-//			actuatorFakeState[CO2] = OFF;
-//			alarmFlag[alarmPH_Low] = ON;
-//		}
-//	}
-//
-//
-//	/* if alarmTemp_high OR alarmPH_low are ENABLE checks recycleWater status
-//	 * and start or stop the pumps. */
-//	if (ENABLE == (alarmControl[alarmTemp_High] && alarmControl[alarmPH_Low]) ) {
-//		if( ON == (alarmState[alarmTemp_High] || alarmState[alarmPH_Low]) ) {
-//			actuatorFakeState[pumpIn] = ON;
-//			actuatorFakeState[pumpOut] = ON;
-//		}
-//		else if (ON == (alarmFlag[alarmTemp_High] || alarmFlag[alarmPH_Low]) ) {
-//			actuatorFakeState[pumpIn] = OFF;
-//			actuatorFakeState[pumpOut] = OFF;
-//			alarmFlag[alarmTemp_High] = OFF;
-//			alarmFlag[alarmPH_Low] = OFF;
-//		}
-//	}
-//
-//	if ((ENABLE == (alarmControl[alarmTemp_High]) && (DISABLE == alarmControl[alarmPH_Low]) )) {
-//		if( ON ==  alarmState[alarmTemp_High]  ) {
-//			actuatorFakeState[pumpIn] = ON;
-//			actuatorFakeState[pumpOut] = ON;
-//		}
-//		else if ( ON == alarmFlag[alarmTemp_High] ) {
-//			actuatorFakeState[pumpIn] = OFF;
-//			actuatorFakeState[pumpOut] = OFF;
-//			alarmFlag[alarmTemp_High] = OFF;
-//			alarmFlag[alarmPH_Low] = OFF;
-//		}
-//	}
-//
-//	if ((DISABLE == (alarmControl[alarmTemp_High]) && (ENABLE == alarmControl[alarmPH_Low]) )) {
-//		if( ON ==  alarmState[alarmPH_Low] ) {
-//			actuatorFakeState[pumpIn] = ON;
-//			actuatorFakeState[pumpOut] = ON;
-//		}
-//		else if ( ON == alarmFlag[alarmPH_Low])  {
-//			actuatorFakeState[pumpIn] = OFF;
-//			actuatorFakeState[pumpOut] = OFF;
-//			alarmFlag[alarmTemp_High] = OFF;
-//			alarmFlag[alarmPH_Low] = OFF;
-//		}
-//	}
-//
-//	/* Control Water Level*/
-//	if (ENABLE == alarmControl[alarmWater_High]) {
-//
-//		if(ON == alarmState[alarmWater_High]){
-//			actuatorFakeState[pumpIn] = OFF;
-//			actuatorFakeState[pumpOut] = ON;
-//			alarmFlag[alarmWater_High] = ON;
-//		}
-//		else if (ON == alarmFlag[alarmWater_High]) {
-//			actuatorFakeState[pumpOut] = OFF;
-//			alarmFlag[alarmWater_High] = OFF;
-//		}
-//	}
-//
-//	if (ENABLE == alarmControl[alarmWater_Low]) {
-//
-//		if(ON == alarmState[alarmWater_Low]){
-//			actuatorFakeState[pumpIn] = ON;
-//			actuatorFakeState[pumpOut] = OFF;
-//			alarmFlag[alarmWater_Low] = ON;
-//		}
-//		else if (ON == alarmFlag[alarmWater_Low]) {
-//			actuatorFakeState[pumpIn] = OFF;
-//			alarmFlag[alarmWater_Low] = OFF;
-//		}
-//
-//
-//	}
-//
-//	/* impact changes to actuators*/
-//
-//	for(i=0; i < MAX_ACTUATOR_NUMBER; i++){
-//
-//		actuatorState[i] = actuatorFakeState[i];
-//	}
-//}
-
-//	DEBUGOUT("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\r\n",
-//											sensorValue[0],
-//											sensorValue[1],
-//											sensorValue[2],
-//											alarmState[0],
-//											alarmState[1],
-//											alarmState[2],
-//											alarmState[3],
-//											alarmState[4],
-//											alarmState[5],
-//											actuatorState[0],
-//											actuatorState[1],
-//											actuatorState[2],
-//											actuatorState[3],
-//											actuatorState[4],
-//											actuatorState[5] );
 
 
 const char *alarmsHandler(int iIndex, int iNumParams, char *pcParam[], char *pcValue[]) {

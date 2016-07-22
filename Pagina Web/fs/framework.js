@@ -7,7 +7,7 @@ var graph0;
 var graph1;
 var graph2;
 
-var msUpdateTime = 1000;
+var msUpdateTime = 2000;
 
 var Alarm = Object.freeze({
   Water_High : 0,

@@ -43,13 +43,17 @@
 const uint32_t ExtRateIn = 0;
 const uint32_t OscRateIn = 12000000;
 
-typedef struct {
-	uint8_t port;
-	uint8_t pin;
-} io_port_t;
 
+typedef enum {	DOUT0 = 0,
+				DOUT1,
+				DOUT2,
+				DOUT3,
+				DOUT4,
+				DOUT5,
+				DOUT6,
+				DOUT7} dout_t;
 
-static const io_port_t gpioLEDBits[] = {{5,0},{5,1},{5,2},{0,14},{1,11},{1,12}};
+static const io_port_t gpioDOUTBits[] = {{5,1}, {2,6}, {2,5}, {2,4},{5,12},{5,13},{5,14},{1,8}};
 
 
 void Board_UART_Init(LPC_USART_T *pUART)
@@ -169,24 +173,24 @@ void Board_UARTPutSTR(const char *str)
 #endif
 }
 
-static void Board_LED_Init()
-{
-   /* LEDs EDU-CIAA-NXP */
-   Chip_SCU_PinMux(2,0,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[0], LED0R */
-   Chip_SCU_PinMux(2,1,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[1], LED0G */
-   Chip_SCU_PinMux(2,2,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[2], LED0B */
-   Chip_SCU_PinMux(2,10,MD_PUP|MD_EZI,FUNC0); /* GPIO0[14], LED1 */
-   Chip_SCU_PinMux(2,11,MD_PUP|MD_EZI,FUNC0); /* GPIO1[11], LED2 */
-   Chip_SCU_PinMux(2,12,MD_PUP|MD_EZI,FUNC0); /* GPIO1[12], LED3 */
-
-   Chip_GPIO_SetDir(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2),1);
-   Chip_GPIO_SetDir(LPC_GPIO_PORT, 0,(1<<14),1);
-   Chip_GPIO_SetDir(LPC_GPIO_PORT, 1,(1<<11)|(1<<12),1);
-
-   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2));
-   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 0,(1<<14));
-   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 1,(1<<11)|(1<<12));
-}
+//static void Board_LED_Init()
+//{
+//   /* LEDs EDU-CIAA-NXP */
+//   Chip_SCU_PinMux(2,0,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[0], LED0R */
+//   Chip_SCU_PinMux(2,1,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[1], LED0G */
+//   Chip_SCU_PinMux(2,2,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[2], LED0B */
+//   Chip_SCU_PinMux(2,10,MD_PUP|MD_EZI,FUNC0); /* GPIO0[14], LED1 */
+//   Chip_SCU_PinMux(2,11,MD_PUP|MD_EZI,FUNC0); /* GPIO1[11], LED2 */
+//   Chip_SCU_PinMux(2,12,MD_PUP|MD_EZI,FUNC0); /* GPIO1[12], LED3 */
+//
+//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2),1);
+//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 0,(1<<14),1);
+//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 1,(1<<11)|(1<<12),1);
+//
+//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2));
+//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 0,(1<<14));
+//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 1,(1<<11)|(1<<12));
+//}
 
 void Board_Ciaa_Gpios()
 {
@@ -228,23 +232,23 @@ void Board_Ciaa_Gpios()
 
 }
 
-void Board_LED_Set(uint8_t LEDNumber, bool On)
+void Board_DOUT_Set(uint8_t DOUTNumber, bool On)
 {
-	if (LEDNumber < (sizeof(gpioLEDBits) / sizeof(io_port_t)))
-		Chip_GPIO_SetPinState(LPC_GPIO_PORT, gpioLEDBits[LEDNumber].port, gpioLEDBits[LEDNumber].pin, On);
+	if (DOUTNumber < (sizeof(gpioDOUTBits) / sizeof(io_port_t)))
+		Chip_GPIO_SetPinState(LPC_GPIO_PORT, gpioDOUTBits[DOUTNumber].port, gpioDOUTBits[DOUTNumber].pin, On);
 }
 
-bool Board_LED_Test(uint8_t LEDNumber)
+bool Board_DOUT_Test(uint8_t DOUTNumber)
 {
-	if (LEDNumber < (sizeof(gpioLEDBits) / sizeof(io_port_t)))
-		return (bool) Chip_GPIO_GetPinState(LPC_GPIO_PORT, gpioLEDBits[LEDNumber].port, gpioLEDBits[LEDNumber].pin);
+	if (DOUTNumber < (sizeof(gpioDOUTBits) / sizeof(io_port_t)))
+		return (bool) Chip_GPIO_GetPinState(LPC_GPIO_PORT, gpioDOUTBits[DOUTNumber].port, gpioDOUTBits[DOUTNumber].pin);
 
 	return false;
 }
 
-void Board_LED_Toggle(uint8_t LEDNumber)
+void Board_DOUT_Toggle(uint8_t DOUTNumber)
 {
-	Board_LED_Set(LEDNumber, !Board_LED_Test(LEDNumber));
+	Board_DOUT_Set(DOUTNumber, !Board_DOUT_Test(DOUTNumber));
 }
 
 void Board_Buttons_Init(void)

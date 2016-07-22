@@ -129,21 +129,21 @@ void Board_UARTPutSTRrb(const char *str);
  * @param	State		: true for on, false for off
  * @return	None
  */
-void Board_LED_Set(uint8_t LEDNumber, bool State);
+void Board_DOUT_Set(uint8_t LEDNumber, bool State);
 
 /**
  * @brief	Returns the current state of a board LED
  * @param	LEDNumber	: LED number to set state for
  * @return	true if the LED is on, otherwise false
  */
-bool Board_LED_Test(uint8_t LEDNumber);
+bool Board_DOUT_Test(uint8_t LEDNumber);
 
 /**
  * @brief	Toggles the current state of a board LED
  * @param	LEDNumber	: LED number to change state for
  * @return	None
  */
-void Board_LED_Toggle(uint8_t LEDNumber);
+void Board_DOUT_Toggle(uint8_t LEDNumber);
 
 /**
  * @brief	Turn on Board LCD Backlight
