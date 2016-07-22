@@ -46,7 +46,7 @@ extern "C" {
     DEBUGIN macros. If not defined, DEBUG* functions will be optimized
 	out of the code at build time.
  */
-#define DEBUG_ENABLE
+//#define DEBUG_ENABLE
 
 /** Define DEBUG_SEMIHOSTING along with DEBUG_ENABLE to enable IO support
     via semihosting. You may need to use a C library that supports
@@ -81,6 +81,8 @@ typedef struct {
 /* Transmit and receive ring buffers */
 static RINGBUFF_T txring, rxring;
 
+#if defined(DEBUG_ENABLE)
+
 /* Transmit and receive ring buffer sizes */
 #define UART_SRB_SIZE 1024	/* Send */
 #define UART_RRB_SIZE 32	/* Receive */
@@ -88,6 +90,7 @@ static RINGBUFF_T txring, rxring;
 /* Transmit and receive buffers */
 static uint8_t rxbuff[UART_RRB_SIZE], txbuff[UART_SRB_SIZE];
 
+#endif
 
 
 /* For USBLIB examples */

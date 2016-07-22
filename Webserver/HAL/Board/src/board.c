@@ -55,6 +55,31 @@ typedef enum {	DOUT0 = 0,
 
 static const io_port_t gpioDOUTBits[] = {{5,1}, {2,6}, {2,5}, {2,4},{5,12},{5,13},{5,14},{1,8}};
 
+/* Set up and initialize all required blocks and functions related to the
+   board hardware */
+void Board_Init(void)
+{
+#if defined(DEBUG_ENABLE)
+	/* Sets up DEBUG UART */
+	Board_Debug_Init();
+#endif
+	/* Initializes GPIO */
+	Chip_GPIO_Init(LPC_GPIO_PORT);
+	Board_Ciaa_Gpios();
+
+	/*Initialize ADCs*/
+	init_ADCs();
+
+
+	/* Initialize LEDs */
+//	Board_LED_Init();
+
+#if defined(USE_RMII)
+	Chip_ENET_RMIIEnable(LPC_ETHERNET);
+#else
+	Chip_ENET_MIIEnable(LPC_ETHERNET);
+#endif
+}
 
 void Board_UART_Init(LPC_USART_T *pUART)
 {
@@ -75,6 +100,7 @@ void Board_UART_Init(LPC_USART_T *pUART)
 //	}
 }
 
+#if defined(DEBUG_ENABLE)
 /* Initialize debug output via UART for board */
 void Board_Debug_Init(void)
 {
@@ -114,6 +140,7 @@ void Board_Debug_Init(void)
 
 #endif
 }
+#endif
 
 /**
  * @brief	UART interrupt handler using ring buffers
@@ -172,25 +199,6 @@ void Board_UARTPutSTR(const char *str)
 	}
 #endif
 }
-
-//static void Board_LED_Init()
-//{
-//   /* LEDs EDU-CIAA-NXP */
-//   Chip_SCU_PinMux(2,0,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[0], LED0R */
-//   Chip_SCU_PinMux(2,1,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[1], LED0G */
-//   Chip_SCU_PinMux(2,2,MD_PUP|MD_EZI,FUNC4);  /* GPIO5[2], LED0B */
-//   Chip_SCU_PinMux(2,10,MD_PUP|MD_EZI,FUNC0); /* GPIO0[14], LED1 */
-//   Chip_SCU_PinMux(2,11,MD_PUP|MD_EZI,FUNC0); /* GPIO1[11], LED2 */
-//   Chip_SCU_PinMux(2,12,MD_PUP|MD_EZI,FUNC0); /* GPIO1[12], LED3 */
-//
-//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2),1);
-//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 0,(1<<14),1);
-//   Chip_GPIO_SetDir(LPC_GPIO_PORT, 1,(1<<11)|(1<<12),1);
-//
-//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 5,(1<<0)|(1<<1)|(1<<2));
-//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 0,(1<<14));
-//   Chip_GPIO_ClearValue(LPC_GPIO_PORT, 1,(1<<11)|(1<<12));
-//}
 
 void Board_Ciaa_Gpios()
 {
@@ -275,31 +283,7 @@ void Board_ENET_GetMacADDR(uint8_t *mcaddr)
 	memcpy(mcaddr, boardmac, 6);
 }
 
-/* Set up and initialize all required blocks and functions related to the
-   board hardware */
-void Board_Init(void)
-{
 
-	/* Sets up DEBUG UART */
-	Board_Debug_Init();
-
-	/* Initializes GPIO */
-	Chip_GPIO_Init(LPC_GPIO_PORT);
-	Board_Ciaa_Gpios();
-
-	/*Initialize ADCs*/
-	init_ADCs();
-
-
-	/* Initialize LEDs */
-//	Board_LED_Init();
-
-#if defined(USE_RMII)
-	Chip_ENET_RMIIEnable(LPC_ETHERNET);
-#else
-	Chip_ENET_MIIEnable(LPC_ETHERNET);
-#endif
-}
 
 void Board_I2C_Init(I2C_ID_T id)
 {
