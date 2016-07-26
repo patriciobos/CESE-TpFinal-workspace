@@ -12,13 +12,14 @@ body{
   background-color:black;
   color:white;
   text-align:center;
-  padding:5px;
+  padding:5px 0px;
+  width:1280px;
 }
 
 #nav {
   line-height:30px;
   background-color:#eeeeee;
-  height:100%;
+  /*height:100%;*/
   width:140px;
   float:left;
   position:relative;
@@ -28,17 +29,11 @@ body{
 
 #section{
   background-color:#eeeeee;
-  text-align:center;
   position:relative;
-  /* center the element */
-  right: 0;
   left: 150px;
-  top:0;
-  margin-right: auto;
-  /*margin-left: auto;*/
-  /* give it dimensions */
-  min-height: 10em;
   width: 1110px;
+  height:620px;
+  padding-bottom:20px;
 }
 
 #footer {
@@ -46,11 +41,12 @@ body{
   color:white;
   clear:both;
   text-align:center;
-  padding:5px;
+  padding:5px 0px;
   position: fixed;
-  bottom: 5px;
-  width: 100%;
-}
+  bottom:0;
+  width:1280px;
+  height:20px;
+ }
 
 /*---------------------------*/
 /*	  Divs	                 */
@@ -62,7 +58,7 @@ div.inner_sensores {
   width: 260px;
   position: absolute;
   left:20px;
-  margin: 0;
+  margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
@@ -75,7 +71,7 @@ div.inner_alarmas {
   width: 410px;
   position: absolute;
   left:275px;
-  margin: 0;
+  margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
@@ -89,7 +85,7 @@ div.inner_actuadores {
   width: 410px;
   position: absolute;
   left:695px;
-  margin: 0;
+  margin: 0 auto;
   display:inline-block;
   text-align:left;
   padding:5px;
