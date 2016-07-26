@@ -32,14 +32,13 @@ body{
   position:relative;
   /* center the element */
   right: 0;
-  left: 180px;
+  left: 150px;
   top:0;
   margin-right: auto;
   /*margin-left: auto;*/
   /* give it dimensions */
   min-height: 10em;
-  width: 50%;
-  /*min-width: 1150px;*/
+  width: 1110px;
 }
 
 #footer {
@@ -63,32 +62,39 @@ div.inner_sensores {
   width: 260px;
   position: absolute;
   left:20px;
-  margin: 0 auto;
+  margin: 0;
   display:inline-block;
   text-align:left;
   padding:5px;
+  padding-left:0px;
+  padding-right:0px;
 }
 
 div.inner_alarmas {
   background-color:#eeeeee;
-  width: 430px;
+  width: 410px;
   position: absolute;
-  left:300px;
-  margin: 0 auto;
+  left:275px;
+  margin: 0;
   display:inline-block;
   text-align:left;
   padding:5px;
+  padding-left:0px;
+  padding-right:0px;
+
 }
 
 div.inner_actuadores {
   background-color:#eeeeee;
-  width: 430px;
+  width: 410px;
   position: absolute;
-  left:740px;
-  margin: 0 auto;
+  left:695px;
+  margin: 0;
   display:inline-block;
   text-align:left;
   padding:5px;
+  padding-left:0px;
+  padding-right:0px;
 }
 
 /*---------------------------*/
@@ -98,10 +104,7 @@ div.inner_actuadores {
 table.fixed {
   table-layout:fixed;
   border: 2.5px solid #ddd;
-  padding-right:10px;
-  padding-left:10px;
-  padding-bottom:10px;
-  padding-top:10px;
+  padding:5px;
   border-radius: 6px;
   height:525px;
 }
@@ -181,16 +184,17 @@ ul {
   margin:  0;
   padding: 0;
   background-color: #eeeeee;
-  width: 9em;
-  height: 400px; /* Full height */
-  /*position: fixed;*/
+  width: 135px;
+  height: 400px;
 }
 
 li a {
   display: block;
   color: #000;
   margin:  2px 0 2px 0;
-  padding: 8px 16px 8px 16px;
+  padding: 5px;
+  padding-top:10px;
+  padding-bottom:10px;
   text-decoration: none;
   border-radius: 6px;
 }
