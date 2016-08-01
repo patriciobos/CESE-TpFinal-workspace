@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Mon 25 Jul 2016 16:36:10 ART
+
+BeginCmp
+TimeStamp = /57963C5A;
+Reference = C1;
+ValeurCmp = 47uF;
+IdModule  = C2V8;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963C81;
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = /57911112;
+Reference = C3;
+ValeurCmp = .1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E2E;
+Reference = C4;
+ValeurCmp = .1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E82;
+Reference = C5;
+ValeurCmp = .1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963F2C;
+Reference = D1;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963F26;
+Reference = D2;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E44;
+Reference = D3;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963F0E;
+Reference = D4;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963F18;
+Reference = D5;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963F1E;
+Reference = D6;
+ValeurCmp = 1N4148;
+IdModule  = DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /5796496D;
+Reference = P1;
+ValeurCmp = TST;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /5796497A;
+Reference = P2;
+ValeurCmp = TST;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /5796498A;
+Reference = P3;
+ValeurCmp = TST;
+IdModule  = PINTST;
+EndCmp
+
+BeginCmp
+TimeStamp = /57965630;
+Reference = P4;
+ValeurCmp = CONN_4;
+IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /579669EE;
+Reference = P5;
+ValeurCmp = CONN_2;
+IdModule  = bornier2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5791107C;
+Reference = R1;
+ValeurCmp = 100;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E24;
+Reference = R2;
+ValeurCmp = 100;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E78;
+Reference = R3;
+ValeurCmp = 100;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /57910F36;
+Reference = RV1;
+ValeurCmp = 10K;
+IdModule  = Pote;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E06;
+Reference = RV2;
+ValeurCmp = 10K;
+IdModule  = Pote;
+EndCmp
+
+BeginCmp
+TimeStamp = /57963E5A;
+Reference = RV3;
+ValeurCmp = 10K;
+IdModule  = Pote;
+EndCmp
+
+EndListe
