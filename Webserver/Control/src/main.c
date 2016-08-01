@@ -176,7 +176,7 @@ static void vSetupIFTask (void *pvParameters)
 		/* Only check for connection state when the PHY status has changed */
 		if (physts & PHY_LINK_CHANGED) {
 			if (physts & PHY_LINK_CONNECTED) {
-				Board_DOUT_Set(0, true);
+				//Board_DOUT_Set(0, true);
 				prt_ip = 0;
 
 				/* Set interface speed and duplex */
@@ -199,7 +199,7 @@ static void vSetupIFTask (void *pvParameters)
 										  (void *) &lpc_netif, 1);
 			}
 			else {
-				Board_DOUT_Set(0, false);
+				//Board_DOUT_Set(0, false);
 				tcpip_callback_with_block((tcpip_callback_fn) netif_set_link_down,
 										  (void *) &lpc_netif, 1);
 			}
