@@ -43,7 +43,6 @@
 const uint32_t ExtRateIn = 0;
 const uint32_t OscRateIn = 12000000;
 
-
 typedef enum {	DOUT0 = 0,
 				DOUT1,
 				DOUT2,
@@ -54,32 +53,6 @@ typedef enum {	DOUT0 = 0,
 				DOUT7} dout_t;
 
 static const io_port_t gpioDOUTBits[] = {{5,1}, {2,6}, {2,5}, {2,4},{5,12},{5,13},{5,14},{1,8}};
-
-/* Set up and initialize all required blocks and functions related to the
-   board hardware */
-void Board_Init(void)
-{
-#if defined(DEBUG_ENABLE)
-	/* Sets up DEBUG UART */
-	Board_Debug_Init();
-#endif
-	/* Initializes GPIO */
-	Chip_GPIO_Init(LPC_GPIO_PORT);
-	Board_Ciaa_Gpios();
-
-	/*Initialize ADCs*/
-	init_ADCs();
-
-
-	/* Initialize LEDs */
-//	Board_LED_Init();
-
-#if defined(USE_RMII)
-	Chip_ENET_RMIIEnable(LPC_ETHERNET);
-#else
-	Chip_ENET_MIIEnable(LPC_ETHERNET);
-#endif
-}
 
 void Board_UART_Init(LPC_USART_T *pUART)
 {
@@ -283,7 +256,31 @@ void Board_ENET_GetMacADDR(uint8_t *mcaddr)
 	memcpy(mcaddr, boardmac, 6);
 }
 
+/* Set up and initialize all required blocks and functions related to the
+   board hardware */
+void Board_Init(void)
+{
+#if defined(DEBUG_ENABLE)
+	/* Sets up DEBUG UART */
+	DEBUGINIT();
 
+	/* Initializes GPIO */
+	Chip_GPIO_Init(LPC_GPIO_PORT);
+	Board_Ciaa_Gpios();
+
+	/*Initialize ADCs*/
+	init_ADCs();
+
+
+	/* Initialize LEDs */
+//	Board_LED_Init();
+
+#if defined(USE_RMII)
+	Chip_ENET_RMIIEnable(LPC_ETHERNET);
+#else
+	Chip_ENET_MIIEnable(LPC_ETHERNET);
+#endif
+}
 
 void Board_I2C_Init(I2C_ID_T id)
 {

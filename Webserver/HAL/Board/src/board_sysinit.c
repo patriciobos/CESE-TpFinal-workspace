@@ -67,15 +67,15 @@ STATIC const PINMUX_GRP_T spifipinmuxing[] = {
 
 STATIC const PINMUX_GRP_T pinmuxing[] = {
 	/* RMII pin group */
-	  {0x7, 7, MD_EHS | MD_PLN | MD_EZI | MD_ZI |FUNC6},
-	  {0x1 ,17 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_MDIO: P1_17 -> FUNC3
-	  {0x1 ,18 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_TXD0: P1_18 -> FUNC3
-	  {0x1 ,20 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_TXD1: P1_20 -> FUNC3
-	  {0x1 ,19 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC0},  // ENET_REF: P1_19 -> FUNC0 (default)
-	  {0x0 ,1 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC6},   // ENET_TX_EN: P0_1 -> FUNC6
-	  {0x1 ,15 ,MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},   // ENET_RXD0: P1_15 -> FUNC3
-	  {0x0 ,0 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC2},   // ENET_RXD1: P0_0 -> FUNC2
-	  {0x1 ,16 ,MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC7}
+	{0x7 ,7  , MD_EHS | MD_PLN | MD_EZI | MD_ZI |FUNC6},
+	{0x1 ,17 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_MDIO: P1_17 -> FUNC3
+	{0x1 ,18 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_TXD0: P1_18 -> FUNC3
+	{0x1 ,20 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},  // ENET_TXD1: P1_20 -> FUNC3
+	{0x1 ,19 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC0},  // ENET_REF: P1_19 -> FUNC0 (default)
+	{0x0 ,1  , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC6},   // ENET_TX_EN: P0_1 -> FUNC6
+	{0x1 ,15 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC3},   // ENET_RXD0: P1_15 -> FUNC3
+	{0x0 ,0  , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC2},   // ENET_RXD1: P0_0 -> FUNC2
+	{0x1 ,16 , MD_EHS | MD_PLN | MD_EZI | MD_ZI| FUNC7}
 
 };
 

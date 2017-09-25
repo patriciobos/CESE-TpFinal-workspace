@@ -81,7 +81,7 @@ int RingBuffer_Insert(RINGBUFF_T *RingBuff, const void *data)
 /* Insert multiple items into Ring Buffer */
 int RingBuffer_InsertMult(RINGBUFF_T *RingBuff, const void *data, int num)
 {
-	char *ptr = RingBuff->data;
+	uint8_t *ptr = RingBuff->data;
 	int cnt1, cnt2;
 
 	/* We cannot insert when queue is full */

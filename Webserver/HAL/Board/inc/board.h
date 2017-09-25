@@ -32,7 +32,6 @@
 #ifndef __BOARD_H_
 #define __BOARD_H_
 
-
 #include "chip.h"
 #include "adcs.h"
 /* board_api.h is included at the bottom of this file after DEBUG setup */
@@ -78,7 +77,7 @@ typedef struct {
 #define USE_RMII
 
 
-/* Transmit and receive ring buffers */
+/* UART Transmit and receive ring buffers */
 static RINGBUFF_T txring, rxring;
 
 #if defined(DEBUG_ENABLE)

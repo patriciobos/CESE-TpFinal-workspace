@@ -183,25 +183,16 @@ Board_UARTPutSTRrb(msg_aux); \
 #define DEBUGIN() Board_UARTGetChar()
 #endif /* defined(DEBUG_SEMIHOSTING) */
 
-
 #else
 #define DEBUGINIT()
 #define DEBUGOUT(...)
 #define DEBUGSTR(str)
 #define DEBUGIN() (int) EOF
-
 #endif /* defined(DEBUG_ENABLE) */
 
-
-//#define DEBUGOUT(...) { \
-//char msg_aux[64]; \
-//sprintf(msg_aux,__VA_ARGS__); \
-//Board_UARTPutSTRrb(msg_aux); \
-//}
-//
-//#define DEBUGSTR(str) Board_UARTPutSTRrb(str);
-
-
+/**
+ * @}
+ */
 
 #ifdef __cplusplus
 }

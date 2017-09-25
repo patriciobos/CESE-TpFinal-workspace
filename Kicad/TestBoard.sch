@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:TestBoard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -31,7 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:74HC132
 LIBS:TestBoard-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -46,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L POT RV1
+L POT-RESCUE-TestBoard RV1
 U 1 1 57910F36
 P 2100 1350
 F 0 "RV1" H 2150 1400 60  0001 C CNN
@@ -57,7 +57,7 @@ F 3 "~" H 2100 1350 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L GNDA #PWR01
+L GNDA-RESCUE-TestBoard #PWR01
 U 1 1 57910FFB
 P 2100 2250
 F 0 "#PWR01" H 2150 2300 60  0001 C CNN
@@ -90,7 +90,7 @@ $EndComp
 Wire Wire Line
 	2100 800  2100 1100
 $Comp
-L R R1
+L R-RESCUE-TestBoard R1
 U 1 1 5791107C
 P 2650 1350
 F 0 "R1" H 2700 1400 60  0001 C CNN
@@ -106,7 +106,7 @@ $EndComp
 Wire Wire Line
 	2250 1350 2400 1350
 $Comp
-L CP C3
+L CP-RESCUE-TestBoard C3
 U 1 1 57911112
 P 3000 1700
 F 0 "C3" H 3050 1750 60  0001 C CNN
@@ -167,7 +167,7 @@ F 6 "" H 1100 2500 60  0000 C CNN "Footprint"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR05
+L GNDA-RESCUE-TestBoard #PWR05
 U 1 1 57963C51
 P 1250 3150
 F 0 "#PWR05" H 1300 3200 60  0001 C CNN
@@ -181,7 +181,7 @@ F 6 "" H 1250 3150 60  0000 C CNN "Footprint"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C1
+L CP-RESCUE-TestBoard C1
 U 1 1 57963C5A
 P 1250 2750
 F 0 "C1" H 1150 2800 40  0000 R TNN
@@ -194,7 +194,7 @@ $EndComp
 Wire Wire Line
 	1250 2950 1250 3150
 $Comp
-L C C2
+L C-RESCUE-TestBoard C2
 U 1 1 57963C81
 P 1600 2750
 F 0 "C2" H 1650 2850 40  0000 L CNN
@@ -217,7 +217,7 @@ Wire Wire Line
 	1600 3000 1250 3000
 Connection ~ 1250 3000
 $Comp
-L POT RV2
+L POT-RESCUE-TestBoard RV2
 U 1 1 57963E06
 P 2100 3250
 F 0 "RV2" H 2150 3300 60  0001 C CNN
@@ -228,7 +228,7 @@ F 3 "~" H 2100 3250 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L GNDA #PWR06
+L GNDA-RESCUE-TestBoard #PWR06
 U 1 1 57963E0F
 P 2100 4150
 F 0 "#PWR06" H 2150 4200 60  0001 C CNN
@@ -261,7 +261,7 @@ $EndComp
 Wire Wire Line
 	2100 2700 2100 3000
 $Comp
-L R R2
+L R-RESCUE-TestBoard R2
 U 1 1 57963E24
 P 2650 3250
 F 0 "R2" H 2700 3300 60  0001 C CNN
@@ -277,7 +277,7 @@ $EndComp
 Wire Wire Line
 	2250 3250 2400 3250
 $Comp
-L CP C4
+L CP-RESCUE-TestBoard C4
 U 1 1 57963E2E
 P 3000 3600
 F 0 "C4" H 3050 3650 60  0001 C CNN
@@ -335,7 +335,7 @@ Wire Wire Line
 Text Label 4000 3250 0    60   ~ 0
 ADC1
 $Comp
-L POT RV3
+L POT-RESCUE-TestBoard RV3
 U 1 1 57963E5A
 P 2100 5250
 F 0 "RV3" H 2150 5300 60  0001 C CNN
@@ -346,7 +346,7 @@ F 3 "~" H 2100 5250 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L GNDA #PWR09
+L GNDA-RESCUE-TestBoard #PWR09
 U 1 1 57963E63
 P 2100 6150
 F 0 "#PWR09" H 2150 6200 60  0001 C CNN
@@ -379,7 +379,7 @@ $EndComp
 Wire Wire Line
 	2100 4700 2100 5000
 $Comp
-L R R3
+L R-RESCUE-TestBoard R3
 U 1 1 57963E78
 P 2650 5250
 F 0 "R3" H 2700 5300 60  0001 C CNN
@@ -395,7 +395,7 @@ $EndComp
 Wire Wire Line
 	2250 5250 2400 5250
 $Comp
-L CP C5
+L CP-RESCUE-TestBoard C5
 U 1 1 57963E82
 P 3000 5600
 F 0 "C5" H 3050 5650 60  0001 C CNN
